@@ -1,0 +1,59 @@
+project:
+  type: website
+  output-dir: docs
+
+lang: kr
+date-format: "YYYY년 MM월 DD일"
+
+website:
+  title: "서울 R 미트업"
+  favicon: "fig/korea-r-user-group.png"
+  navbar:
+    search: true
+    logo: "fig/korea-r-user-group.png"
+    left:
+      - text: 소개
+        href: index.Rmd
+      - text: 2023년
+        file: dashboard/meetup-2023.Rmd
+      - text: 2022년
+        file: dashboard/meetup-2022.Rmd
+      - text: 2021년
+        file: dashboard/meetup-2021.Rmd
+      - text: 2020년
+        file: dashboard/meetup-2020.Rmd
+      - text: 2019년
+        file: dashboard/meetup-2019.Rmd
+      - text: 2018년
+        file: dashboard/meetup-2018.Rmd
+      - text: 연혁
+        file: dashboard/history.Rmd
+      - text: 행동강령(CoC)
+        file: dashboard/coc.Rmd
+    right: 
+      - href: https://r2bit.com
+        text: "R사용자회"
+      - icon: youtube
+        href: https://www.youtube.com/channel/UCW-epmIvjBEhhVXw_F0Nqbw
+      - icon: github
+        href: https://github.com/bit2r/seoul-r
+      - icon: facebook
+        href: https://www.facebook.com/groups/tidyverse
+
+format:
+  html:
+    theme: cosmo
+    css: custom.css
+    toc: true
+    include-in-header:
+      - google-analytics.html
+      - header.html
+    include-after-body:
+      - footer.html
+
+theme:
+  light: cosmo
+  dark: [cosmo, theme-dark.scss]
+  
+execute:
+  freeze: true  

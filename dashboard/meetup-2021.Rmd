@@ -1,0 +1,164 @@
+---
+title: "서울R미트업 2021년"
+output:
+  flexdashboard::flex_dashboard:
+    logo: fig/hex-tidyverse.png
+    orientation: rows
+    theme: readable
+    vertical_layout: fill
+    css: extra.css
+    include:
+      after_body: footer.html
+      before_body: header.html
+mainfont: NanumGothic
+editor_options:
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+## 0. R 마크다운 환경설정 ------
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE,
+                    comment="", digits = 3, tidy = FALSE, prompt = FALSE, fig.align = 'center')
+
+knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
+
+options(knitr.duplicate.label = 'allow')
+
+library(flexdashboard)
+```
+
+### Overview
+
+- When: **Wednesday, January 13, 2021
+7:00 PM to 9:00 PM GMT+9**
+  - RSVP opens Wednesday, December 30, 2020 7:00 PM**
+- Where: Online Event - Link visible for attendees
+- [Seoul R Users: 2021 - January](https://www.meetup.com/seoul-r-meetup/events/ccqpbsycccbrb/)
+
+- **Schedule**
+  - 6:30 open zoom
+  - 7:00-7:30 Presentation Talk 1
+  - 7:30-8:00 Presentation Talk 2
+  - 8:00-8:30 Presentation Talk 3
+  - 8:30 ~ 9:00 Virtual Social
+
+### January (1월)
+
+- **Talk** (25min talk, 5min Q&A)
+  - Title: "Data Science with R and Python"
+  - Korean Title: "R과 파이썬 데이터 과학"
+  - **Speaker**: 이광춘(Kwangchun Lee)
+  - [slidedeck](https://statkclee.github.io/data-science/ds-languages.html)
+  - Abstract: R 혹은 파이썬이 데이터 과학에 더 적합하고 어떤 데이터 과학 언어가 평정할 것이냐는 전쟁은 이제 새로운 세대를 맞고 있습니다. 데이터 과학을 어떤 언어로 하느냐가 중요한 것이 아니냐 풀려고 하는 문제를 어떻게 데이터 과학 문제로 정의하고 데이터 과학 언어로 문제를 풀면 되지 않느냐는 주장이 설득력을 얻고 있으며 몇년전부터 개발되기 시작한 `reticulate`가 두 진영을 이어주는 핵심 팩키지로 자리를 잡아가고 있습니다.
+- **Talk** (25min talk, 5min Q&A)
+  - Title: "Medical Research Support with R/shiny"
+  - Korean Title: "Shiny 활용 의학연구지원"
+  - **Speaker**: 김진섭(JinSeoup Kim)
+  - [slidedeck](https://jinseob2kim.github.io/lecture-general/tidyversekorea)
+  - Abstract: 의과대학, 보건대학원, 삼성전자를 거치면서 다양한 건강데이터를 다룬 경험을 바탕으로 연구지원법인 차라투를 설립, R/Shiny 로 의학연구자들을 지원 중입니다. Shinykorea 의 진행과 후원을 맡아 의료/축산/게임/반도체/신용평가/IPTV 등 다양한 분야의 사람들과 함께 Shiny 를 알아가는 중입니다.
+- **Talk** (25min talk, 5min Q&A)
+  - Title: ~~Simple AutoML Starting with KubeFlow~~
+  - Korean Title: ~~"KubeFlow로 시작하는 간단한 AutoML"~~
+  - **Speaker**: ~~이승우~~
+- **Talk** (25min talk, 5min Q&A)
+  - Title: "Data Analysis with KNIME"
+  - Korean Title: "KNIME을 이용한 데이터분석" + $\alpha$ "Shiny 이용 모바일앱 개발
+  - **Speaker**: Nam-Hyeon Jee (지남현)
+  - [shinyMobile 소개](data/2. shinyMobile 소개 (지남현).pdf), [KNME 소개](data/1-1. KNME 소개_엑셈 (지남현).pdf), [knime_study_workflow](data/1-3. knime_study_workflow (지남현).zip), [KNIME Cheatsheet](https://www.knime.com/cheat-sheets)
+  - Abstract 1 : KNIME Analytics Platform은 GUI workflow 기반으로 데이터 선택부터 전처리, 변환, 분석, 모델링, 평가, 시각화 까지 일련의 분석 과정을 손쉽게 작업할 수 있는 분석 플랫폼으로, 독일의 Konstanz University에서 Java로 2004년 부터 개발해 온 오픈소스 프로그램 입니다.
+  - Abstract 2 : shinyMobile은 shiny용 대시보드 (shinydashboardplus, bs4Dash, argonDash 등) 패키지를 만든 RinteRface에서, Framework7 템플릿 기반으로 만든 모바일용으로 shiny 대시보드 패키지 입니다.
+
+### February (2월)
+
+- When: **Wednesday, February 10, 2021 7:00 PM to 9:00 PM GMT+9
+- Where: Online Event - Link visible for attendees
+- [Seoul R Users: 2021 - February](https://www.meetup.com/seoul-r-meetup/events/ccqpbsyccdbnb/)
+
+- **Schedule**
+  - 6:30 open zoom
+  - 7:00-7:30 Presentation Talk 1
+  - 7:30-8:00 Presentation Talk 2
+  - 8:00-8:30 Presentation Talk 3
+  - 8:30 ~ 9:00 Virtual Social
+
+- **Talk** (25min talk, 5min Q&A)
+  - Title: "Crawling the United States stock data"
+  - Korean Title: "미국주식 데이터 수집"
+  - **Speaker**: 이현열
+  - [slidedeck](https://hyunyulhenry.github.io/lecture/210210_r_meetup/index.html)
+  - 초록: 투자를 하기 위해서는 우선 그 기업이 무엇을 하는지, 즉 데이터를 수집해야 합니다. 데이터만 있다면 국내 뿐만 아니라 미국, 혹은 우리가 한번도 들어보지 못했던 동유럽이나 동남아에도 투자가 가능합니다. 크롤링을 이용한다고 이러한 데이터를 얼마든지 무료로 수집할 수 있습니다. 또한 데이터를 기반으로 투자를 한다면 시장의 광끼과 공포에 휘둘리지 않는 장점도 있습니다.
+  - Abstract: To invest, first, you have to collect what the company does: data. If you have data, you can invest not only in Korea but also in the United States, or in Eastern Europe or Southeast Asia, which we have never heard of. You can collect these data for free by using web crawling. And if you invest based on data, you have the advantage of not being overwhelmed by the market's greed and fear.
+- **Talk** (25min talk, 5min Q&A)
+  - Title: "GIS Data Handling Using R"
+  - Korean Title: "R을 이용한 GIS 데이터 핸들링"
+  - **Speaker**: 하헌철
+  - Abstract:GIS Data 전반에 대한 내용을 처음 접하는 데이터분석가를 상정하여 소개하는 내용입니다. 기본적인 R 지식은 갖추고 있다는 전제 하에, 더 깊은 내용을 구글링하고 이해하기 위한 기초적인 지식 그리고 실무 예제들을 소개합니다.
+  - [slidedeck](data/GIS_Data_Handling_Using_R.html)
+- **Talk** (25min talk, 5min Q&A)
+  - Title: Case Study: Time Series Analysis with R
+  - Korean Title: "돈이 될지도 모르는 암호화폐의 변동성 분석"
+  - **Speaker**: 안상선(SangSun Ahn)
+  - [paper](data/안상선_2021.pdf)
+  - Abstract: 암호화폐의 가격정보가 금융시장에서 투자정보로서 역할을 하기 위해서는 첫째, 암호화폐 가격정보가 우리의 연구 대상은 주식시장과 관련이 있어야 한다. 이를 위해서 암호화폐의 가격 정보와 우리나라의 종합주가지수(KOSPI지수)와의 관계를 살펴본다. 둘째, 사전 정보로서 가능성을 검증하기 위해 과거 시점의 암호화폐가격정보와 현재 주식시장의 가격변수와의 관계를 살펴본다. 이는 암호화폐 가격이 예측가능성 있는 투자지
+표로서 역할을 할 수 있는지를 검증한 것이다. 셋째, 불확실성이 높은 상황에서도 암호화폐의 가격정보가 투자지표로서 역할을 할 수 있는지 검증한다. 금융 연구에서는 1999년 동아시아의 금융위기, 2008년에 미국발 금융위기 등과 같은 비일상적인 상황에서 금융 시장을 다룬 연구가 많다. 여기서는 코로나19 팬데믹 선언을 한 2020년 1월 29일을 기점으로 그 이전과 이후로 기간을 나눴으며, 2기간 간에 암호화폐 가격의 정보의 효율성을 비교했다.
+
+### March (3월)
+
+- When: **Wednesday, March 10, 2021 7:00 PM to 9:00 PM GMT+9
+- Where: Online Event - Link visible for attendees
+- [Seoul R Users: 2021 - March](https://www.meetup.com/seoul-r-meetup/events/ccqpbsyccfbnb/)
+
+- **Talk** (25min talk, 5min Q&A)
+  - Title: "Data Visualization Happening"
+  - Korean Title: "데이터 시각화 해프닝"
+  - **Speaker**: 송효진(HyoJin Song)
+  - 초록: 본 세션은 데이터를 시각화 할 때 일어나는 일들과 위험요소들이 무엇이 있었는지 과거경험을 통해 이야기 합니다.
+특히 최근데이터를 이용하여 갱신되는 구조의 대시보드 형 리포트를 만들 때 일어날 수 있었던 일(해프닝)들과, 이에 대한 견해를 공유합니다. 데이터 시각화시 일어날 수 있는 사건들의 해프닝들을 반면교사 삼아 미리 대비하고 염두해두어야 할 부분들이 무엇이 있는지 기초적인 10가지 주제를 요약정리하여 발표를 통해 알려드립니다.
+  - [slidedeck, `PDF`](data/데이터시각화해프닝.pdf), [`keynote`](data/데이터시각화해프닝.key)
+- **Talk** (25min talk, 5min Q&A)
+  - Title: Data analysis begins with data quality diagnosis and exploratory data analysis.
+  - Korean Title: 데이터 품질 진단과 EDA
+  - **Speaker**: Choonghyun Ryu (유충현)
+  - 초록: 데이터 분석의 시작은 데이터 품질 진단과 탐색적 데이터 분석부터 시작합니다.
+dlookr 패키지는 데이터가 분석을 수행할 품질을 만족하는지 진단하고,  개별 변수에 숨겨진 특징 이해하기 위한 EDA 작업을 도와줍니다. dlookr 패키지의 새로운 기능을 소개하고, tidyverse 패키지와 협업하는 방법을 제시합니다.
+  - Abstract: The dlookr package diagnoses whether the data meets the quality to perform the analysis, and helps EDA work to understand the hidden features of individual variables. Introduces new features of the dlookr package and shows you how to collaborate with the tidyverse package.
+  - [slidedeck](data/20210310_Diagnosis_and EDA.pdf)
+- **Talk** (25min talk, 5min Q&A)
+  - Title: "How to easily analyze text data"
+  - Korean Title: "텍스트를 쉽게 분석하는 방법"
+  - **Speaker**: 김영우 (Young-Woo Kim)
+  - Abstract: Text data can also be analyzed easily in tidy way. From Tokenization, Morphological analysis, and calculating TF-IDF to creating network graphs, this talk introduces how to analyze text data in tidy way.
+  - 초록: 텍스트 데이터도 tidy한 스타일로 다루면 쉽게 분석할 수 있습니다. 토큰화, 형태소 분석, TF-IDF 계산부터 네트워크 그래프를 만드는 작업까지, tidy한 방법으로 텍스트를 분석하는 방법을 소개합니다.
+  - "Do it! 쉽게 배우는 R 텍스트 마이닝" 이지스 퍼블리싱 출판사 책 2권 증정
+  - [slidedeck](data/텍스트를 쉽게 분석하는 방법_김영우.pdf)
+
+### April (4월)
+
+- When: **Wednesday, April 14, 2021 7:00 PM to 9:00 PM GMT+9
+- Where: Online Event - Link visible for attendees
+- [Seoul R Users: 2021 - April](https://www.meetup.com/seoul-r-meetup/events/ccqpbsyccgbsb/)
+
+- **Talk** (25min talk, 5min Q&A)
+  - Title: "데이터 과학 워드 프로세서"
+  - Korean Title: "Word Processor for Data Science"
+  - **Speaker**: 이광춘(Kwangchun Lee)
+  - Abstract: RStudio announced that RStudio v1.4 has provided "Visual Markdown Editing". With this feature data scientists can focus on technical writing itself such that they can improve documents quality. In this short talk, "Visual Markdown Editing" feature will be presented and Korean language supporting experiences will be shared.
+  - 초록: Visual R Markdown 편집기능이 RStudio v1.4에 포함되면서 글쓰기에 좀더 집중을 하면서 전반적인 데이터 과학 문서 품질향상에 획기적인 변화가 생겨 새롭게 추가된 획기적인 Visual R Markdown 기능과 한국어를 반영할 수 있는 방법을 함께 고민하고자 합니다.
+  - [slidedeck](https://statkclee.github.io/latex/document-ide.html)
+- **Talk** (25min talk, 5min Q&A)
+  - Title: Propensity score analysis using R
+  - Korean Title: R기반 성향점수분석
+  - **Speaker**: 박인서
+  - Abstract: Most social sciences data are collected through observational studies, without experimental manipulation. Under the circumstances, propensity score analysis allows us to make valid causal inferences.
+This talk will introduce main concepts and crucial steps in propensity score analysis.
+  - 초록: 대부분의 사회과학 데이터는 실험설계를 따르지 않는 관측연구 상황에서 얻어집니다.
+이러한 관측연구 상황에서 타당하게 인과관계를 추론할 수 있는 방법으로 성향점수분석 기법을 소개합니다.
+성향점수분석에서 등장하는 핵심 개념들을 알아보고, R에서 주요 진행 절차를 실습해보겠습니다.
+  - [slidedeck](data/RMeetup_PSA_slide_210414.pdf)
+- **Talk** (25min talk, 5min Q&A)
+  - Title: "DataRobot's Location AI, ease of featurizing"
+  - Korean Title: "DataRobot의 위치정보를 활용한 모델링"
+  - **Speaker**: 홍운표(WoonPyo Hong)
+  - Abstract: What and how are the available ways of feature engineering at location-relevant features in R? Review some cases in pure R scripting, we'll consider DataRobot's Location AI plus R API which is a good alternative to the existing approach as an enterprise AI platform.
+  - 초록: 위치정보가 포함된 데이터를 활용하여 모델링할 때 R usage를 살펴보고, 이의 대안으로 Enterprise AI Platform인 DataRobot의 Location AI 기능과, R api를 활용하는 방법을 소개합니다.
+  - [slidedeck](data/DataRobot Location AI - R meetup.pdf)

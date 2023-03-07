@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="kr" xml:lang="kr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.280">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>서울 R 미트업 - R 및 데이터분석 기초</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색"
+  }
+}</script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-P3F3EGT0XE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "G-P3F3EGT0XE");
+</script>
+<!-- <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-theme.css" />
+<link rel="stylesheet" type="text/css" href="css/swc.css" />  -->
+<link rel="alternate" type="application/rss+xml" title="Tidyverse Korea" href="https://www.facebook.com/groups/tidyverse/">
+<meta charset="UTF-8">
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+  <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-59802572-23"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-59802572-23');
+</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../custom.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">서울 R 미트업</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html">
+ <span class="menu-text">소개</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../dashboard/meetup-2023.html">
+ <span class="menu-text">2023년</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../dashboard/meetup-2022.html">
+ <span class="menu-text">2022년</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../dashboard/meetup-2021.html">
+ <span class="menu-text">2021년</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../dashboard/meetup-2020.html">
+ <span class="menu-text">2020년</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../dashboard/meetup-2019.html">
+ <span class="menu-text">2019년</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../dashboard/meetup-2018.html">
+ <span class="menu-text">2018년</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../dashboard/history.html">
+ <span class="menu-text">연혁</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../dashboard/coc.html">
+ <span class="menu-text">행동강령(CoC)</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://r2bit.com">
+ <span class="menu-text">R사용자회</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/channel/UCW-epmIvjBEhhVXw_F0Nqbw"><i class="bi bi-youtube" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/bit2r/seoul-r"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.facebook.com/groups/tidyverse"><i class="bi bi-facebook" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#api" id="toc-api" class="nav-link active" data-scroll-target="#api">API</a></li>
+  <li><a href="#모의투자-및-api-서비스-신청하기" id="toc-모의투자-및-api-서비스-신청하기" class="nav-link" data-scroll-target="#모의투자-및-api-서비스-신청하기">모의투자 및 API 서비스 신청하기</a></li>
+  <li><a href="#접근토큰-및-해쉬키-발급받기" id="toc-접근토큰-및-해쉬키-발급받기" class="nav-link" data-scroll-target="#접근토큰-및-해쉬키-발급받기">접근토큰 및 해쉬키 발급받기</a>
+  <ul class="collapse">
+  <li><a href="#접근토큰-발급받기" id="toc-접근토큰-발급받기" class="nav-link" data-scroll-target="#접근토큰-발급받기">접근토큰 발급받기</a></li>
+  <li><a href="#해쉬키-발급받기" id="toc-해쉬키-발급받기" class="nav-link" data-scroll-target="#해쉬키-발급받기">해쉬키 발급받기</a></li>
+  </ul></li>
+  <li><a href="#주식-현재가-시세-조회하기" id="toc-주식-현재가-시세-조회하기" class="nav-link" data-scroll-target="#주식-현재가-시세-조회하기">주식 현재가 시세 조회하기</a></li>
+  <li><a href="#매수-주문" id="toc-매수-주문" class="nav-link" data-scroll-target="#매수-주문">매수 주문</a>
+  <ul class="collapse">
+  <li><a href="#매도-주문" id="toc-매도-주문" class="nav-link" data-scroll-target="#매도-주문">매도 주문</a></li>
+  </ul></li>
+  <li><a href="#주식-잔고조회" id="toc-주식-잔고조회" class="nav-link" data-scroll-target="#주식-잔고조회">주식 잔고조회</a></li>
+  <li><a href="#스케줄링" id="toc-스케줄링" class="nav-link" data-scroll-target="#스케줄링">스케줄링</a>
+  <ul class="collapse">
+  <li><a href="#시간-지정하기" id="toc-시간-지정하기" class="nav-link" data-scroll-target="#시간-지정하기">시간 지정하기</a></li>
+  </ul></li>
+  <li><a href="#포트폴리오-리밸런싱" id="toc-포트폴리오-리밸런싱" class="nav-link" data-scroll-target="#포트폴리오-리밸런싱">포트폴리오 리밸런싱</a>
+  <ul class="collapse">
+  <li><a href="#포트폴리오-매수" id="toc-포트폴리오-매수" class="nav-link" data-scroll-target="#포트폴리오-매수">포트폴리오 매수</a></li>
+  <li><a href="#포트폴리오-리밸런싱-1" id="toc-포트폴리오-리밸런싱-1" class="nav-link" data-scroll-target="#포트폴리오-리밸런싱-1">포트폴리오 리밸런싱</a></li>
+  </ul></li>
+  <li><a href="#기타" id="toc-기타" class="nav-link" data-scroll-target="#기타">기타</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">R 및 데이터분석 기초</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="api" class="level1">
+<h1>API</h1>
+<p>원하는 조건에 따라 주식을 사거나 파는 등 자동거래를 하기 위해서는 API가 필수적이다. 조건에 따라 매번 손으로 매매하는 것은 번거로울 뿐만 아니라 불가능에 가까우므로, API가 없이는 매매 자동화가 불가능하다.</p>
+<p>기존에도 국내 증권사들(키움증권, 대신증권, 이베스트증권 등)이 API를 제공해주기는 하였다. 그러나 이는 HTS에 로그인을 한 후 COM 방식을 연결해야 하는 매우 불편한 방식이었다.</p>
+<p>링크: <a href="https://eco.jnomy.com/2022/04/open-api-with-python.html">키움증권 API 예제</a></p>
+<p>반면 2022년 한국투자증권에서 <strong>Rest API</strong>와 <strong>웹소켓 방식</strong>을 제공함에 따라 HTS에 로그인을 하지 않고 API Key만을 이용한 트레이딩이 가능해졌다. 또한 국내 뿐만 아니라 해외주식에 대한 조회/주문 기능도 제공하고 있다. 바야흐로 진정한 자동거래가 가능해진 셈이다.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>항목</th>
+<th>오픈 API</th>
+<th>기존 API</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>사용 가능 환경 (OS)</td>
+<td>제한 없음</td>
+<td>윈도우만 가능</td>
+</tr>
+<tr class="even">
+<td>구동 방식</td>
+<td>Rest API, websocket</td>
+<td>Com, ocx, dll</td>
+</tr>
+<tr class="odd">
+<td>인증 방식</td>
+<td>대체 인증 토큰</td>
+<td>HTS 접속 인증</td>
+</tr>
+</tbody>
+</table>
+<p>오픈 API는 모의투자 계좌와 실제 계좌에서 사용할 수 있으므로, 모의투자 계좌를 대상으로 충분히 테스트를 거친 후 실졔 계좌에 적용하는 것이 안전하다. 또한 API 사용법은 KIS Developers 홈페이지에 자세히 나와있으니 참조하기 바란다.</p>
+<pre><code>https://apiportal.koreainvestment.com/</code></pre>
+<p>API를 신청하기 위해서는 계좌가 있어야 한다. 한국투자증권 계좌는 앱을 통해 비대면으로도 개설이 가능하다. 또한 API 서비스가 제대로 작동하고 있는지 HTS를 통해 확인해볼 필요가 있으므로, 이 역시 미리 다운로드 받는다. 먼저 한국투자증권 홈페이지에 접속하여 <span class="math display">\[이용안내 → 온라인 이용안내 → 온라인 거래시스템\]</span>를 선택한다.</p>
+<p><img src="images/hts_down.png" class="img-fluid"></p>
+<p>여러 PC 전용 프로그램(HTS) 중 가장 일반적인 ’eFriend Plus’를 다운로드 받는다.</p>
+<p><img src="images/efriend.png" class="img-fluid"></p>
+</section>
+<section id="모의투자-및-api-서비스-신청하기" class="level1">
+<h1>모의투자 및 API 서비스 신청하기</h1>
+<p>모의투자 계좌에서 API 서비스를 테스트해보기 위해 모의계좌를 신청한다. 한국투자증권 홈페이지에 접속하여 로그인을 한 후 <span class="math display">\[트레이딩 → 모의투자 → 주식/선물옵션 모의투자 → 모의투자안내\]</span>를 선택하여 계좌를 개설한다.</p>
+<p><img src="images/mock.png" class="img-fluid"></p>
+<p><span class="math display">\[신청/재도전\]</span> 탭을 클릭한 후 리그구분에서 국내주식, 금액은 최대인 5억원을 선택한다. 그 후 이메일 및 휴대폰 번호를 입력하고 하단의 <span class="math display">\[신청\]</span>을 클릭한다.</p>
+<p><img src="images/start.png" class="img-fluid"></p>
+<p>신청을 완료하면 다음과 같은 화면이 뜬다. 모의계좌번호는 API 신청시 필요하므로 기억해두거나 적어두기 바란다.</p>
+<p><img src="images/start2.png" class="img-fluid"></p>
+<p>이제 API 서비스를 신청하도록 한다. 한국투자증권 홈페이지에서 <span class="math display">\[트레이딩 → Open API → KIS Developers → KIS Developers 서비스 신청하기\]</span>를 선택한다.</p>
+<p><img src="images/developer.png" class="img-fluid"></p>
+<p>먼저 휴대폰 번호 인증을 한다.</p>
+<p><img src="images/api_1.png" class="img-fluid"></p>
+<p>다음으로 유의사항확인 화면에서 동의를 누른 후 다음을 클릭한다.</p>
+<p><img src="images/api_2.png" class="img-fluid"></p>
+<p>신청정보 화면에서 <span class="math display">\[종합계좌\]</span>와 <span class="math display">\[모의계좌\]</span> 모두 선택한다. 이후 <span class="math display">\[다음\]</span> 버튼을 클릭하면 인증화면으로 넘어간다.</p>
+<p><img src="images/api_3.png" class="img-fluid"></p>
+<p>인증을 마치면 종합계좌와 모의계좌에 각각 APP Key와 APP Secret이 생성된다. 해당 key를 통해 계좌 내에서 매매가 가능하므로 유출되지 않도록 조심한다.</p>
+<p><img src="images/api_4.png" class="img-fluid"></p>
+<p>발급받은 API Key를 저장한다.</p>
+<ul>
+<li><p>R: <strong>.Renviron</strong> 파일에 추가</p></li>
+<li><p>Python: keyring 패키지를 이용</p></li>
+</ul>
+<p>HTS에서 <span class="math display">\[eFriend 모의투자\]</span> 탭을 선택해 모의투자 계좌에 로그인하면, 잔고에 신청한 금액인 5억이 있는것을 확인할 수 있다.</p>
+<p><img src="images/hts.png" class="img-fluid"></p>
+<p><img src="images/mock_1.png" class="img-fluid"></p>
+</section>
+<section id="접근토큰-및-해쉬키-발급받기" class="level1">
+<h1>접근토큰 및 해쉬키 발급받기</h1>
+<p>API를 이용해 조회 및 주문을 하기 위해서는 접근토큰과 해쉬키가 추가적으로 필요하다.</p>
+<section id="접근토큰-발급받기" class="level2">
+<h2 class="anchored" data-anchor-id="접근토큰-발급받기">접근토큰 발급받기</h2>
+<p>앞서 발급받은 App Key와 App Secret을 이용해 접근토큰을 받을 수 있으며, 접근토큰을 통해 계좌에 접근할 수 있다. 접근토큰을 발급받는 법은 KIS Developers의 ‘API 문서’ 페이지에 상세히 나와있다.</p>
+<ul>
+<li>KIS Developers: <a href="https://apiportal.koreainvestment.com/intro" class="uri">https://apiportal.koreainvestment.com/intro</a></li>
+</ul>
+<p><img src="images/token.png" class="img-fluid"></p>
+<p>기본정보 및 LAYOUT의 항목에 맞춰 코드를 작성해보도록 하자.</p>
+<ul>
+<li>파이썬</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> keyring</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># key</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>app_key <span class="op">=</span> keyring.get_password(<span class="st">'mock_app_key'</span>, <span class="st">'Henry'</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>app_secret <span class="op">=</span> keyring.get_password(<span class="st">'mock_app_secret'</span>, <span class="st">'Henry'</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># base url</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>url_base <span class="op">=</span> <span class="st">"https://openapivts.koreainvestment.com:29443"</span> <span class="co"># 모의투자</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># information</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>headers <span class="op">=</span> {<span class="st">"content-type"</span>: <span class="st">"application/json"</span>}</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>path <span class="op">=</span> <span class="st">"oauth2/tokenP"</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>body <span class="op">=</span> {</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">"grant_type"</span>: <span class="st">"client_credentials"</span>,</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">"appkey"</span>: app_key,</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">"appsecret"</span>: app_secret</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>url_base<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>path<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>res <span class="op">=</span> requests.post(url, headers<span class="op">=</span>headers, data<span class="op">=</span>json.dumps(body))</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>access_token <span class="op">=</span> res.json()[<span class="st">'access_token'</span>]</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>R</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(httr)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(jsonlite)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(magrittr)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rvest)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>app_key <span class="ot">=</span> <span class="st">'Your Key'</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>app_secret <span class="ot">=</span> <span class="st">'Your Secret Key'</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>url_base <span class="ot">=</span> <span class="st">'https://openapivts.koreainvestment.com:29443'</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>path <span class="ot">=</span> <span class="st">'/oauth2/tokenP'</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>data <span class="ot">=</span> <span class="fu">toJSON</span>(<span class="fu">list</span>(<span class="at">grant_type =</span> <span class="st">"client_credentials"</span>,</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>                    <span class="at">appkey =</span> app_key,</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>                    <span class="at">appsecret =</span> app_secret), <span class="at">auto_unbox =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>res <span class="ot">=</span> <span class="fu">POST</span>(</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">url =</span> <span class="fu">paste0</span>(url_base, path),</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">body =</span> data </span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>access_token <span class="ot">=</span> res <span class="sc">%&gt;%</span> <span class="fu">read_html</span>() <span class="sc">%&gt;%</span> <span class="fu">html_text</span>() <span class="sc">%&gt;%</span> <span class="fu">fromJSON</span>() <span class="sc">%&gt;%</span> .<span class="sc">$</span>access_token</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="해쉬키-발급받기" class="level2">
+<h2 class="anchored" data-anchor-id="해쉬키-발급받기">해쉬키 발급받기</h2>
+<p>조회가 아닌 주문이나 정정, 취소 등을 할 때는 추가적으로 해쉬키가 필요하다. 해쉬키(Hashkey)는 보안을 위한 요소로 사용자가 보낸 요청 값을 중간에 탈취하여 변조하지 못하도록 하는데 사용된다. 해쉬키는 요청하는 데이터마다 변하므로, 아래와 같이 함수로 만드는 것이 편리하다.</p>
+<ul>
+<li>파이썬</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> hashkey(datas):</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    path <span class="op">=</span> <span class="st">"uapi/hashkey"</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    url <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>url_base<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>path<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    headers <span class="op">=</span> {</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>        <span class="st">'content-Type'</span>: <span class="st">'application/json'</span>,</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>        <span class="st">'appKey'</span>: app_key,</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        <span class="st">'appSecret'</span>: app_secret,</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    res <span class="op">=</span> requests.post(url, headers<span class="op">=</span>headers, data<span class="op">=</span>json.dumps(datas))</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    hashkey <span class="op">=</span> res.json()[<span class="st">"HASH"</span>]</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> hashkey</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>R</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>hashkey <span class="ot">=</span> <span class="cf">function</span>(data) {</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  url_base <span class="ot">=</span> <span class="st">'https://openapivts.koreainvestment.com:29443'</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  path <span class="ot">=</span> <span class="st">'/uapi/hashkey'</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  res <span class="ot">=</span> <span class="fu">POST</span>(</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">url =</span> <span class="fu">paste0</span>(url_base, path),</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_headers</span>(<span class="at">.headers =</span> <span class="fu">c</span>(<span class="st">'content-Type'</span><span class="ot">=</span> <span class="st">'application/json'</span>,</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>                             <span class="st">'appKey'</span> <span class="ot">=</span> app_key, </span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>                             <span class="st">'appSecret'</span> <span class="ot">=</span> app_secret)),</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">body =</span> data</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  hashkey <span class="ot">=</span> res <span class="sc">%&gt;%</span> <span class="fu">read_html</span>() <span class="sc">%&gt;%</span> <span class="fu">html_text</span>() <span class="sc">%&gt;%</span> <span class="fu">fromJSON</span>() <span class="sc">%&gt;%</span> .<span class="sc">$</span>HASH</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span> (hashkey)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="주식-현재가-시세-조회하기" class="level1">
+<h1>주식 현재가 시세 조회하기</h1>
+<p>발급받은 Key와 토큰을 통해 본격적으로 API를 사용해보도록 하자. 먼저 삼성전자의 현재가를 조회해보겠다. 메뉴얼의 기본정보 및 LAYOUT에 따라 코드를 작성한다.</p>
+<ul>
+<li>R과 파이썬이 동일하므로, 여기부터는 파이썬 코드만 작성하도록 합니다.</li>
+<li>R 버젼 코드는 아래 글에 정리되어 있습니다.</li>
+<li><a href="https://blog.naver.com/leebisu/222704181327" class="uri">https://blog.naver.com/leebisu/222704181327</a></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>path <span class="op">=</span> <span class="st">"uapi/domestic-stock/v1/quotations/inquire-price"</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>url_base<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>path<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>headers <span class="op">=</span> {</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Content-Type"</span>: <span class="st">"application/json"</span>,</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"authorization"</span>: <span class="ss">f"Bearer </span><span class="sc">{</span>access_token<span class="sc">}</span><span class="ss">"</span>,</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"appKey"</span>: app_key,</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"appSecret"</span>: app_secret,</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"tr_id"</span>: <span class="st">"FHKST01010100"</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>params <span class="op">=</span> {<span class="st">"fid_cond_mrkt_div_code"</span>: <span class="st">"J"</span>, <span class="st">"fid_input_iscd"</span>: <span class="st">"005930"</span>}</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>res <span class="op">=</span> requests.get(url, headers<span class="op">=</span>headers, params<span class="op">=</span>params)</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>res.json()[<span class="st">'output'</span>][<span class="st">'stck_prpr'</span>]</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol type="1">
+<li>URL을 만든다.</li>
+<li>headers 부분에 해당하는 값들을 입력한다. 토큰과 키를 입력하며, ’tr_id’는 거래ID에 해당하는 부분으로써 주식현재가 시세에 해당하는 ’FHKST01010100’를 입력한다.</li>
+<li>params 부분에서 ’fid_cond_mrkt_div_code’는 시장 분류 코드를 의미하며, 주식에 해당하는 ’J’를 입력한다. ’fid_input_iscd’는 종목코드에 해당하며 삼성전자의 티커를 입력한다.</li>
+</ol>
+<p>작성된 내용을 바탕으로 <code>get()</code> 요청을 하여 결과를 받아온다. 종목과 관련된 수많은 정보를 받을 수 있으며 이에 대한 자세한 설명은 홈페이지에서 확인할 수 있다. 이 중 ‘주식 현재가’에 해당하는 ’stck_prpr’ 부분을 통해 현재가를 확인할 수 있다.</p>
+<p>이 외에도 홈페이지의 API 문서를 참조한 후 ‘headers’와 ’params’ 부분만 수정하면 여러 정보에 대한 조회도 가능하다.</p>
+</section>
+<section id="매수-주문" class="level1">
+<h1>매수 주문</h1>
+<p>API를 이용해 실제로 주문을 내보도록 하며, 모의투자의 경우 신용 주문이 되지 않아 현금 주문에 대해 테스트해보겠다.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>path <span class="op">=</span> <span class="st">"/uapi/domestic-stock/v1/trading/order-cash"</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>url_base<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>path<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> {</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"CANO"</span>: <span class="st">"50068923"</span>,  <span class="co"># 계좌번호 앞 8지리</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ACNT_PRDT_CD"</span>: <span class="st">"01"</span>,  <span class="co"># 계좌번호 뒤 2자리</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"PDNO"</span>: <span class="st">"005930"</span>,  <span class="co"># 종목코드</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ORD_DVSN"</span>: <span class="st">"01"</span>,  <span class="co"># 주문 방법</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ORD_QTY"</span>: <span class="st">"10"</span>,  <span class="co"># 주문 수량</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ORD_UNPR"</span>: <span class="st">"0"</span>,  <span class="co"># 주문 단가 (시장가의 경우 0)</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>headers <span class="op">=</span> {</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Content-Type"</span>: <span class="st">"application/json"</span>,</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">"authorization"</span>: <span class="ss">f"Bearer </span><span class="sc">{</span>access_token<span class="sc">}</span><span class="ss">"</span>,</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">"appKey"</span>: app_key,</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">"appSecret"</span>: app_secret,</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">"tr_id"</span>: <span class="st">"VTTC0802U"</span>,</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">"custtype"</span>: <span class="st">"P"</span>,</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">"hashkey"</span>: hashkey(data)</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>res <span class="op">=</span> requests.post(url, headers<span class="op">=</span>headers, data<span class="op">=</span>json.dumps(data))</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>res.json()</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><img src="images/result_1.png" class="img-fluid"></p>
+<ol type="1">
+<li>URL을 만든다.</li>
+<li>data 부분에 LAYOUT에서 Body에 해당하는 값을 입력한다. ’ORD_DVSN’는 주문 방법이며 ’01’은 시장가 주문에 해당하는 코드다. ’ORD_UNPR’는 주문 단가로써 시장가 주문의 경우에는 0을 입력한다.</li>
+<li>headers 부분도 채워주도록 한다. 모의투자의 ‘주식 현금 매수 주문’에 해당하는 tr_id는 ’VTTC0802U’이다. 또한 주문의 경우 보안이 필요한 사항이므로, 위에서 입력한 data를 바탕으로 해쉬키를 발급받아 ’hashkey’ 부분에 입력한다. 이는 위에서 만들어 둔 hashkey() 함수를 사용하면 쉽게 적용이 가능하다.</li>
+<li>post() 함수를 통해 요청을 하면 주문이 전송된다.</li>
+</ol>
+<p>HTS를 확인해보면 삼성전자 10주가 매수되어 있다.</p>
+<p><img src="images/mock_buy.png" class="img-fluid"></p>
+<section id="매도-주문" class="level2">
+<h2 class="anchored" data-anchor-id="매도-주문">매도 주문</h2>
+<p>매도 주문의 경우 매수 주문과 거의 동일하며, ‘tr_id’ 부분만 변경해주면 된다. 삼성전자 10주를 시장가로 매도해보자.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>path <span class="op">=</span> <span class="st">"/uapi/domestic-stock/v1/trading/order-cash"</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>url_base<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>path<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> {</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"CANO"</span>: <span class="st">"50068923"</span>,  <span class="co"># 계좌번호 앞 8지리</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ACNT_PRDT_CD"</span>: <span class="st">"01"</span>,  <span class="co"># 계좌번호 뒤 2자리</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"PDNO"</span>: <span class="st">"005930"</span>,  <span class="co"># 종목코드</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ORD_DVSN"</span>: <span class="st">"01"</span>,  <span class="co"># 주문 방법</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ORD_QTY"</span>: <span class="st">"10"</span>,  <span class="co"># 주문 수량</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ORD_UNPR"</span>: <span class="st">"0"</span>,  <span class="co"># 주문 단가 (시장가의 경우 0)</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>headers <span class="op">=</span> {</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Content-Type"</span>: <span class="st">"application/json"</span>,</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">"authorization"</span>: <span class="ss">f"Bearer </span><span class="sc">{</span>access_token<span class="sc">}</span><span class="ss">"</span>,</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">"appKey"</span>: app_key,</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">"appSecret"</span>: app_secret,</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">"tr_id"</span>: <span class="st">"VTTC0801U"</span>,</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">"custtype"</span>: <span class="st">"P"</span>,</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">"hashkey"</span>: hashkey(data)</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>res <span class="op">=</span> requests.post(url, headers<span class="op">=</span>headers, data<span class="op">=</span>json.dumps(data))</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>’tr_id’만 모의투자의 현금 매도에 해당하는 ’VTTC0801U’로 변경하였으며, 나머지는 현금 매수와 동일하다.</p>
+<p><img src="images/mock_4.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="주식-잔고조회" class="level1">
+<h1>주식 잔고조회</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>path <span class="op">=</span> <span class="st">"/uapi/domestic-stock/v1/trading/inquire-balance"</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>url_base<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>path<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>headers <span class="op">=</span> {</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Content-Type"</span>: <span class="st">"application/json"</span>,</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"authorization"</span>: <span class="ss">f"Bearer </span><span class="sc">{</span>access_token<span class="sc">}</span><span class="ss">"</span>,</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"appKey"</span>: app_key,</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"appSecret"</span>: app_secret,</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"tr_id"</span>: <span class="st">"VTTC8434R"</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>params <span class="op">=</span> {</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">"CANO"</span>: <span class="st">"50068923"</span>,  <span class="co"># 계좌번호 앞 8지리</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ACNT_PRDT_CD"</span>: <span class="st">"01"</span>,  <span class="co"># 계좌번호 뒤 2자리</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">"AFHR_FLPR_YN"</span>: <span class="st">"N"</span>,  <span class="co"># 시간외단일가여부</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">"OFL_YN"</span>: <span class="st">""</span>,  <span class="co"># 공란</span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">"INQR_DVSN"</span>: <span class="st">"01"</span>,  <span class="co"># 조회구분</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">"UNPR_DVSN"</span>: <span class="st">"01"</span>,  <span class="co"># 단가구분</span></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">"FUND_STTL_ICLD_YN"</span>: <span class="st">"N"</span>,  <span class="co"># 펀드결제분포함여부</span></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">"FNCG_AMT_AUTO_RDPT_YN"</span>: <span class="st">"N"</span>,  <span class="co"># 융자금액자동상환여부        </span></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>    <span class="st">"PRCS_DVSN"</span>: <span class="st">"00"</span>,  <span class="co"># 처리구분(00: 전일매매포함)</span></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>    <span class="st">"CTX_AREA_FK100"</span>: <span class="st">""</span>,  <span class="co"># 연속조회검색조건</span></span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>    <span class="st">"CTX_AREA_NK100"</span>: <span class="st">""</span>  <span class="co"># 연속조회키</span></span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>res <span class="op">=</span> requests.get(url, headers<span class="op">=</span>headers, params<span class="op">=</span>params)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol type="1">
+<li>URL을 만든다.</li>
+<li>headers와 params 부분에 해당하는 값을 채운다.</li>
+<li>get() 함수를 통해 데이터를 요청한다.</li>
+</ol>
+<p>결과를 살펴보면 [‘output1’]에는 보유 종목에 대한 정보가, [‘output2’]에는 계좌잔고 정보가 들어있다. 먼저 보유 종목 정보를 살펴보자.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">res.json</span>()[<span class="st">'output1'</span>]</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><img src="images/result_5.png" class="img-fluid"></p>
+<p>from_records() 함수를 이용하면 JSON 형태를 데이터프레임 형태로 변경할 수 있다. 모의투자에서 잔고조회 API는 한번에 20종목까지 조회가 가능하며, 이후의 값은 연속조회를 통해 확인할 수 있다.</p>
+<p>이번에는 계좌잔고를 확인해도록 하자.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">res.json</span>()[<span class="st">'output2'</span>]</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><img src="images/result_6.png" class="img-fluid"></p>
+<p>예수금총금액, 전일/금일 매수금액, 전일/금일 매도금액 등 잔고에 대한 정보가 들어있다.</p>
+</section>
+<section id="스케줄링" class="level1">
+<h1>스케줄링</h1>
+<p>포트폴리오를 교체하는 리밸런싱 작업은 몇 시간 혹은 몇 일에 걸쳐 나누어 해야, 시장에 충격을 주지 않으면서 내가 원하는 만큼 매매를 할 수 있다. 이를 위해서는 정해진 시간에 정해진 수량을 매수 혹은 매도하도록 계획을 짠 뒤 실행하는 ‘스케줄링’에 대해 알 필요가 있다. 스케줄링이란 정해진 시간에 파이썬 스크립트를 자동으로 실행하게 해주며, 일반적으로 ’schedule’ 패키지를 이용한다. 먼저 간단한 예제를 살펴보자.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>import datetime</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>def <span class="fu">job</span>()<span class="sc">:</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">datetime.datetime.now</span>()<span class="fu">.strftime</span>(<span class="st">'%H:%M:%S'</span>))    </span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">"====================="</span>)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>위의 job() 함수는 현재 시간을 출력해준다. 이제 schedule 패키지를 이용해 위의 함수가 매 3초마다 실행되게 지정하자.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>import schedule</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">schedule.every</span>(<span class="dv">3</span>)<span class="fu">.seconds.do</span>(job)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<pre><code>[Every 3 seconds do job() (last run: [never], next run: 2022-08-05 18:18:12)]</code></pre>
+<p>schedule.get_jobs()를 입력하면 현재 등록된 스케줄을 모두 출력한다. 이제 해당 함수를 실행해보도록 하자.</p>
+<div class="cell">
+<pre class="eval cell-code"><code>while True:
+    schedule.run_pending()</code></pre>
+</div>
+<p><img src="images/schedule.png" class="img-fluid"></p>
+<p>schedule.run_pending()을 실행하면 스케줄에 등록된 작업이 실행되며, while 문을 통해 해당 코드가 계속 실행되게 한다. 즉 매 3초마다 현재시간을 출력하는 job() 함수가 실행되어 결과가 출력된다. 작업을 멈추기 위해서는 우측 상단의 붉은색 네모를 클릭하면 된다.</p>
+<p>현재 등록된 스케줄을 삭제하는 법은 다음과 같다.</p>
+<ul>
+<li>schedule.clear_job(job): 특정 스케줄 삭제</li>
+<li>schedule.clear() 모든 스케줄 삭제</li>
+</ul>
+<section id="시간-지정하기" class="level2">
+<h2 class="anchored" data-anchor-id="시간-지정하기">시간 지정하기</h2>
+<p>이번에는 작업이 실행될 시간과 종료할 시간을 직접 지정해보도록 하자.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datetime <span class="im">import</span> timedelta</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>schedule.clear()</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>startDt <span class="op">=</span> datetime.datetime.now() <span class="op">+</span> timedelta(seconds<span class="op">=</span><span class="dv">60</span>)</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>endDt <span class="op">=</span> datetime.datetime.now() <span class="op">+</span> timedelta(seconds<span class="op">=</span><span class="dv">80</span>)</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>time_list <span class="op">=</span> pd.date_range(startDt, endDt, periods<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(time_list)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<pre><code>DatetimeIndex(['2022-08-05 18:19:10.340281', '2022-08-05 18:19:15.340281',
+               '2022-08-05 18:19:20.340281', '2022-08-05 18:19:25.340281',
+               '2022-08-05 18:19:30.340281'],
+              dtype='datetime64[ns]', freq=None)</code></pre>
+<ol type="1">
+<li>schedule.clear() 함수를 통해 기존에 저장된 스케줄을 삭제한다.</li>
+<li>startDt에는 현재 시간에서 60초를 더한다.</li>
+<li>endDt에는 현재 시간에서 90초를 더한다.</li>
+<li>date_range 함수를 통해 startDt와 endDt를 10개 구간으로 나눈다.</li>
+</ol>
+<p>위 결과를 스케줄러 등록에 필요한 ‘시:분:초’ 형태로 변형하자.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>time_list_sec <span class="ot">=</span> [<span class="fu">i.strftime</span>(<span class="st">'%H:%M:%S'</span>) <span class="cf">for</span> i <span class="cf">in</span> time_list]</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>time_list_sec</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<pre><code>['18:19:10', '18:19:15', '18:19:20', '18:19:25', '18:19:30']</code></pre>
+<p>이제 위의 시간에 job() 함수를 수행하도록 스케줄을 등록하자.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>[schedule.every().day.at(i).do(job) <span class="cf">for</span> i <span class="kw">in</span> time_list_sec]</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<pre><code>[Every 1 day at 18:19:10 do job() (last run: [never], next run: 2022-08-05 18:19:10),
+ Every 1 day at 18:19:15 do job() (last run: [never], next run: 2022-08-05 18:19:15),
+ Every 1 day at 18:19:20 do job() (last run: [never], next run: 2022-08-05 18:19:20),
+ Every 1 day at 18:19:25 do job() (last run: [never], next run: 2022-08-05 18:19:25),
+ Every 1 day at 18:19:30 do job() (last run: [never], next run: 2022-08-05 18:19:30)]</code></pre>
+<p>schedule.every().day.at(i).do(job) 형태처럼 at 내에 특정 시점을 입력하면 해당 시점에 함수가 실행된다. 이제 결과를 살펴보자.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> True<span class="sc">:</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">schedule.run_pending</span>()</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="fu">datetime.datetime.now</span>() <span class="sc">&gt;</span> endDt<span class="sc">:</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>        <span class="fu">print</span>(<span class="st">'End'</span>)</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>        <span class="fu">schedule.clear</span>()</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span></span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<pre><code>18:19:10
+=====================
+18:19:15
+=====================
+18:19:20
+=====================
+18:19:25
+=====================
+18:19:30
+=====================
+End</code></pre>
+<ol type="1">
+<li>스케줄에 입력된 시간에 현재 시간을 출력하는 함수가 실행된다.</li>
+<li>만일 현재 시간이 ’endDt’를 넘어가면 ’End’를 출력하고 등록된 모든 스케줄을 삭제한다. 그 후 break를 통해 while문이 멈춘다.</li>
+</ol>
+<p>이러한 스케줄링을 활용하면 정해진 시간에 정해진 주식을 자동으로 매매할 수도 있다.</p>
+</section>
+</section>
+<section id="포트폴리오-리밸런싱" class="level1">
+<h1>포트폴리오 리밸런싱</h1>
+<p>앞서 배웠던 내용들을 응용해, 포트폴리오를 구성한 뒤 이를 매수하거나 다른 포트폴리오로 리밸런싱하는 작업을 해보도록 하자. 거래하는 종목이나 금액이 얼마 되지 않을때는 지정가 주문 혹은 시장가 주문으로도 체결이 가능하다. 그러나 종목수가 많고 금액이 커진다면 이러한 방법으로는 체결이 힘들다. 큰 금액을 한 번에 시장가로 주문하면 불리한 가격에 체결될 수 있고, 지정가로 주문하면 체결이 안될 가능성이 크기 때문이다. 그렇다고 하루 종일 수십 종목에 대해 계속해서 정정 주문을 내는 것도 현실적으로 불가능하다.</p>
+<p>따라서 전문투자자들은 리밸런싱 작업을 할 때 종종 시분할 매매(TWAP, Time Weighted Average Price)를 사용한다. 국내에서는 흔히 CD(Careful Discretion) 주문이라고도 한다. 즉 1,000 주를 매수해야 하면 주문 시간을 여러개로 나누어 조금씩 매수를 하는 것이다. 물량이 너무 많을 경우 몇 일에 걸쳐 나누어 주문을 체결을 하기도 한다. 이를 통해 한 번에 주문을 냄으로 인해 발생할 수 있는 시장충격을 최소화할 수 있으며, 미체결될 확률도 줄일 수 있다.</p>
+<p>본 책에서는 시간을 나누어 1주 단위로 최유리지정가 주문으로 내는 방법에 대해 실습해보도록 하겠다. 주문이 계속해서 1주 단위로 나가므로 대부분 체결이 가능하며, 시장에 미치는 영향도 거의 없다. 또한 매매시간은 9시 10분부터 3시까지 하도록 한다. 9시부터 초반 10분간은 기관투자자들의 프로그램매매로 인해 가격 변동성이 크고 물량도 잘 없어, 불리한 가격에 체결될 확률이 높기 때문이다. 또한 3시에는 주문을 마감해야 남은 시간동안 미체결 물량 및 T+2 예수금 상황 등을 고려해 정리 작업을 할 수 있다.</p>
+<section id="포트폴리오-매수" class="level2">
+<h2 class="anchored" data-anchor-id="포트폴리오-매수">포트폴리오 매수</h2>
+<p>먼저 모의계좌에서 국내 대형주 10개로 구성된 포트폴리오를 시분할로 매수해보도록 하자.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>import requests</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>import json</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>import keyring</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>import pandas as pd</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>import time</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>import numpy as np</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>import datetime</span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>from datetime import timedelta</span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>import schedule</span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a><span class="co"># API Key</span></span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>app_key <span class="ot">=</span> <span class="fu">keyring.get_password</span>(<span class="st">'mock_app_key'</span>, <span class="st">'Henry'</span>)</span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>app_secret <span class="ot">=</span> <span class="fu">keyring.get_password</span>(<span class="st">'mock_app_secret'</span>, <span class="st">'Henry'</span>)</span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a><span class="co"># 접근토큰 발급</span></span>
+<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a>url_base <span class="ot">=</span> <span class="st">"https://openapivts.koreainvestment.com:29443"</span>  <span class="co"># 모의투자</span></span>
+<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a>headers <span class="ot">=</span> {<span class="st">"content-type"</span><span class="sc">:</span> <span class="st">"application/json"</span>}</span>
+<span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a>path <span class="ot">=</span> <span class="st">"oauth2/tokenP"</span></span>
+<span id="cb24-20"><a href="#cb24-20" aria-hidden="true" tabindex="-1"></a>body <span class="ot">=</span> {</span>
+<span id="cb24-21"><a href="#cb24-21" aria-hidden="true" tabindex="-1"></a>    <span class="st">"grant_type"</span><span class="sc">:</span> <span class="st">"client_credentials"</span>,</span>
+<span id="cb24-22"><a href="#cb24-22" aria-hidden="true" tabindex="-1"></a>    <span class="st">"appkey"</span><span class="sc">:</span> app_key,</span>
+<span id="cb24-23"><a href="#cb24-23" aria-hidden="true" tabindex="-1"></a>    <span class="st">"appsecret"</span><span class="sc">:</span> app_secret</span>
+<span id="cb24-24"><a href="#cb24-24" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb24-25"><a href="#cb24-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-26"><a href="#cb24-26" aria-hidden="true" tabindex="-1"></a>url <span class="ot">=</span> f<span class="st">"{url_base}/{path}"</span></span>
+<span id="cb24-27"><a href="#cb24-27" aria-hidden="true" tabindex="-1"></a>res <span class="ot">=</span> <span class="fu">requests.post</span>(url, <span class="at">headers=</span>headers, <span class="at">data=</span><span class="fu">json.dumps</span>(body))</span>
+<span id="cb24-28"><a href="#cb24-28" aria-hidden="true" tabindex="-1"></a>access_token <span class="ot">=</span> <span class="fu">res.json</span>()[<span class="st">'access_token'</span>]</span>
+<span id="cb24-29"><a href="#cb24-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-30"><a href="#cb24-30" aria-hidden="true" tabindex="-1"></a><span class="co"># 해시키 발급</span></span>
+<span id="cb24-31"><a href="#cb24-31" aria-hidden="true" tabindex="-1"></a>def <span class="fu">hashkey</span>(datas)<span class="sc">:</span></span>
+<span id="cb24-32"><a href="#cb24-32" aria-hidden="true" tabindex="-1"></a>    path <span class="ot">=</span> <span class="st">"uapi/hashkey"</span></span>
+<span id="cb24-33"><a href="#cb24-33" aria-hidden="true" tabindex="-1"></a>    url <span class="ot">=</span> f<span class="st">"{url_base}/{path}"</span></span>
+<span id="cb24-34"><a href="#cb24-34" aria-hidden="true" tabindex="-1"></a>    headers <span class="ot">=</span> {</span>
+<span id="cb24-35"><a href="#cb24-35" aria-hidden="true" tabindex="-1"></a>        <span class="st">'content-Type'</span><span class="sc">:</span> <span class="st">'application/json'</span>,</span>
+<span id="cb24-36"><a href="#cb24-36" aria-hidden="true" tabindex="-1"></a>        <span class="st">'appKey'</span><span class="sc">:</span> app_key,</span>
+<span id="cb24-37"><a href="#cb24-37" aria-hidden="true" tabindex="-1"></a>        <span class="st">'appSecret'</span><span class="sc">:</span> app_secret,</span>
+<span id="cb24-38"><a href="#cb24-38" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb24-39"><a href="#cb24-39" aria-hidden="true" tabindex="-1"></a>    res <span class="ot">=</span> <span class="fu">requests.post</span>(url, <span class="at">headers=</span>headers, <span class="at">data=</span><span class="fu">json.dumps</span>(datas))</span>
+<span id="cb24-40"><a href="#cb24-40" aria-hidden="true" tabindex="-1"></a>    hashkey <span class="ot">=</span> <span class="fu">res.json</span>()[<span class="st">"HASH"</span>]</span>
+<span id="cb24-41"><a href="#cb24-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-42"><a href="#cb24-42" aria-hidden="true" tabindex="-1"></a>    return hashkey</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol type="1">
+<li>모의투자에 해당하는 API Key를 불러온다.</li>
+<li>접근토큰을 발급 받는다.</li>
+<li>해쉬키를 발급받는 함수를 만든다.</li>
+</ol>
+<p>다음으로 각종 조회 및 체결 함수를 만들도록 하자.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 현재가 구하기</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>def <span class="fu">get_price</span>(ticker)<span class="sc">:</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>    path <span class="ot">=</span> <span class="st">"uapi/domestic-stock/v1/quotations/inquire-price"</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>    url <span class="ot">=</span> f<span class="st">"{url_base}/{path}"</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>    headers <span class="ot">=</span> {</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Content-Type"</span><span class="sc">:</span> <span class="st">"application/json"</span>,</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>        <span class="st">"authorization"</span><span class="sc">:</span> f<span class="st">"Bearer {access_token}"</span>,</span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>        <span class="st">"appKey"</span><span class="sc">:</span> app_key,</span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>        <span class="st">"appSecret"</span><span class="sc">:</span> app_secret,</span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>        <span class="st">"tr_id"</span><span class="sc">:</span> <span class="st">"FHKST01010100"</span></span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>    params <span class="ot">=</span> {<span class="st">"fid_cond_mrkt_div_code"</span><span class="sc">:</span> <span class="st">"J"</span>, <span class="st">"fid_input_iscd"</span><span class="sc">:</span> ticker}</span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a>    res <span class="ot">=</span> <span class="fu">requests.get</span>(url, <span class="at">headers=</span>headers, <span class="at">params=</span>params)</span>
+<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a>    price <span class="ot">=</span> <span class="fu">res.json</span>()[<span class="st">'output'</span>][<span class="st">'stck_prpr'</span>]</span>
+<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a>    price <span class="ot">=</span> <span class="fu">int</span>(price)</span>
+<span id="cb25-19"><a href="#cb25-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">time.sleep</span>(<span class="fl">0.1</span>)</span>
+<span id="cb25-20"><a href="#cb25-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-21"><a href="#cb25-21" aria-hidden="true" tabindex="-1"></a>    return price</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>종목코드에 해당하는 ticker를 입력하면 현재가를 출력하는 함수를 만든다. 또한 API는 초당 10건까지 요청할 수 있으므로, 연속조회를 위해 0.1초의 정지를 준다.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 주문</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>def <span class="fu">trading</span>(ticker, tr_id)<span class="sc">:</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>    path <span class="ot">=</span> <span class="st">"/uapi/domestic-stock/v1/trading/order-cash"</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>    url <span class="ot">=</span> f<span class="st">"{url_base}/{path}"</span></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>    data <span class="ot">=</span> {</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>        <span class="st">"CANO"</span><span class="sc">:</span> <span class="st">"50068923"</span>, <span class="co"># 계좌번호 앞 8지리</span></span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>        <span class="st">"ACNT_PRDT_CD"</span><span class="sc">:</span> <span class="st">"01"</span>,</span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>        <span class="st">"PDNO"</span><span class="sc">:</span> ticker,</span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>        <span class="st">"ORD_DVSN"</span><span class="sc">:</span> <span class="st">"03"</span>,</span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>        <span class="st">"ORD_QTY"</span><span class="sc">:</span> <span class="st">"1"</span>,</span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>        <span class="st">"ORD_UNPR"</span><span class="sc">:</span> <span class="st">"0"</span>,</span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a>    headers <span class="ot">=</span> {</span>
+<span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Content-Type"</span><span class="sc">:</span> <span class="st">"application/json"</span>,</span>
+<span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a>        <span class="st">"authorization"</span><span class="sc">:</span> f<span class="st">"Bearer {access_token}"</span>,</span>
+<span id="cb26-19"><a href="#cb26-19" aria-hidden="true" tabindex="-1"></a>        <span class="st">"appKey"</span><span class="sc">:</span> app_key,</span>
+<span id="cb26-20"><a href="#cb26-20" aria-hidden="true" tabindex="-1"></a>        <span class="st">"appSecret"</span><span class="sc">:</span> app_secret,</span>
+<span id="cb26-21"><a href="#cb26-21" aria-hidden="true" tabindex="-1"></a>        <span class="st">"tr_id"</span><span class="sc">:</span> tr_id,</span>
+<span id="cb26-22"><a href="#cb26-22" aria-hidden="true" tabindex="-1"></a>        <span class="st">"custtype"</span><span class="sc">:</span> <span class="st">"P"</span>,</span>
+<span id="cb26-23"><a href="#cb26-23" aria-hidden="true" tabindex="-1"></a>        <span class="st">"hashkey"</span><span class="sc">:</span> <span class="fu">hashkey</span>(data)</span>
+<span id="cb26-24"><a href="#cb26-24" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb26-25"><a href="#cb26-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-26"><a href="#cb26-26" aria-hidden="true" tabindex="-1"></a>    res <span class="ot">=</span> <span class="fu">requests.post</span>(url, <span class="at">headers=</span>headers, <span class="at">data=</span><span class="fu">json.dumps</span>(data)) </span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>주문을 내는 함수를 만든다. 종목코드에 해당하는 ticker와 매수/매도 구분에 해당하는 tr_id를 입력하면, 해당 종목을 최유리 지정가(ORD_DVSN)로 한 주씩(ORD_QTY) 주문을 낸다.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 계좌 잔고 조회</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>def <span class="fu">check_account</span>()<span class="sc">:</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>    output1 <span class="ot">=</span> []</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>    output2 <span class="ot">=</span> []</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>    CTX_AREA_NK100 <span class="ot">=</span> <span class="st">''</span></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> True<span class="sc">:</span></span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a>        path <span class="ot">=</span> <span class="st">"/uapi/domestic-stock/v1/trading/inquire-balance"</span></span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a>        url <span class="ot">=</span> f<span class="st">"{url_base}/{path}"</span></span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a>        headers <span class="ot">=</span> {</span>
+<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Content-Type"</span><span class="sc">:</span> <span class="st">"application/json"</span>,</span>
+<span id="cb27-15"><a href="#cb27-15" aria-hidden="true" tabindex="-1"></a>            <span class="st">"authorization"</span><span class="sc">:</span> f<span class="st">"Bearer {access_token}"</span>,</span>
+<span id="cb27-16"><a href="#cb27-16" aria-hidden="true" tabindex="-1"></a>            <span class="st">"appKey"</span><span class="sc">:</span> app_key,</span>
+<span id="cb27-17"><a href="#cb27-17" aria-hidden="true" tabindex="-1"></a>            <span class="st">"appSecret"</span><span class="sc">:</span> app_secret,</span>
+<span id="cb27-18"><a href="#cb27-18" aria-hidden="true" tabindex="-1"></a>            <span class="st">"tr_id"</span><span class="sc">:</span> <span class="st">"VTTC8434R"</span></span>
+<span id="cb27-19"><a href="#cb27-19" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb27-20"><a href="#cb27-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-21"><a href="#cb27-21" aria-hidden="true" tabindex="-1"></a>        params <span class="ot">=</span> {</span>
+<span id="cb27-22"><a href="#cb27-22" aria-hidden="true" tabindex="-1"></a>            <span class="st">"CANO"</span><span class="sc">:</span> <span class="st">"50068923"</span>, <span class="co"># 계좌번호 앞 8지리</span></span>
+<span id="cb27-23"><a href="#cb27-23" aria-hidden="true" tabindex="-1"></a>            <span class="st">"ACNT_PRDT_CD"</span><span class="sc">:</span> <span class="st">"01"</span>,</span>
+<span id="cb27-24"><a href="#cb27-24" aria-hidden="true" tabindex="-1"></a>            <span class="st">"AFHR_FLPR_YN"</span><span class="sc">:</span> <span class="st">"N"</span>,</span>
+<span id="cb27-25"><a href="#cb27-25" aria-hidden="true" tabindex="-1"></a>            <span class="st">"UNPR_DVSN"</span><span class="sc">:</span> <span class="st">"01"</span>,</span>
+<span id="cb27-26"><a href="#cb27-26" aria-hidden="true" tabindex="-1"></a>            <span class="st">"FUND_STTL_ICLD_YN"</span><span class="sc">:</span> <span class="st">"N"</span>,</span>
+<span id="cb27-27"><a href="#cb27-27" aria-hidden="true" tabindex="-1"></a>            <span class="st">"FNCG_AMT_AUTO_RDPT_YN"</span><span class="sc">:</span> <span class="st">"N"</span>,</span>
+<span id="cb27-28"><a href="#cb27-28" aria-hidden="true" tabindex="-1"></a>            <span class="st">"OFL_YN"</span><span class="sc">:</span> <span class="st">""</span>,</span>
+<span id="cb27-29"><a href="#cb27-29" aria-hidden="true" tabindex="-1"></a>            <span class="st">"INQR_DVSN"</span><span class="sc">:</span> <span class="st">"01"</span>,</span>
+<span id="cb27-30"><a href="#cb27-30" aria-hidden="true" tabindex="-1"></a>            <span class="st">"PRCS_DVSN"</span><span class="sc">:</span> <span class="st">"00"</span>,</span>
+<span id="cb27-31"><a href="#cb27-31" aria-hidden="true" tabindex="-1"></a>            <span class="st">"CTX_AREA_FK100"</span><span class="sc">:</span> <span class="st">''</span>,</span>
+<span id="cb27-32"><a href="#cb27-32" aria-hidden="true" tabindex="-1"></a>            <span class="st">"CTX_AREA_NK100"</span><span class="sc">:</span> CTX_AREA_NK100</span>
+<span id="cb27-33"><a href="#cb27-33" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb27-34"><a href="#cb27-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-35"><a href="#cb27-35" aria-hidden="true" tabindex="-1"></a>        res <span class="ot">=</span> <span class="fu">requests.get</span>(url, <span class="at">headers=</span>headers, <span class="at">params=</span>params)</span>
+<span id="cb27-36"><a href="#cb27-36" aria-hidden="true" tabindex="-1"></a>        <span class="fu">output1.append</span>(<span class="fu">pd.DataFrame.from_records</span>(<span class="fu">res.json</span>()[<span class="st">'output1'</span>]))</span>
+<span id="cb27-37"><a href="#cb27-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-38"><a href="#cb27-38" aria-hidden="true" tabindex="-1"></a>        CTX_AREA_NK100 <span class="ot">=</span> <span class="fu">res.json</span>()[<span class="st">'ctx_area_nk100'</span>]<span class="fu">.strip</span>()</span>
+<span id="cb27-39"><a href="#cb27-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-40"><a href="#cb27-40" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> CTX_AREA_NK100 <span class="sc">==</span> <span class="st">''</span><span class="sc">:</span></span>
+<span id="cb27-41"><a href="#cb27-41" aria-hidden="true" tabindex="-1"></a>            <span class="fu">output2.append</span>(<span class="fu">res.json</span>()[<span class="st">'output2'</span>][<span class="dv">0</span>])</span>
+<span id="cb27-42"><a href="#cb27-42" aria-hidden="true" tabindex="-1"></a>            <span class="cf">break</span></span>
+<span id="cb27-43"><a href="#cb27-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-44"><a href="#cb27-44" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> not output1[<span class="dv">0</span>].empty<span class="sc">:</span></span>
+<span id="cb27-45"><a href="#cb27-45" aria-hidden="true" tabindex="-1"></a>        res1 <span class="ot">=</span> <span class="fu">pd.concat</span>(output1)[[<span class="st">'pdno'</span>,</span>
+<span id="cb27-46"><a href="#cb27-46" aria-hidden="true" tabindex="-1"></a>                                   <span class="st">'hldg_qty'</span>]]<span class="fu">.rename</span>(<span class="at">columns=</span>{</span>
+<span id="cb27-47"><a href="#cb27-47" aria-hidden="true" tabindex="-1"></a>                                       <span class="st">'pdno'</span><span class="sc">:</span> <span class="st">'종목코드'</span>,</span>
+<span id="cb27-48"><a href="#cb27-48" aria-hidden="true" tabindex="-1"></a>                                       <span class="st">'hldg_qty'</span><span class="sc">:</span> <span class="st">'보유수량'</span></span>
+<span id="cb27-49"><a href="#cb27-49" aria-hidden="true" tabindex="-1"></a>                                   })<span class="fu">.reset_index</span>(<span class="at">drop=</span>True)</span>
+<span id="cb27-50"><a href="#cb27-50" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span><span class="sc">:</span></span>
+<span id="cb27-51"><a href="#cb27-51" aria-hidden="true" tabindex="-1"></a>        res1 <span class="ot">=</span> <span class="fu">pd.DataFrame</span>(<span class="at">columns=</span>[<span class="st">'종목코드'</span>, <span class="st">'보유수량'</span>])</span>
+<span id="cb27-52"><a href="#cb27-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-53"><a href="#cb27-53" aria-hidden="true" tabindex="-1"></a>    res2 <span class="ot">=</span> output2[<span class="dv">0</span>]</span>
+<span id="cb27-54"><a href="#cb27-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-55"><a href="#cb27-55" aria-hidden="true" tabindex="-1"></a>    return [res1, res2]</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>계좌의 보유종목 및 계좌잔고 항목을 조회하는 함수를 만든다. 이전에 설명했듯이 잔고조회 API는 모의투자에서는 한번에 20종목까지, 실제계좌에서는 50종목까지 조회가 가능하다. 따라서 종목수가 이보다 더 많을 경우에는 연속조회를 통해 확인해야 한다. 연속조회 값이 없을 경우 res.json()[‘ctx_area_nk100’] 값은 ‘’이지만, 그 이상일 경우에는 연속조회를 시작해야하는 티커가 반환된다. 이를 이용해 해당 값이’‘가 나올때까지 while문을 이용해 연속조회를 한다. 또한 보유종목에서는 ’종목코드’와 ’보유수량’ 열만 선택하며, 만일 보유종목이 없는 경우에는 빈 데이터프레임을 입력한다. res2에는 계좌잔고를 입력한다.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>ap, account <span class="ot">=</span> <span class="fu">check_account</span>()</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>위 코드를 실행하면 보유종목에 해당하는 res1은 ap 변수에, 계좌잔고에 해당하는 res2는 account 변수에 각각 입력된다. 이제 각 종목 당 몇주를 사야하는지 수량을 계산하자.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 모델 포트폴리오</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>mp <span class="ot">=</span> <span class="fu">pd.DataFrame</span>({</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'종목코드'</span><span class="sc">:</span> [</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>        <span class="st">'005930'</span>,  <span class="co"># 삼성전자</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>        <span class="st">'373220'</span>,  <span class="co"># LG에너지솔루션</span></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>        <span class="st">'000660'</span>,  <span class="co"># SK하이닉스</span></span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>        <span class="st">'207940'</span>,  <span class="co"># 삼성바이오로직스</span></span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>        <span class="st">'051910'</span>,  <span class="co"># LG화학</span></span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>        <span class="st">'035420'</span>,  <span class="co"># NAVER</span></span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>        <span class="st">'005380'</span>,  <span class="co"># 현대차</span></span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a>        <span class="st">'006400'</span>,  <span class="co"># 삼성SDI,</span></span>
+<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a>        <span class="st">'035720'</span>,  <span class="co"># 카카오</span></span>
+<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a>        <span class="st">'105560'</span>,  <span class="co">#KB금융</span></span>
+<span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb29-15"><a href="#cb29-15" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb29-16"><a href="#cb29-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-17"><a href="#cb29-17" aria-hidden="true" tabindex="-1"></a><span class="co"># 주당 투자 금액</span></span>
+<span id="cb29-18"><a href="#cb29-18" aria-hidden="true" tabindex="-1"></a>invest_per_stock <span class="ot">=</span> <span class="fu">int</span>(account[<span class="st">'tot_evlu_amt'</span>]) <span class="sc">*</span> <span class="fl">0.98</span> <span class="sc">/</span> <span class="fu">len</span>(mp)</span>
+<span id="cb29-19"><a href="#cb29-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-20"><a href="#cb29-20" aria-hidden="true" tabindex="-1"></a><span class="co"># 매매 구성</span></span>
+<span id="cb29-21"><a href="#cb29-21" aria-hidden="true" tabindex="-1"></a>target <span class="ot">=</span> <span class="fu">mp.merge</span>(ap, <span class="at">on=</span><span class="st">'종목코드'</span>, <span class="at">how=</span><span class="st">'outer'</span>)</span>
+<span id="cb29-22"><a href="#cb29-22" aria-hidden="true" tabindex="-1"></a>target[<span class="st">'보유수량'</span>] <span class="ot">=</span> target[<span class="st">'보유수량'</span>]<span class="fu">.fillna</span>(<span class="dv">0</span>)<span class="fu">.apply</span>(pd.to_numeric)</span>
+<span id="cb29-23"><a href="#cb29-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-24"><a href="#cb29-24" aria-hidden="true" tabindex="-1"></a><span class="co"># 현재가 확인</span></span>
+<span id="cb29-25"><a href="#cb29-25" aria-hidden="true" tabindex="-1"></a>target[<span class="st">'현재가'</span>] <span class="ot">=</span> <span class="fu">target.apply</span>(lambda x<span class="sc">:</span> <span class="fu">get_price</span>(x.종목코드), <span class="at">axis=</span><span class="dv">1</span>)</span>
+<span id="cb29-26"><a href="#cb29-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-27"><a href="#cb29-27" aria-hidden="true" tabindex="-1"></a><span class="co"># 목표수량 및 투자수량 입력</span></span>
+<span id="cb29-28"><a href="#cb29-28" aria-hidden="true" tabindex="-1"></a>target[<span class="st">'목표수량'</span>] <span class="ot">=</span> <span class="fu">np.where</span>(target[<span class="st">'종목코드'</span>]<span class="fu">.isin</span>(mp[<span class="st">'종목코드'</span>]<span class="fu">.tolist</span>()),</span>
+<span id="cb29-29"><a href="#cb29-29" aria-hidden="true" tabindex="-1"></a>                          <span class="fu">round</span>(invest_per_stock <span class="sc">/</span> target[<span class="st">'현재가'</span>]), <span class="dv">0</span>)</span>
+<span id="cb29-30"><a href="#cb29-30" aria-hidden="true" tabindex="-1"></a>target[<span class="st">'투자수량'</span>] <span class="ot">=</span> target[<span class="st">'목표수량'</span>] <span class="sc">-</span> target[<span class="st">'보유수량'</span>]</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol type="1">
+<li>먼저 국내 대형주 10종목(모델 포트폴리오)의 티커를 데이터프레임(mp) 형태로 만든다.</li>
+<li>주당 투자 금액을 계산한다. 계좌잔고에서 총평가금액 항목을 가져온 후 int() 함수를 통해 숫자형태로 변경한다. 만일 총평가금액을 100% 투자할 경우, 리밸런싱 과정에서 주가의 등락에 의해 주문금액이 보유금액을 초과하는 일이 벌어질 수도 있으므로 1~5% 정도의 현금은 보유하는 것이 좋다. 즉 총평가금액의 98%만 투자에 이용하며, 이를 모델 포트폴리오의 종목수로 나누어 종목당 투자 금액을 계산한다.</li>
+<li>투자하고자 하는 포트폴리오(mp)와 현재 포트폴리오(ap)를 merge() 함수를 통해 합치며, 모든 종목이 들어가야 하므로 outer 방식으로 합친다.</li>
+<li>mp 중 현재 보유하고 있지 않은 종목은 NA로 표시되므로, 이를 0으로 바꾼다. 그 후 ’보유수량’열의 값을 to_numeric() 함수를 이용해 숫자형태로 변경한다.</li>
+<li>앞서 만든 현재가를 확인하는 get_price() 함수를 이용해 모든 종목의 현재가를 확인한다.</li>
+<li>종목코드가 투자하고자 하는 대상, 즉 모델 포트폴리오에 있는 경우는 ’종목당 투자 금액/현재가’를 통해 종목당 목표수량이 얼마인지 계산한다. 그렇지 않을 경우, 즉 모델 포트폴리오에 존재하지 않아 전량 매도해야 하는 종목은 목표수량에 0을 입력한다.</li>
+<li>목표수량에서 보유수량을 빼 실제로 몇주를 투자해야 하는지 계산한다.</li>
+</ol>
+<p>만들어진 데이터프레임을 확인해보자.</p>
+<p><img src="images/mock_6.png" class="img-fluid"></p>
+<ul>
+<li>종목코드: 투자하고자 하는 종목 및 보유 종목의 티커</li>
+<li>보유수량: 각 종목의 현재 보유수량</li>
+<li>현재가: 각 종목의 현재가</li>
+<li>목표수량: 총평가금액 기준으로 계산된 각 종목의 목표수량</li>
+<li>투자수량: 목표수량에서 보유수량이 빼서 계산된 실제 투자해야되는 수량</li>
+</ul>
+<p>이제 각 종목 별로 시분할 주문을 스케줄에 입력한다.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 시간 분할</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>startDt1 <span class="ot">=</span> <span class="fu">datetime.datetime.now</span>() <span class="sc">+</span> <span class="fu">timedelta</span>(<span class="at">minutes=</span><span class="dv">1</span>)</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>startDt2 <span class="ot">=</span> <span class="fu">datetime.datetime.now</span>()<span class="fu">.replace</span>(<span class="at">hour=</span><span class="dv">9</span>,<span class="at">minute=</span><span class="dv">10</span>,<span class="at">second=</span><span class="dv">0</span>,<span class="at">microsecond=</span><span class="dv">0</span>)</span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>startDt <span class="ot">=</span> <span class="fu">max</span>(startDt1, startDt2)</span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>endDt <span class="ot">=</span> <span class="fu">datetime.datetime.now</span>()<span class="fu">.replace</span>(<span class="at">hour=</span><span class="dv">15</span>,<span class="at">minute=</span><span class="dv">0</span>,<span class="at">second=</span><span class="dv">0</span>,<span class="at">microsecond=</span><span class="dv">0</span>)</span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 스케줄 초기화</span></span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a><span class="fu">schedule.clear</span>()</span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a><span class="co"># 스케줄 등록</span></span>
+<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> t <span class="cf">in</span> <span class="fu">range</span>(target.shape[<span class="dv">0</span>]) <span class="sc">:</span></span>
+<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb30-13"><a href="#cb30-13" aria-hidden="true" tabindex="-1"></a>    n <span class="ot">=</span> target.loc[t, <span class="st">'투자수량'</span>]</span>
+<span id="cb30-14"><a href="#cb30-14" aria-hidden="true" tabindex="-1"></a>    position <span class="ot">=</span> <span class="st">'VTTC0802U'</span> <span class="cf">if</span> n <span class="sc">&gt;</span> <span class="dv">0</span> <span class="cf">else</span> <span class="st">'VTTC0801U'</span></span>
+<span id="cb30-15"><a href="#cb30-15" aria-hidden="true" tabindex="-1"></a>    ticker <span class="ot">=</span> target.loc[t, <span class="st">'종목코드'</span>]    </span>
+<span id="cb30-16"><a href="#cb30-16" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb30-17"><a href="#cb30-17" aria-hidden="true" tabindex="-1"></a>    time_list <span class="ot">=</span> <span class="fu">pd.date_range</span>(startDt, endDt, <span class="at">periods =</span> <span class="fu">abs</span>(n))    </span>
+<span id="cb30-18"><a href="#cb30-18" aria-hidden="true" tabindex="-1"></a>    time_list <span class="ot">=</span> <span class="fu">time_list.round</span>(<span class="at">freq =</span> <span class="st">'s'</span>)<span class="fu">.tolist</span>()    </span>
+<span id="cb30-19"><a href="#cb30-19" aria-hidden="true" tabindex="-1"></a>    time_list_sec <span class="ot">=</span> [<span class="fu">s.strftime</span>(<span class="st">'%H:%M:%S'</span>) <span class="cf">for</span> s <span class="cf">in</span> time_list]                 </span>
+<span id="cb30-20"><a href="#cb30-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-21"><a href="#cb30-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="cf">in</span> time_list_sec<span class="sc">:</span></span>
+<span id="cb30-22"><a href="#cb30-22" aria-hidden="true" tabindex="-1"></a>        <span class="fu">schedule.every</span>()<span class="fu">.day.at</span>(i)<span class="fu">.do</span>(trading, ticker, position)   </span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol type="1">
+<li>시작시간(startDt)은 현재보다 1분 뒤와 9시 10분 중 큰 값을 선택한다. 즉 9시 10분 이전에 코드를 실행하면 9시 10분부터 주문이 나가지만, 장이 시작하고 코드를 실행하면 1분 뒤부터 주문이 나가도록 한다.</li>
+<li>종료시간(endDt)는 오후 3시를 입력한다.</li>
+<li>schedule.clear()를 통해 기존 등록된 스케줄을 모두 삭제한다.</li>
+<li>for문을 통해 전 종목의 시분할 주문을 만든다. 포지션의 경우 만일 투자수량(n)이 0보다 클 경우 매수를 해야하므로 이에 해당하는 tr_id인 ’VTTC0802U’을, 매도의 경우에는 ’VTTC0801U’를 입력한다.</li>
+<li>시작시간부터 종료시간까지 투자수량의 절댓값에 해당하는 만큼 기간을 나눈다. 이 후 ’시:분:초’의 형태로 만든다.</li>
+<li>스케줄러에 등록될 함수에 인자가 들어가는 경우는 do(함수명, 인자1, 인자2, …) 형태로 입력하면 된다.</li>
+</ol>
+<p>schedule.get_jobs()를 통해 확인해보면 모든 종목이 한 주씩 시분할 주문이 나가도록 스케줄이 등록되어 있다. 이제 매매를 시작해보도록 하자.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 스케줄 실행</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> True<span class="sc">:</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">schedule.run_pending</span>()    </span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="fu">datetime.datetime.now</span>() <span class="sc">&gt;</span> endDt <span class="sc">:</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>        <span class="fu">print</span>(<span class="st">'거래가 완료되었습니다.'</span>)        </span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>        <span class="fu">schedule.clear</span>()</span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span></span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol type="1">
+<li>schedule.run_pending() 함수를 통해 스케줄에 등록된 작업을 실행한다.</li>
+<li>만일 현재시간이 3시(endDt) 이후 일 경우에는 스케줄을 모두 지우고 break를 통해 작업을 정지한다.</li>
+</ol>
+<p>매매가 실행되는 동안 파이썬 프로그램은 계속 켜두어야 하며, HTS를 확인해보면 한 주씩 주문이 나가는 것을 확인할 수 있다.</p>
+<p><img src="images/mock_7.png" class="img-fluid"></p>
+<p>3시가 지난 후 계좌를 확인해보면, 포트폴리오 매수가 제대로 진행되었다.</p>
+<p><img src="images/mock_8.png" class="img-fluid"></p>
+</section>
+<section id="포트폴리오-리밸런싱-1" class="level2">
+<h2 class="anchored" data-anchor-id="포트폴리오-리밸런싱-1">포트폴리오 리밸런싱</h2>
+<p>이번에는 매수와 매도를 동시에 하는 리밸런싱 작업을 해보도록 하겠다. 모델 포트폴리오는 ‘멀티팩터 포트폴리오’ 구성을 통해 나온 결과를 사용하겠으며, 나머지 코드는 위와 동일하다.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 모델 포트폴리오</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>mp <span class="ot">=</span> <span class="fu">pd.read_excel</span>(<span class="st">'C:/Users/leebi/Dropbox/My Book/quant_py/model.xlsx'</span>, <span class="at">dtype=</span>str)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>모델 포트폴리오를 토대로 매매수량을 계산해보도록 하자.</p>
+<p><img src="images/rebal_1.png" class="img-fluid"></p>
+<p>새롭게 투자해야 할 종목은 보유수량이 0이며, 총평가금액을 이용해 목표수량과 투자수량이 계산된다. 반면 제외되는 종목은 목표수량이 0이며, 투자수량 만큼 매도를 한다. 이를 토대로 시분할 주문을 스케줄에 입력한다. 9시 10분이 되면 스케줄에 따라 매수와 매도가 동시에 일어나며 리밸런싱 작업이 진행된다.</p>
+<p><img src="images/rebal_2.png" class="img-fluid"></p>
+<p>이번에도 3시가 지난 후 계좌를 확인해보면, 포트폴리오 리밸런싱 작업이 진행되어 기존 종목은 모두 매도되고 모델 포트폴리오에 해당하는 종목은 매수가 되었다.</p>
+<p><img src="images/rebal_3.png" class="img-fluid"></p>
+<p>마지막으로 목표수량과 실제수량이 차이가 없는지 확인해보도록 하자.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>ap_after, account_after <span class="op">=</span> check_account()        </span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>ap_after.columns  <span class="op">=</span> [<span class="st">'종목코드'</span>, <span class="st">'매매후수량'</span>]</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>ap_after[<span class="st">'매매후수량'</span>] <span class="op">=</span> ap_after[<span class="st">'매매후수량'</span>].<span class="bu">apply</span>(pd.to_numeric)</span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>target_after <span class="op">=</span> target.merge(ap_after)</span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>target_after[<span class="st">'차이'</span>] <span class="op">=</span> target_after[<span class="st">'목표수량'</span>] <span class="op">-</span> target_after[<span class="st">'매매후수량'</span>]</span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>target_after</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><img src="images/rebal_4.png" class="img-fluid"></p>
+<ol type="1">
+<li>계좌정보를 확인하는 check_account() 함수를 통해 보유종목과 계좌잔고를 불러온다.</li>
+<li>보유종목 데이터프레임의 열 이름을 바꾼다.</li>
+<li>’매매후수량’열을 숫자 형태로 바꾼다.</li>
+<li>기존 데이터프레임과 합친다.</li>
+<li>’목표수량’과 ’매매후수량’의 차이를 구한다.</li>
+</ol>
+<p>목표와 실제 간의 차이가 거의 없는 것을 확인할 수 있다.</p>
+</section>
+</section>
+<section id="기타" class="level1">
+<h1>기타</h1>
+<p>이 외에 트레이딩 모델도 얼마든지 자동화 구현이 가능하다.</p>
+<p>관련 영상: <a href="https://youtu.be/2Hxfb5HT4kE" class="uri">https://youtu.be/2Hxfb5HT4kE</a></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<div id="copyright">Copyright by R사용자회 <https: r2bit.com="">. all rights reserved.</https:></div>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "복사완료!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "복사완료!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

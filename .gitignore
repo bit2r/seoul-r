@@ -1,0 +1,9 @@
+.quarto
+.vscode
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+ccm.Rproj
+/.quarto/
+__odl__docs

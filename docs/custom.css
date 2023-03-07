@@ -1,0 +1,129 @@
+/* 웹폰트 추가 */
+
+/* Noto폰트 */
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+
+/* 나눔스퀘어 네오 */
+
+@font-face {
+  font-family: "NanumSquareNeo-Variable";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 리디바탕 */
+
+@font-face {
+  font-family: "RIDIBatang";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 공고딕 미디엄 */
+
+@font-face {
+  font-family: "GongGothicMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 공고딕 라이트 */
+
+@font-face {
+  font-family: "GongGothicLight";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicLight.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 공고딕 볼드 */
+
+@font-face {
+  font-family: "GongGothicBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicBold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 경기천년바탕 */
+
+@font-face {
+  font-family: "GyeonggiBatang";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiBatang.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 경기천년제목 */
+
+@font-face {
+  font-family: "GyeonggiTitleM";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiTitleM.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.navbar {
+  /* background-color: #000; */
+  background-image: url("./fig/fractal-1280074_1920.jpg");
+  background-position: 300px 50%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "GongGothicMedium";
+}
+
+p {
+  font-family: "RIDIBatang";
+}
+
+li {
+  font-family: "NanumSquareNeo-Variable";
+}
+
+span.navbar-title {
+  font-family: "GongGothicMedium";
+}
+
+ul.navbar-nav > li {
+  font-family: "GongGothicLight";
+}
+
+#copyright {
+  font-family: "GongGothicMedium", sans-serif;
+  font-size: 10pt;
+  border-top: 1px solid #ccc;
+  text-align: center;
+}
+
+.html-widget.gauge {
+  height: 320px;
+  /*or try sth like 320px instead of 100%, whatever you prefer*/
+}
+
+.html-widget.gauge svg {
+  height: 320px;
+  /*or try sth like 320px instead of 100%, whatever you prefer*/
+  margin-top: -10px;
+  margin-bottom: -40px;
+}

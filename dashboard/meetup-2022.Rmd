@@ -1,0 +1,206 @@
+---
+title: "서울R미트업 2022년"
+output:
+  flexdashboard::flex_dashboard:
+    logo: fig/hex-tidyverse.png
+    orientation: rows
+    theme: readable
+    vertical_layout: fill
+    css: extra.css
+    include:
+      after_body: footer.html
+      before_body: header.html
+mainfont: NanumGothic
+editor_options:
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+## 0. R 마크다운 환경설정 ------
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE,
+                    comment="", digits = 3, tidy = FALSE, prompt = FALSE, fig.align = 'center')
+
+knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
+
+options(knitr.duplicate.label = 'allow')
+
+library(flexdashboard)
+```
+
+### December (12월)
+
+- When: Saturday, December 10, 2022 13:00 to 17:00 AM GMT+9
+- Where: Sungkyunkwan University · Seoul / 성균관대학교 다산경제관 32211
+- [Seoul R Users: 2022 - November](https://www.meetup.com/seoul-r-meetup/events/288178926/)
+
+- Talk/Hands-on (50min talk, 10min Q&A): 32211호
+  - Title: “Introduction to Survival Analysisy with R”
+  - Korean Title: “R을 이용한 생존분석 기초”
+  - Speaker: 문건웅 (가톨릭 의대)
+  - Abstract: 최근 출간된 "의료인을 위한 R 생존분석" 책에 담긴 기본기 충실한 내용을 함께 공유합니다.
+  - [발표자료](https://github.com/cardiomoon/survivalWorkshop)
+
+- Talk/Hands-on (50min talk, 10min Q&A): 32211호
+  - Title: "Digital Writing with Quarto"
+  - Korean Title: "Quarto 로 디지털 글쓰기"
+  - Speaker: 한국R사용자회(Korea R User Group) 강사
+  - Abstract: 과학기술 디지털 글쓰기 절대반지로 급부상한 Quarto를 통해 디지털 글쓰기 기본기 경험을 전달합니다.
+  - [발표자료](https://r2bit.com/bitSlide/slideshow/202212-dreamtalk/)
+
+- Hands-on Tutorial A (2 Hr): 31405호
+  - Title: "Document Automation with SQL and R(rmd,shiny)"
+  - Korean Title: "SQL과 R(rmd,shiny)를 이용한 문서자동화"
+  - Instructor(강사): 이현열 (두물머리)
+  - Abstract: 아래한글, MS 워드 워드프로세서가 아닌 방식으로 대량의 문서를 자동화하는 방식을 소개합니다.
+  - [발표자료](data/221220_r_meetup_shiny/index.html), [샘플 보고서](data/221220_r_meetup_shiny/20221116.html)
+- Hands-on Tutorial A (2 Hr):
+  - Title: "Regression model prediction and regression analysis essence"
+  - Korean Title: "왜 같은 모델가지고 다른 이야기 하는거죠? -한번에 끝내는 회귀모형 예측과 회귀분석 에센스"
+  - Instructor(강사): 안상선 (엠로보)
+  - Abstract: 사회과학의 대표적인 연구 방법인 회귀분석과 머신러닝의 회귀모형의 주요 특징과 차이점을 소개합니다.
+  - [발표자료](https://mrobo2016.notion.site/Seoul-R-Meetup-Tutorial-12-3a2f007dc73c40c1b131f947a52e6150)
+
+### November (11월)
+
+- When: Saturday, November 05, 2022 13:00 to 17:00 AM GMT+9
+- Where: Sungkyunkwan University · Seoul / 성균관대학교 다산경제관 32211
+- [Seoul R Users: 2022 - November](https://www.meetup.com/seoul-r-meetup/events/288178926/)
+
+- Talk/Hands-on (30min talk, 10min Q&A): 32211호
+  - Title: “Making Recommendation System with Shiny”
+  - Korean Title: “Shiny로 추천시스템 만들기”
+  - Speaker: 이영록 (Youngrok Lee)
+  - Abstract: 무비렌즈 데이터를 통해 Shiny로 영화 추천 시스템 제작 경험을 공유합니다.
+  - [발표자료](https://github.com/youngroklee-ml/movie-recommender)
+- Talk/Hands-on (30min talk, 10min Q&A): 32211호
+  - Title: "So many painful decisions until using R - R, Shiny, HWP experience dealing with Covid-19 at MoE"
+  - Korean Title: "R로 넘어온 험난한 시간들 - 교육부 코로나 부서에서 R, shiny, hwp 사용기"
+  - Speaker: 교육부 장명헌 사무관
+  - Abstract: 교육부 코로나 부서에서 R, shiny, hwp 사용 경험을 발표합니다.
+  - [ggplot to hwp](data/covid_221105_meetup/ggplot_to_hwp.html)
+- Talk/Hands-on (30min talk, 10min Q&A) 32211호
+  - Title: “Low-Code Shiny Application Development”
+  - Korean Title: “로우코드 Shiny 앱 개발”
+  - Speaker: 한국R사용자회(Korea R User Group)
+  - Abstract: Shiny가 세상에 나온지 올해로 꼭 10년이 되었고 Shiny가 개척한 영역에 Plotly Dash, 파이썬 Streamlit 이 등장하면서 가장 뜨거운 영역으로 등장하고 있다. 최근 RPA를 넘어 새롭게 각광받고 있는 노코드/로우코드 개발에 Shiny 생태계에 추가되고 있는 다양한 도구를 적극 도입한 고교통계패키지 BitStat-HS 사례를 소개합니다.
+  - [발표자료](https://r2bit.com/bitSlide/slideshow/202211-meetup/)
+- Hands-on Tutorial A (2 Hr): 31405호
+  - Title: "Low Code Shiny Tutorial"
+  - Korean Title: "로우 코드 Shiny 튜토리얼"
+  - Instructor(강사): 한국R사용자회(Korea R User Group) 강사
+  - Abstract: 나눔국민운동본부의 후원을 받아 R, 특히 Shiny 앱개발을 차근차근 배우고자하는 분을 대상으로 디지털 불평등 해소와 데이터 문해력 향상을 위한 무료 나눔 교육을 실시합니다.
+= Hands-on Tutorial A (2 Hr):
+  - Title: "Shiny Tutorial"
+  - Korean Title: "Shiny 튜토리얼"
+  - Instructor(강사): 이준혁
+  - Abstract: 나눔국민운동본부의 후원을 받아 R, 특히 Shiny 앱개발을 차근차근 배우고자하는 분을 대상으로 디지털 불평등 해소와 데이터 문해력 향상을 위한 무료 나눔 교육을 실시합니다.
+
+### October (10월)
+
+- When: Saturday, October 22, 2022 13:00 to 17:00 AM GMT+9
+- Where: Sungkyunkwan University · Seoul / 성균관대학교 다산경제관 31406
+- [Seoul R Users: 2022 - October](https://www.meetup.com/seoul-r-meetup/events/287875293/)
+
+- Talk/Hands-on (30min talk, 10min Q&A): 31406호
+  - Title: “IFRS Valuation Report with Rmarkdown”
+  - Korean Title: “IFRS R마크다운 보고서 ”
+  - Speaker: 형환희 CPA (HwanHee Hyung)
+  - Abstract: IFRS 가치평가 보고서를 RMarkdown을 활용하여 자동화한 경험을 공유합니다.
+  - [발표자료](https://joy-hhh.github.io/seoul_R_meetup/)
+- Talk/Hands-on (30min talk, 10min Q&A): 31406호
+  - Title: “증권사의 API를 이용한 자동거래”
+  - Korean Title: “Automatic transactions using the API of securities firms”
+  - Speaker: 이현열 CFA (Hyunyul Lee)
+  - Abstract: 증권사 API를 이용한 시스템 자동거래에 대한 경험을 공유합니다.
+  - [발표자료](data/221022_r_meetup_api/index.html)
+- Talk/Hands-on (30min talk, 10min Q&A): 31406호
+  - Title: "Dynamic Pricing"
+  - Korean Title: "Dynamic Pricing"
+  - Instructor(강사): 한국R사용자회(Korea R User Group) 강사
+  - [발표자료](https://statkclee.github.io/pricing)
+- Hands-on Tutorial A (2 Hr): 31406호
+  - Title: "연식이냐 주행거리냐 그것이 문제로다"
+  - Instructor(강사): 나성호
+  - 상세내용: 엔카 중고차 데이터를 바탕으로 차종별 (중형차/대형차) 회귀모형 개발과 등급별 비교
+  - [워크샵자료](https://github.com/hdsceokevin/R-Meetup)
+- Hands-on Tutorial B (2 Hr): 31405호
+  - Title: "OS와 무관한 데이터 과학 개발 환경 구성"
+  - Instructor(강사): 김호성
+  - 상세내용: 디지털 글쓰기 Shiny App 컨셉설명, 별도 구성한 환경을 시연
+  - [워크샵자료](https://github.com/joygram/bit-server) [디지털 글쓰기](http://r2bit.ddns.net/)
+
+### September (9월)
+
+- When: Saturday, September 24, 2022 13:00 to 17:00 AM GMT+9
+- Where: Sungkyunkwan University · Seoul / 성균관대학교 다산경제관 33221
+- [Seoul R Users: 2022 - September](https://www.meetup.com/seoul-r-meetup/events/287874898/)
+
+- Talk/Hands-on (50min talk, 10min Q&A)
+  - Title: “R Data Journalism: Text Mining”
+  - Korean Title: “R기반 데이터저널리즘: 텍스트마이닝의 활용”
+  - Speaker: 안도현(Ahn Dohyun)
+  - Abstract: 데이터저널리즘에 왜 R을 이용해야 하는지, R프로그래밍은 어느 정도 수준까지 필요한지, 텍스트마이닝을 데이터저널리즘에 어떻게 활용하는지 경험을 공유합니다.
+  - 발표자료: <https://datajournalism.netlify.app/>
+- Talk/Hands-on (30min talk, 10min Q&A)
+  - Title: “Korean R Text Mining Package; bitTA”
+  - Korean Title: “한글 R 텍스트 마이닝 패키지; bitTA”
+  - Speaker: 한국R사용자회(Korea R User Group)
+  - Abstract: 한글 텍스트 분석을 빠르고 정확하고 쉽게 작업하여 생산적인 결과물을 뽑아내는데 축적된 지식과 경험을 담아낸 한글 텍스트 마이닝 패키지 bitTA를 공유합니다.
+  - 발표자료: https://github.com/bit2r/bitTA
+
+- Two Track Hands-on Tutorial (각 2hrs ):
+  - Advanced Track (홍성학)
+    - Title: "한국어임베딩과 R언어(Korean Embedding and R Language)"
+    - Abstract: 전통적인 자연어처리와 텍스트마이닝부터 BERT와 같은 최신 워드임베딩 방식의 텍스트마이닝 기법에 대한 장벽과 현황에 대해서 공유하고 R을 이용한 여러가지 최신 워드임베딩 모델을 사용하는 패키지와 코드를 소개합니다.
+    - [발표자료](https://aidenhong.com/presentations/korean-embedding-with-r/korean-embedding-with-r.html)
+  - Learning Track (이광춘)
+    - Title: "데이터 패키지(Data Packaging for Korean Context)"
+    - Abstract: 데이터 사이언스의 시작점이 되는 제대로된 한국 데이터셋에 문제를 인식하고 bitData 를 소개하고 추가 데이터를 함께 만들어 기여하고 이를 분석하여 가능하면 Vignette에 추가하는 것까지 짧은 시간 참여자와 함께 합니다.
+    - 발표자료: [bitData](https://r2bit.com/bitData/) Vignette
+
+### August (8월)
+
+- When: Saturday, August 13, 2022 10:00 AM to 12:00 AM GMT+9
+- Where: Konkuk University · Seoul / 건국대학교 상허연구관 320호
+- [Seoul R Users: 2022 - August](https://www.meetup.com/seoul-r-meetup/events/287301435/)
+
+- Talk/Hands-on (30min talk, 10min Q&A)
+  - Title: “ggplot2 coloring guide”
+  - Korean Title: “ggplot2 컬러링 가이드”
+  - Speaker: 방태모(BANG TaeMo)
+  - Abstract: 보다 적은 수의 컬러를 사용해 직관적인 시각화를 수행하는 방법
+  - [발표자료](https://be-favorite.github.io/Presentation_archive/coloring_guide/coloring_guide.html)
+- Talk/Hands-on (30min talk, 10min Q&A)
+  - Title: “Advanced 'Rcmdr' practice”
+  - Korean Title: “R Commander 99% 활용법”
+  - Speaker: 신종화(SHIN Jong-Hwa)
+  - Abstract: Rcmdr GUI 통계 툴이 있습니다. RStudio와 연계한 중급 사용법, Plugin 패키지 활용과 개발 이야기를 나눕니다.
+  - [참고자료1](https://rcmdr.kr)
+  - [참고자료2](https://modernity.tistory.com)
+- Talk/Hands-on (50min talk, 10min Q&A)
+  - Title: “Deep Learning with R”
+  - Korean Title: “R 딥러닝”
+  - Speaker: 이광춘(Kwangchun Lee)
+  - [발표자료](https://aispiration.com/united-states/)
+  - Abstract: 딥러닝 발전이 눈부시는 한편 이에 대한 R 진영의 대응도 빨라지고 있다. 이에 따라 최근 R에서 딥러닝을 활용하여 데이터 과학/통계 문제를 풀어나가는 엔지니어링 측면에서 살펴보고자 한다.
+
+### July (7월)
+
+- When: Saturday, July 9, 2022 10:00 AM to 12:00 AM GMT+9
+- Where: Sungkyunkwan University · Seoul / 성균관대학교 퇴계인문관
+- [Seoul R Users: 2022 - July](https://www.meetup.com/seoul-r-meetup/events/286541787/)
+
+- **Talk/Hands-on** (50min talk, 10min Q&A)
+  - Title: "Tidyverse Meets Shiny"
+  - Korean Title: "Tidyverse Meets Shiny"
+  - **Speaker**: 이광춘(Kwangchun Lee)
+  - [slidedeck](https://aispiration.com/ds-authoring/tidyverse-shiny.html#1)
+  - Abstract: flexdashboard, crosstalk, shiny 도구를 사용해서 정적 대쉬보드,
+    Standalone 인터랙티브 기능 구현, 오픈 통계 교과서 기반이 되는 Shiny 서버 기술을
+    통해 데이터 과학 웹앱 개발의 무한한 가능성을 탐구
+- **Talk/Hands-on** (50min talk, 10min Q&A)
+  - Title: "Naver News with Shiny"
+  - Korean Title: "Shiny로 네이버 뉴스 검색하기"
+  - **Speaker**: 유충현(Choonghyun Ryu)
+  - [slidedeck](https://choonghyunryu.github.io/tidyverse-meets-shiny/)
+  - Abstract: Shiny 애플리케이션 개발의 ABC에서 시작하여 Shiny 앱의 동작을 이해하고, 간단한 어플리케이션 개발을 위한 자신감을 통해 네이버 뉴스 수집과 간단한 텍스트 분석 핸즈온 실습
