@@ -37,16 +37,17 @@ library(flexdashboard)
 
 ### 일시 및 장소
 
-정확한 미트업 일시는 확정되는대로 업데이트할 예정입니다.
+- 일시: 2023년 4월 13일(목) 19:00 ~ 21:00
+- 장소: 강남 교보타워 5층 노블리에홀
 
 ### 발표 목록
 
-#### R을 이용한 기계 학습 간소화 방법
+#### R과 함께 chatGPT 활용하기
 
-- 제목: “R을 이용한 기계 학습 간소화 방법”
-- 영문 제목: “How to simplify machine learning using R”
+- 제목: “R과 함께 chatGPT 활용하기”
+- 영문 제목: “Using chatGPT with R”
 - 발표자: 유충현 (한국R사용자회)
-- 주줴: Binary Classification 모형 개발 과정에서의 생산성 제고를 위한 방법을 공유합니다.
+- 주제: OpenAI API를 이용해서 R 환경에서 chatGPT를 활용하는 방법을 소개합니다.
 
 #### chatGPT와 디지털 글쓰기
 
