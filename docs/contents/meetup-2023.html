@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="kr" xml:lang="kr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>서울 R 미트업 - 서울R밋업 2023년</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../fig/korea-r-user-group.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색"
+  }
+}</script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-P3F3EGT0XE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "G-P3F3EGT0XE");
+</script>
+<!-- <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-theme.css" />
+<link rel="stylesheet" type="text/css" href="css/swc.css" />  -->
+<link rel="alternate" type="application/rss+xml" title="Tidyverse Korea" href="https://www.facebook.com/groups/tidyverse/">
+<meta charset="UTF-8">
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+  <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-59802572-23"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-59802572-23');
+</script>
+
+
+<link rel="stylesheet" href="../custom.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../fig/korea-r-user-group.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">서울 R 미트업</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../contents/intro.html">
+ <span class="menu-text">소개</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../contents/meetup-2023.html" aria-current="page">
+ <span class="menu-text">2023년</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../contents/meetup-2022.html">
+ <span class="menu-text">2022년</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../contents/meetup-2021.html">
+ <span class="menu-text">2021년</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../contents/meetup-2020.html">
+ <span class="menu-text">2020년</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../contents/meetup-2019.html">
+ <span class="menu-text">2019년</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../contents/meetup-2018.html">
+ <span class="menu-text">2018년</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../contents/history.html">
+ <span class="menu-text">연혁</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../contents/coc.html">
+ <span class="menu-text">행동강령(CoC)</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://r2bit.com">
+ <span class="menu-text">R사용자회</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/channel/UCW-epmIvjBEhhVXw_F0Nqbw"><i class="bi bi-youtube" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/bit2r/seoul-r"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.facebook.com/groups/tidyverse"><i class="bi bi-facebook" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#년-서울r미트업-발표자-모집" id="toc-년-서울r미트업-발표자-모집" class="nav-link active" data-scroll-target="#년-서울r미트업-발표자-모집">2023년 서울R미트업 발표자 모집</a></li>
+  <li><a href="#년-4월-april-2023" id="toc-년-4월-april-2023" class="nav-link" data-scroll-target="#년-4월-april-2023">2023년 4월 (April, 2023)</a>
+  <ul class="collapse">
+  <li><a href="#일시-및-장소" id="toc-일시-및-장소" class="nav-link" data-scroll-target="#일시-및-장소">일시 및 장소</a></li>
+  <li><a href="#발표-목록" id="toc-발표-목록" class="nav-link" data-scroll-target="#발표-목록">발표 목록</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">서울R밋업 2023년</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="년-서울r미트업-발표자-모집" class="level2">
+<h2 class="anchored" data-anchor-id="년-서울r미트업-발표자-모집">2023년 서울R미트업 발표자 모집</h2>
+<p>2023년 발표자를 모집하고 있습니다. 소정의 강사료가 지급되므로 관심있는 분들은 아래 링크를 통해 신청해 주시기 바랍니다.</p>
+<p><a href="https://forms.gle/pcr8y54jRMBz3pDa9">발표자 모집</a></p>
+</section>
+<section id="년-4월-april-2023" class="level2">
+<h2 class="anchored" data-anchor-id="년-4월-april-2023">2023년 4월 (April, 2023)</h2>
+<section id="일시-및-장소" class="level3">
+<h3 class="anchored" data-anchor-id="일시-및-장소">일시 및 장소</h3>
+<ul>
+<li>일시: 2023년 4월 13일(목) 19:00 ~ 21:00</li>
+<li>장소: 강남 교보타워 5층 노블리에홀
+<ul>
+<li>주소: 서울특별시 서초구 강남대로 465 교보타워</li>
+<li>📍<a href="https://naver.me/F08oB7J8" target="_blank">네이버지도 링크</a></li>
+<li>📍<a href="http://kko.to/bmuzNbBHbs" target="_blank">카카오지도 링크</a></li>
+</ul></li>
+</ul>
+<p>※ 실시간 방송 및 영상공유는 하지 않습니다.</p>
+</section>
+<section id="발표-목록" class="level3">
+<h3 class="anchored" data-anchor-id="발표-목록">발표 목록</h3>
+<section id="r과-함께-chatgpt-활용하기" class="level4">
+<h4 class="anchored" data-anchor-id="r과-함께-chatgpt-활용하기">R과 함께 chatGPT 활용하기</h4>
+<ul>
+<li>제목: “R과 함께 chatGPT 활용하기”</li>
+<li>영문 제목: “Using chatGPT with R”</li>
+<li>발표자: 유충현 (한국R사용자회)</li>
+<li>주제: OpenAI API를 이용해서 R 환경에서 chatGPT를 활용하는 방법을 소개합니다.</li>
+</ul>
+</section>
+<section id="chatgpt와-디지털-글쓰기" class="level4">
+<h4 class="anchored" data-anchor-id="chatgpt와-디지털-글쓰기">chatGPT와 디지털 글쓰기</h4>
+<ul>
+<li>제목: “chatGPT와 디지털 글쓰기”</li>
+<li>영문 제목: “Digital Writing Powered by chatGPT”</li>
+<li>발표자: 이광춘 (한국R사용자회)</li>
+<li>주줴: 데이터 사이언스 분야 기계(chatGPT)와 함께 디지털 글쓰기 경험을 공유합니다.</li>
+</ul>
+</section>
+<section id="chatgpt를-만난-오픈-통계-패키지" class="level4">
+<h4 class="anchored" data-anchor-id="chatgpt를-만난-오픈-통계-패키지">chatGPT를 만난 오픈 통계 패키지</h4>
+<ul>
+<li>제목 “chatGPT를 만난 오픈 통계 패키지”</li>
+<li>영문 제목: “BitStat meets chatGPT”</li>
+<li>발표자: 김호성 (한국R사용자회)</li>
+<li>주줴: 우리아이 BitStat 오픈 통계패키지가 chatGPT를 만나 이렇게 바뀌었어요</li>
+</ul>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<div id="copyright">Copyright by R사용자회 <https: r2bit.com="">. all rights reserved.</https:></div>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "복사완료!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "복사완료!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

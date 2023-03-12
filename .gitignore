@@ -1,5 +1,6 @@
 .quarto
 .vscode
+.idea
 .Rproj.user
 .Rhistory
 .RData

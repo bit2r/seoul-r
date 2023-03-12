@@ -1,0 +1,14 @@
+{
+  "hash": "0af551dc316dc1f6b6bd791424aa46cc",
+  "result": {
+    "markdown": "---\ntitle: \"서울R미트업 소개\"\noutput:\n  flexdashboard::flex_dashboard:\n    logo: fig/hex-tidyverse.png\n    orientation: rows\n    theme: readable\n    vertical_layout: fill\n    css: extra.css\n    include:\n      after_body: footer.html\n      before_body: header.html\nmainfont: NanumGothic\neditor_options:\n  chunk_output_type: console\n---\n\n\n\n\nR은 데이터 수집, 데이터 처리, 탐색적 데이터 분석, 통계 모델링, 시각화 및 기계 학습 등을 위한 오픈 소스 소프트웨어이자 프로그래밍 언어입니다. 최근에는 이러한 작업을 총칭하는 '데이터 사이언스'라는 용어가 등장하면서 데이터 사이언티스트들이 주로 사용하는 도구로 자리 잡았습니다. 서울 R 미트업은 국내 R 사용자를 한자리에 모아 세계적인 연사와의 강연을 통해 회원들에게 유익한 네트워킹 기회를 제공합니다.\n\n서울R미트업은 현재 meetup.com을 통해서 모임 관리를 하고 있습니다.\n\n- **서울R미트업 meetup.com**: [link](https://www.meetup.com/seoul-r-meetup)\n\n기타 커뮤니티 관련 링크는 아래와 같습니다.\n\n- 세계R미트업 현황 (Global R Meetup Dashboard): [link](https://r-community.org/usergroups/)\n- 한국R사용자회 (Korea R User Group): [link](https://r2bit.com/)\n- 한국R컨퍼런스 (Korea R Conference): [link](https://use-r.kr/)\n- 유튜브 채널 (Youtube Channel): [link](https://www.youtube.com/channel/UCW-epmIvjBEhhVXw_F0Nqbw)\n- 페이스북 그룹 (Facebook Group): [link](https://www.facebook.com/groups/tidyverse)\n\n#### 운영진 (Organizers)\n\n운영진은 서울R미트업을 운영하는데 필요한 모든 일을 담당합니다. 운영진은 서울R미트업의 모든 활동을 통해 회원들에게 유익한 정보를 제공하고, 서울R미트업의 활동을 지원합니다.\n\n- [Choonghyun Ryu, 유충현](https://github.com/choonghyunryu)\n- [Kwangchun Lee, 이광춘](https://github.com/statkclee)\n- [Seonghak Hong, 홍성학](https://github.com/euriion/)\n\n#### 스폰서 (Sponsors)\n\n[![](./fig/R_Consortium-logo-vertical-color.png){width=10%}](https://www.r-consortium.org/)\n[![](./fig/openup_logo.png){width=10%}](https://www.oss.kr/)\n\n서울R미트업은 언제는 후원을 기다리고 있습니다. 후원을 원하시는 경우 아래의 이메일을 통해 연락주세요.\n\n[한국R사용자회 운영자](mailto:admin@r2bit.com)\n\n## 수정 요청 (Request for Modification)\n\n서울R미트업 페이지는 현재는 한국R사용자회의 [깃헙 저장소](https://github.com/bit2r/bit2r.github.io)에서 함께 관리하고 있습니다.\n수정 요청은 아래의 링크를 통해 할 수 있습니다.\n\n[깃헙 이슈](https://github.com/bit2r/bit2r.github.io/issues)\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

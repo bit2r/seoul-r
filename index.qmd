@@ -9,21 +9,21 @@ format:
     toc-depth: 3
     toc-title: 목차
     number-sections: true
-    highlight-style: github    
+    highlight-style: github
     self-contained: false
 filters:
-   - lightbox
+  - lightbox
 lightbox: auto
 link-citations: yes
 knitr:
-  opts_chunk: 
+  opts_chunk:
     message: false
     warning: false
     collapse: true
-    comment: "#>" 
+    comment: "#>"
     R.options:
       knitr.graphics.auto_pdf: true
-editor_options: 
+editor_options:
   chunk_output_type: console
 ---
 
@@ -83,7 +83,7 @@ R Consortium R User Groups에 등록된 Seoul R Meetup은 매월 개최되는 �
 
 [한국R사용자회 운영자](mailto:admin@r2bit.com)
 
-## 페이지 수정 요청
+## 페이지 수정 요청 (Request)
 
 서울R미트업 페이지는 현재는 한국R사용자회의 [깃헙 저장소](https://github.com/bit2r/seoul-r)에서 함께 관리하고 있습니다.
 수정 요청(Request for Modification)은 아래의 링크를 통해 할 수 있습니다.
@@ -98,4 +98,3 @@ R Consortium R User Groups에 등록된 Seoul R Meetup은 매월 개최되는 �
 - [Kwangchun Lee, 이광춘](https://github.com/statkclee)
 - [Seonghak Hong, 홍성학](https://github.com/euriion/)
 - [Hosung Kim, 김호성](https://github.com/joygram/)
-

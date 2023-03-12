@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="kr" xml:lang="kr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>서울 R 미트업 - 서울R미트업 2022년</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../fig/korea-r-user-group.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색"
+  }
+}</script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-P3F3EGT0XE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "G-P3F3EGT0XE");
+</script>
+<!-- <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-theme.css" />
+<link rel="stylesheet" type="text/css" href="css/swc.css" />  -->
+<link rel="alternate" type="application/rss+xml" title="Tidyverse Korea" href="https://www.facebook.com/groups/tidyverse/">
+<meta charset="UTF-8">
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+  <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-59802572-23"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-59802572-23');
+</script>
+
+
+<link rel="stylesheet" href="../custom.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../fig/korea-r-user-group.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">서울 R 미트업</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../contents/intro.html">
+ <span class="menu-text">소개</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../contents/meetup-2023.html">
+ <span class="menu-text">2023년</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../contents/meetup-2022.html" aria-current="page">
+ <span class="menu-text">2022년</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../contents/meetup-2021.html">
+ <span class="menu-text">2021년</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../contents/meetup-2020.html">
+ <span class="menu-text">2020년</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../contents/meetup-2019.html">
+ <span class="menu-text">2019년</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../contents/meetup-2018.html">
+ <span class="menu-text">2018년</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../contents/history.html">
+ <span class="menu-text">연혁</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../contents/coc.html">
+ <span class="menu-text">행동강령(CoC)</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://r2bit.com">
+ <span class="menu-text">R사용자회</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/channel/UCW-epmIvjBEhhVXw_F0Nqbw"><i class="bi bi-youtube" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/bit2r/seoul-r"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.facebook.com/groups/tidyverse"><i class="bi bi-facebook" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#december-12월" id="toc-december-12월" class="nav-link active" data-scroll-target="#december-12월">December (12월)</a></li>
+  <li><a href="#november-11월" id="toc-november-11월" class="nav-link" data-scroll-target="#november-11월">November (11월)</a></li>
+  <li><a href="#october-10월" id="toc-october-10월" class="nav-link" data-scroll-target="#october-10월">October (10월)</a></li>
+  <li><a href="#september-9월" id="toc-september-9월" class="nav-link" data-scroll-target="#september-9월">September (9월)</a></li>
+  <li><a href="#august-8월" id="toc-august-8월" class="nav-link" data-scroll-target="#august-8월">August (8월)</a></li>
+  <li><a href="#july-7월" id="toc-july-7월" class="nav-link" data-scroll-target="#july-7월">July (7월)</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">서울R미트업 2022년</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="december-12월" class="level3">
+<h3 class="anchored" data-anchor-id="december-12월">December (12월)</h3>
+<ul>
+<li><p>When: Saturday, December 10, 2022 13:00 to 17:00 AM GMT+9</p></li>
+<li><p>Where: Sungkyunkwan University · Seoul / 성균관대학교 다산경제관 32211</p></li>
+<li><p><a href="https://www.meetup.com/seoul-r-meetup/events/288178926/">Seoul R Users: 2022 - November</a></p></li>
+<li><p>Talk/Hands-on (50min talk, 10min Q&amp;A): 32211호</p>
+<ul>
+<li>Title: “Introduction to Survival Analysisy with R”</li>
+<li>Korean Title: “R을 이용한 생존분석 기초”</li>
+<li>Speaker: 문건웅 (가톨릭 의대)</li>
+<li>Abstract: 최근 출간된 “의료인을 위한 R 생존분석” 책에 담긴 기본기 충실한 내용을 함께 공유합니다.</li>
+<li><a href="https://github.com/cardiomoon/survivalWorkshop">발표자료</a></li>
+</ul></li>
+<li><p>Talk/Hands-on (50min talk, 10min Q&amp;A): 32211호</p>
+<ul>
+<li>Title: “Digital Writing with Quarto”</li>
+<li>Korean Title: “Quarto 로 디지털 글쓰기”</li>
+<li>Speaker: 한국R사용자회(Korea R User Group) 강사</li>
+<li>Abstract: 과학기술 디지털 글쓰기 절대반지로 급부상한 Quarto를 통해 디지털 글쓰기 기본기 경험을 전달합니다.</li>
+<li><a href="https://r2bit.com/bitSlide/slideshow/202212-dreamtalk/">발표자료</a></li>
+</ul></li>
+<li><p>Hands-on Tutorial A (2 Hr): 31405호</p>
+<ul>
+<li>Title: “Document Automation with SQL and R(rmd,shiny)”</li>
+<li>Korean Title: “SQL과 R(rmd,shiny)를 이용한 문서자동화”</li>
+<li>Instructor(강사): 이현열 (두물머리)</li>
+<li>Abstract: 아래한글, MS 워드 워드프로세서가 아닌 방식으로 대량의 문서를 자동화하는 방식을 소개합니다.</li>
+<li><a href="data/221220_r_meetup_shiny/index.html">발표자료</a>, <a href="data/221220_r_meetup_shiny/20221116.html">샘플 보고서</a></li>
+</ul></li>
+<li><p>Hands-on Tutorial A (2 Hr):</p>
+<ul>
+<li>Title: “Regression model prediction and regression analysis essence”</li>
+<li>Korean Title: “왜 같은 모델가지고 다른 이야기 하는거죠? -한번에 끝내는 회귀모형 예측과 회귀분석 에센스”</li>
+<li>Instructor(강사): 안상선 (엠로보)</li>
+<li>Abstract: 사회과학의 대표적인 연구 방법인 회귀분석과 머신러닝의 회귀모형의 주요 특징과 차이점을 소개합니다.</li>
+<li><a href="https://mrobo2016.notion.site/Seoul-R-Meetup-Tutorial-12-3a2f007dc73c40c1b131f947a52e6150">발표자료</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="november-11월" class="level3">
+<h3 class="anchored" data-anchor-id="november-11월">November (11월)</h3>
+<ul>
+<li><p>When: Saturday, November 05, 2022 13:00 to 17:00 AM GMT+9</p></li>
+<li><p>Where: Sungkyunkwan University · Seoul / 성균관대학교 다산경제관 32211</p></li>
+<li><p><a href="https://www.meetup.com/seoul-r-meetup/events/288178926/">Seoul R Users: 2022 - November</a></p></li>
+<li><p>Talk/Hands-on (30min talk, 10min Q&amp;A): 32211호</p>
+<ul>
+<li>Title: “Making Recommendation System with Shiny”</li>
+<li>Korean Title: “Shiny로 추천시스템 만들기”</li>
+<li>Speaker: 이영록 (Youngrok Lee)</li>
+<li>Abstract: 무비렌즈 데이터를 통해 Shiny로 영화 추천 시스템 제작 경험을 공유합니다.</li>
+<li><a href="https://github.com/youngroklee-ml/movie-recommender">발표자료</a></li>
+</ul></li>
+<li><p>Talk/Hands-on (30min talk, 10min Q&amp;A): 32211호</p>
+<ul>
+<li>Title: “So many painful decisions until using R - R, Shiny, HWP experience dealing with Covid-19 at MoE”</li>
+<li>Korean Title: “R로 넘어온 험난한 시간들 - 교육부 코로나 부서에서 R, shiny, hwp 사용기”</li>
+<li>Speaker: 교육부 장명헌 사무관</li>
+<li>Abstract: 교육부 코로나 부서에서 R, shiny, hwp 사용 경험을 발표합니다.</li>
+<li><a href="data/covid_221105_meetup/ggplot_to_hwp.html">ggplot to hwp</a></li>
+</ul></li>
+<li><p>Talk/Hands-on (30min talk, 10min Q&amp;A) 32211호</p>
+<ul>
+<li>Title: “Low-Code Shiny Application Development”</li>
+<li>Korean Title: “로우코드 Shiny 앱 개발”</li>
+<li>Speaker: 한국R사용자회(Korea R User Group)</li>
+<li>Abstract: Shiny가 세상에 나온지 올해로 꼭 10년이 되었고 Shiny가 개척한 영역에 Plotly Dash, 파이썬 Streamlit 이 등장하면서 가장 뜨거운 영역으로 등장하고 있다. 최근 RPA를 넘어 새롭게 각광받고 있는 노코드/로우코드 개발에 Shiny 생태계에 추가되고 있는 다양한 도구를 적극 도입한 고교통계패키지 BitStat-HS 사례를 소개합니다.</li>
+<li><a href="https://r2bit.com/bitSlide/slideshow/202211-meetup/">발표자료</a></li>
+</ul></li>
+<li><p>Hands-on Tutorial A (2 Hr): 31405호</p>
+<ul>
+<li>Title: “Low Code Shiny Tutorial”</li>
+<li>Korean Title: “로우 코드 Shiny 튜토리얼”</li>
+<li>Instructor(강사): 한국R사용자회(Korea R User Group) 강사</li>
+<li>Abstract: 나눔국민운동본부의 후원을 받아 R, 특히 Shiny 앱개발을 차근차근 배우고자하는 분을 대상으로 디지털 불평등 해소와 데이터 문해력 향상을 위한 무료 나눔 교육을 실시합니다. = Hands-on Tutorial A (2 Hr):</li>
+<li>Title: “Shiny Tutorial”</li>
+<li>Korean Title: “Shiny 튜토리얼”</li>
+<li>Instructor(강사): 이준혁</li>
+<li>Abstract: 나눔국민운동본부의 후원을 받아 R, 특히 Shiny 앱개발을 차근차근 배우고자하는 분을 대상으로 디지털 불평등 해소와 데이터 문해력 향상을 위한 무료 나눔 교육을 실시합니다.</li>
+</ul></li>
+</ul>
+</section>
+<section id="october-10월" class="level3">
+<h3 class="anchored" data-anchor-id="october-10월">October (10월)</h3>
+<ul>
+<li><p>When: Saturday, October 22, 2022 13:00 to 17:00 AM GMT+9</p></li>
+<li><p>Where: Sungkyunkwan University · Seoul / 성균관대학교 다산경제관 31406</p></li>
+<li><p><a href="https://www.meetup.com/seoul-r-meetup/events/287875293/">Seoul R Users: 2022 - October</a></p></li>
+<li><p>Talk/Hands-on (30min talk, 10min Q&amp;A): 31406호</p>
+<ul>
+<li>Title: “IFRS Valuation Report with Rmarkdown”</li>
+<li>Korean Title: “IFRS R마크다운 보고서”</li>
+<li>Speaker: 형환희 CPA (HwanHee Hyung)</li>
+<li>Abstract: IFRS 가치평가 보고서를 RMarkdown을 활용하여 자동화한 경험을 공유합니다.</li>
+<li><a href="https://joy-hhh.github.io/seoul_R_meetup/">발표자료</a></li>
+</ul></li>
+<li><p>Talk/Hands-on (30min talk, 10min Q&amp;A): 31406호</p>
+<ul>
+<li>Title: “증권사의 API를 이용한 자동거래”</li>
+<li>Korean Title: “Automatic transactions using the API of securities firms”</li>
+<li>Speaker: 이현열 CFA (Hyunyul Lee)</li>
+<li>Abstract: 증권사 API를 이용한 시스템 자동거래에 대한 경험을 공유합니다.</li>
+<li><a href="data/221022_r_meetup_api/index.html">발표자료</a></li>
+</ul></li>
+<li><p>Talk/Hands-on (30min talk, 10min Q&amp;A): 31406호</p>
+<ul>
+<li>Title: “Dynamic Pricing”</li>
+<li>Korean Title: “Dynamic Pricing”</li>
+<li>Instructor(강사): 한국R사용자회(Korea R User Group) 강사</li>
+<li><a href="https://statkclee.github.io/pricing">발표자료</a></li>
+</ul></li>
+<li><p>Hands-on Tutorial A (2 Hr): 31406호</p>
+<ul>
+<li>Title: “연식이냐 주행거리냐 그것이 문제로다”</li>
+<li>Instructor(강사): 나성호</li>
+<li>상세내용: 엔카 중고차 데이터를 바탕으로 차종별 (중형차/대형차) 회귀모형 개발과 등급별 비교</li>
+<li><a href="https://github.com/hdsceokevin/R-Meetup">워크샵자료</a></li>
+</ul></li>
+<li><p>Hands-on Tutorial B (2 Hr): 31405호</p>
+<ul>
+<li>Title: “OS와 무관한 데이터 과학 개발 환경 구성”</li>
+<li>Instructor(강사): 김호성</li>
+<li>상세내용: 디지털 글쓰기 Shiny App 컨셉설명, 별도 구성한 환경을 시연</li>
+<li><a href="https://github.com/joygram/bit-server">워크샵자료</a> <a href="http://r2bit.ddns.net/">디지털 글쓰기</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="september-9월" class="level3">
+<h3 class="anchored" data-anchor-id="september-9월">September (9월)</h3>
+<ul>
+<li><p>When: Saturday, September 24, 2022 13:00 to 17:00 AM GMT+9</p></li>
+<li><p>Where: Sungkyunkwan University · Seoul / 성균관대학교 다산경제관 33221</p></li>
+<li><p><a href="https://www.meetup.com/seoul-r-meetup/events/287874898/">Seoul R Users: 2022 - September</a></p></li>
+<li><p>Talk/Hands-on (50min talk, 10min Q&amp;A)</p>
+<ul>
+<li>Title: “R Data Journalism: Text Mining”</li>
+<li>Korean Title: “R기반 데이터저널리즘: 텍스트마이닝의 활용”</li>
+<li>Speaker: 안도현(Ahn Dohyun)</li>
+<li>Abstract: 데이터저널리즘에 왜 R을 이용해야 하는지, R프로그래밍은 어느 정도 수준까지 필요한지, 텍스트마이닝을 데이터저널리즘에 어떻게 활용하는지 경험을 공유합니다.</li>
+<li>발표자료: <a href="https://datajournalism.netlify.app/" class="uri">https://datajournalism.netlify.app/</a></li>
+</ul></li>
+<li><p>Talk/Hands-on (30min talk, 10min Q&amp;A)</p>
+<ul>
+<li>Title: “Korean R Text Mining Package; bitTA”</li>
+<li>Korean Title: “한글 R 텍스트 마이닝 패키지; bitTA”</li>
+<li>Speaker: 한국R사용자회(Korea R User Group)</li>
+<li>Abstract: 한글 텍스트 분석을 빠르고 정확하고 쉽게 작업하여 생산적인 결과물을 뽑아내는데 축적된 지식과 경험을 담아낸 한글 텍스트 마이닝 패키지 bitTA를 공유합니다.</li>
+<li>발표자료: https://github.com/bit2r/bitTA</li>
+</ul></li>
+<li><p>Two Track Hands-on Tutorial (각 2hrs ):</p>
+<ul>
+<li>Advanced Track (홍성학)
+<ul>
+<li>Title: “한국어임베딩과 R언어(Korean Embedding and R Language)”</li>
+<li>Abstract: 전통적인 자연어처리와 텍스트마이닝부터 BERT와 같은 최신 워드임베딩 방식의 텍스트마이닝 기법에 대한 장벽과 현황에 대해서 공유하고 R을 이용한 여러가지 최신 워드임베딩 모델을 사용하는 패키지와 코드를 소개합니다.</li>
+<li><a href="https://aidenhong.com/presentations/korean-embedding-with-r/korean-embedding-with-r.html">발표자료</a></li>
+</ul></li>
+<li>Learning Track (이광춘)
+<ul>
+<li>Title: “데이터 패키지(Data Packaging for Korean Context)”</li>
+<li>Abstract: 데이터 사이언스의 시작점이 되는 제대로된 한국 데이터셋에 문제를 인식하고 bitData 를 소개하고 추가 데이터를 함께 만들어 기여하고 이를 분석하여 가능하면 Vignette에 추가하는 것까지 짧은 시간 참여자와 함께 합니다.</li>
+<li>발표자료: <a href="https://r2bit.com/bitData/">bitData</a> Vignette</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="august-8월" class="level3">
+<h3 class="anchored" data-anchor-id="august-8월">August (8월)</h3>
+<ul>
+<li><p>When: Saturday, August 13, 2022 10:00 AM to 12:00 AM GMT+9</p></li>
+<li><p>Where: Konkuk University · Seoul / 건국대학교 상허연구관 320호</p></li>
+<li><p><a href="https://www.meetup.com/seoul-r-meetup/events/287301435/">Seoul R Users: 2022 - August</a></p></li>
+<li><p>Talk/Hands-on (30min talk, 10min Q&amp;A)</p>
+<ul>
+<li>Title: “ggplot2 coloring guide”</li>
+<li>Korean Title: “ggplot2 컬러링 가이드”</li>
+<li>Speaker: 방태모(BANG TaeMo)</li>
+<li>Abstract: 보다 적은 수의 컬러를 사용해 직관적인 시각화를 수행하는 방법</li>
+<li><a href="https://be-favorite.github.io/Presentation_archive/coloring_guide/coloring_guide.html">발표자료</a></li>
+</ul></li>
+<li><p>Talk/Hands-on (30min talk, 10min Q&amp;A)</p>
+<ul>
+<li>Title: “Advanced ‘Rcmdr’ practice”</li>
+<li>Korean Title: “R Commander 99% 활용법”</li>
+<li>Speaker: 신종화(SHIN Jong-Hwa)</li>
+<li>Abstract: Rcmdr GUI 통계 툴이 있습니다. RStudio와 연계한 중급 사용법, Plugin 패키지 활용과 개발 이야기를 나눕니다.</li>
+<li><a href="https://rcmdr.kr">참고자료1</a></li>
+<li><a href="https://modernity.tistory.com">참고자료2</a></li>
+</ul></li>
+<li><p>Talk/Hands-on (50min talk, 10min Q&amp;A)</p>
+<ul>
+<li>Title: “Deep Learning with R”</li>
+<li>Korean Title: “R 딥러닝”</li>
+<li>Speaker: 이광춘(Kwangchun Lee)</li>
+<li><a href="https://aispiration.com/united-states/">발표자료</a></li>
+<li>Abstract: 딥러닝 발전이 눈부시는 한편 이에 대한 R 진영의 대응도 빨라지고 있다. 이에 따라 최근 R에서 딥러닝을 활용하여 데이터 과학/통계 문제를 풀어나가는 엔지니어링 측면에서 살펴보고자 한다.</li>
+</ul></li>
+</ul>
+</section>
+<section id="july-7월" class="level3">
+<h3 class="anchored" data-anchor-id="july-7월">July (7월)</h3>
+<ul>
+<li><p>When: Saturday, July 9, 2022 10:00 AM to 12:00 AM GMT+9</p></li>
+<li><p>Where: Sungkyunkwan University · Seoul / 성균관대학교 퇴계인문관</p></li>
+<li><p><a href="https://www.meetup.com/seoul-r-meetup/events/286541787/">Seoul R Users: 2022 - July</a></p></li>
+<li><p><strong>Talk/Hands-on</strong> (50min talk, 10min Q&amp;A)</p>
+<ul>
+<li>Title: “Tidyverse Meets Shiny”</li>
+<li>Korean Title: “Tidyverse Meets Shiny”</li>
+<li><strong>Speaker</strong>: 이광춘(Kwangchun Lee)</li>
+<li><a href="https://aispiration.com/ds-authoring/tidyverse-shiny.html#1">slidedeck</a></li>
+<li>Abstract: flexdashboard, crosstalk, shiny 도구를 사용해서 정적 대쉬보드, Standalone 인터랙티브 기능 구현, 오픈 통계 교과서 기반이 되는 Shiny 서버 기술을 통해 데이터 과학 웹앱 개발의 무한한 가능성을 탐구</li>
+</ul></li>
+<li><p><strong>Talk/Hands-on</strong> (50min talk, 10min Q&amp;A)</p>
+<ul>
+<li>Title: “Naver News with Shiny”</li>
+<li>Korean Title: “Shiny로 네이버 뉴스 검색하기”</li>
+<li><strong>Speaker</strong>: 유충현(Choonghyun Ryu)</li>
+<li><a href="https://choonghyunryu.github.io/tidyverse-meets-shiny/">slidedeck</a></li>
+<li>Abstract: Shiny 애플리케이션 개발의 ABC에서 시작하여 Shiny 앱의 동작을 이해하고, 간단한 어플리케이션 개발을 위한 자신감을 통해 네이버 뉴스 수집과 간단한 텍스트 분석 핸즈온 실습</li>
+</ul></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<div id="copyright">Copyright by R사용자회 <https: r2bit.com="">. all rights reserved.</https:></div>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "복사완료!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "복사완료!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

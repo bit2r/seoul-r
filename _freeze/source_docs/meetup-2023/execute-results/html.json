@@ -1,0 +1,14 @@
+{
+  "hash": "9ac48422198819ddfd21264a08f2cf35",
+  "result": {
+    "markdown": "---\ntitle: \"서울R밋업 2023년\"\noutput:\n  flexdashboard::flex_dashboard:\n    logo: fig/hex-tidyverse.png\n    orientation: rows\n    theme: readable\n    vertical_layout: fill\n    css: extra.css\n    include:\n      after_body: footer.html\n      before_body: header.html\nmainfont: NanumGothic\neditor_options:\n  chunk_output_type: console\n---\n\n\n\n\n## 2023년 서울R미트업 발표자 모집\n\n2023년 발표자를 모집하고 있습니다. 소정의 강사료가 지급되므로 관심있는 분들은 아래 링크를 통해 신청해 주시기 바랍니다.\n\n[발표자 모집](https://forms.gle/pcr8y54jRMBz3pDa9)\n\n## 2023년 4월 (April, 2023)\n\n### 일시 및 장소\n\n- 일시: 2023년 4월 13일(목) 19:00 ~ 21:00\n- 장소: 강남 교보타워 5층 노블리에홀\n  - [네이버지도 링크](https://naver.me/F08oB7J8), [카카오지도 링크](http://kko.to/bmuzNbBHbs)\n  - 주소: 서울특별시 서초구 강남대로 465 교보타워\n\n### 발표 목록\n\n#### R과 함께 chatGPT 활용하기\n\n- 제목: “R과 함께 chatGPT 활용하기”\n- 영문 제목: “Using chatGPT with R”\n- 발표자: 유충현 (한국R사용자회)\n- 주제: OpenAI API를 이용해서 R 환경에서 chatGPT를 활용하는 방법을 소개합니다.\n\n#### chatGPT와 디지털 글쓰기\n\n- 제목: “chatGPT와 디지털 글쓰기”\n- 영문 제목: “Digital Writing Powered by chatGPT”\n- 발표자: 이광춘 (한국R사용자회)\n- 주줴: 데이터 사이언스 분야 기계(chatGPT)와 함께 디지털 글쓰기 경험을 공유합니다.\n\n#### chatGPT를 만난 오픈 통계 패키지\n\n- 제목 “chatGPT를 만난 오픈 통계 패키지”\n- 영문 제목: “BitStat meets chatGPT”\n- 발표자: 김호성 (한국R사용자회)\n- 주줴: 우리아이 BitStat 오픈 통계패키지가 chatGPT를 만나 이렇게 바뀌었어요\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

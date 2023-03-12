@@ -13,23 +13,23 @@ website:
     logo: "fig/korea-r-user-group.png"
     left:
       - text: 소개
-        href: index.Rmd
+        href: contents/intro.Rmd
       - text: 2023년
-        file: dashboard/meetup-2023.Rmd
+        file: contents/meetup-2023.Rmd
       - text: 2022년
-        file: dashboard/meetup-2022.Rmd
+        file: contents/meetup-2022.Rmd
       - text: 2021년
-        file: dashboard/meetup-2021.Rmd
+        file: contents/meetup-2021.Rmd
       - text: 2020년
-        file: dashboard/meetup-2020.Rmd
+        file: contents/meetup-2020.Rmd
       - text: 2019년
-        file: dashboard/meetup-2019.Rmd
+        file: contents/meetup-2019.Rmd
       - text: 2018년
-        file: dashboard/meetup-2018.Rmd
+        file: contents/meetup-2018.Rmd
       - text: 연혁
-        file: dashboard/history.Rmd
+        file: contents/history.Rmd
       - text: 행동강령(CoC)
-        file: dashboard/coc.Rmd
+        file: contents/coc.Rmd
     right: 
       - href: https://r2bit.com
         text: "R사용자회"
@@ -56,4 +56,4 @@ theme:
   dark: [cosmo, theme-dark.scss]
   
 execute:
-  freeze: true  
+  freeze: true
