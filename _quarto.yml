@@ -15,7 +15,7 @@ website:
       - text: 소개
         href: contents/intro.Rmd
       - text: 2023년
-        file: contents/meetup-2023.Rmd
+        file: contents/meetup-2023.qmd
       - text: 2022년
         file: contents/meetup-2022.Rmd
       - text: 2021년

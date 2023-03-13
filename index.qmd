@@ -74,6 +74,18 @@ R Consortium R User Groups에 등록된 Seoul R Meetup은 매월 개최되는 �
 - 유튜브 채널 (Youtube Channel): [link](https://www.youtube.com/channel/UCW-epmIvjBEhhVXw_F0Nqbw)
 - 페이스북 그룹 (Facebook Group): [link](https://www.facebook.com/groups/tidyverse)
 
+
+## R 사용자회 회원 가입
+
+사단법인 한국 R 사용자회(이하 R 사용자회)는 2022년 2월 28일 설립되어 창립 1년이 되었습니다. R 사용자회는 R Consortium R User Groups에 등록된 Seoul R Meetup은 매월 개최되는 데이터 사이언스 R / Tidyverse 미트업을 2017년부터 운영하며 R 지식 나눔과 커뮤니티 멤버들 간의 사랑방 역할도 수행하고 있습니다.
+
+R사용자회는 2022년부터 오픈 통계 패키지(BitStat) 패키지를 개발하여 보급하였을 뿐만 아니라 BitNLP, BitSpatial, BitReport 패키지를 개발하여 공개하였을 뿐만 아니라, "디지털 글쓰기", "데이터 과학 프로그래밍", "데이터 시각화", "데이터 과학 기본기", "오픈 통계 패키지", "R 텍스트 마이닝", "데이터 과학 언플러그드" 등 전자책을 집필하여 무료로 대중에 공개하였습니다.
+
+회원가입을 원하시는 분은 아래의 계좌로 연회비를 입금하시고 관련 정보를 입력해주시면 검토 후 회원이 될 수 있도록 하겠습니다.
+
+입금계좌: 하나은행 448-910057-06204 / 사단법인 한국알사용자회
+회비: 연 2만원 이상
+
 ## 스폰서 (Sponsors)
 
 [![](./fig/R_Consortium-logo-vertical-color.png){width=10%}](https://www.r-consortium.org/)
@@ -81,7 +93,7 @@ R Consortium R User Groups에 등록된 Seoul R Meetup은 매월 개최되는 �
 
 **서울 R 미트업**은 언제는 후원을 기다리고 있습니다. 후원을 원하시는 경우 아래의 이메일을 통해 연락주세요.
 
-[한국R사용자회 운영자](mailto:admin@r2bit.com)
+[한국R사용자회 운영자 전자우편](mailto:admin@r2bit.com)
 
 ## 페이지 수정 요청 (Request)
 

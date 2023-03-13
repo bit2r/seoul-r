@@ -1,0 +1,170 @@
+---
+title: "서울 R 밋업 2023년"
+subtitle: "`chatGPT`와 데이터 사이언스"
+author:
+  - name: 한국 R 사용자회
+    url: https://r2bit.com
+    affiliation: 한국 R 사용자회
+    affiliation-url: https://github.com/bit2r
+# title-block-banner: true
+title-block-banner: "#373830"
+format:
+  html:
+    theme: flatly
+    code-fold: true
+    code-overflow: wrap
+    toc: true
+    toc-depth: 2
+    toc-title: 목차
+    number-sections: false
+    highlight-style: github    
+    self-contained: false
+filters:
+   - lightbox
+lightbox: auto
+link-citations: yes
+knitr:
+  opts_chunk: 
+    message: false
+    warning: false
+    collapse: true
+    comment: "#>" 
+    R.options:
+      knitr.graphics.auto_pdf: true
+editor_options: 
+  chunk_output_type: console
+---
+
+
+
+# 서울R미트업 발표자 모집
+
+2023년 발표자를 모집하고 있습니다. 
+소정의 강사료가 지급되므로 관심있는 분들은 아래 링크를 통해 신청해 주시기 바랍니다.
+
+[발표자 모집](https://forms.gle/pcr8y54jRMBz3pDa9)
+
+::::{.column-body-outset}
+
+:::{.panel-tabset}
+
+# 4월(Apr)
+
+## 일시 및 장소
+
+- 일시: 2023년 4월 13일(목) 19:00 ~ 21:00
+- 장소: 강남 교보타워 5층 노블리에홀
+  - 주소: 서울특별시 서초구 강남대로 465 교보타워
+  - 📍<a href="https://naver.me/F08oB7J8" target="_blank">네이버지도 링크</a>
+  - 📍<a href="http://kko.to/bmuzNbBHbs" target="_blank">카카오지도 링크</a>
+
+※ 실시간 방송 및 영상공유는 하지 않습니다.
+
+## 발표 목록
+
+### R과 함께 chatGPT 활용하기
+
+- 제목: “R과 함께 chatGPT 활용하기”
+- 영문 제목: “Using chatGPT with R”
+- 발표자: 유충현 (한국R사용자회)
+- 발표요약: OpenAI API를 이용해서 R 환경에서 chatGPT를 활용하는 방법을 소개합니다.
+
+### chatGPT와 디지털 글쓰기
+
+- 제목: “chatGPT와 디지털 글쓰기”
+- 영문 제목: “Digital Writing Powered by chatGPT”
+- 발표자: 이광춘 (한국R사용자회)
+- 발표요약: 데이터 사이언스 분야 기계(chatGPT)와 함께 디지털 글쓰기 경험을 공유합니다.
+
+### chatGPT를 만난 오픈 통계 패키지
+
+- 제목 “chatGPT를 만난 오픈 통계 패키지”
+- 영문 제목: “BitStat meets chatGPT”
+- 발표자: 김호성 (한국R사용자회)
+- 발표요약: 우리아이 BitStat 오픈 통계패키지가 chatGPT를 만나 이렇게 바뀌었어요
+
+# 5월(May)
+
+## 일시 및 장소
+
+- 일시: 2023년 5월 3일(수) 19:00 ~ 21:00
+- 장소: 강남 교보타워 5층 노블리에홀
+  - 주소: 서울특별시 서초구 강남대로 465 교보타워
+  - 📍<a href="https://naver.me/F08oB7J8" target="_blank">네이버지도 링크</a>
+  - 📍<a href="http://kko.to/bmuzNbBHbs" target="_blank">카카오지도 링크</a>
+
+※ 실시간 방송 및 영상공유는 하지 않습니다.
+
+## 발표 목록
+
+### ChatGPT와 오정보 대응
+
+- 제목: "ChatGPT와 오정보 대응"
+- 영문 제목: “chatGPT”
+- 발표자: Jevin West (University of Washington iSchool)
+    - [똑똑하게 생존하기(Calling Bullshit)](https://product.kyobobook.co.kr/detail/S000001708704) 저자
+- 발표요약: 
+
+# 6월(Jun)
+
+## 일시 및 장소
+
+- 일시: 2023년 6월 8일(목) 19:00 ~ 21:00
+- 장소: 강남 교보타워 5층 노블리에홀
+  - 주소: 서울특별시 서초구 강남대로 465 교보타워
+  - 📍<a href="https://naver.me/F08oB7J8" target="_blank">네이버지도 링크</a>
+  - 📍<a href="http://kko.to/bmuzNbBHbs" target="_blank">카카오지도 링크</a>
+
+※ 실시간 방송 및 영상공유는 하지 않습니다.
+
+## 발표 목록
+
+# 7월(Jul)
+
+## 일시 및 장소
+
+- 일시: 2023년 7월 6일(목) 19:00 ~ 21:00
+- 장소: 강남 교보타워 5층 노블리에홀
+  - 주소: 서울특별시 서초구 강남대로 465 교보타워
+  - 📍<a href="https://naver.me/F08oB7J8" target="_blank">네이버지도 링크</a>
+  - 📍<a href="http://kko.to/bmuzNbBHbs" target="_blank">카카오지도 링크</a>
+
+※ 실시간 방송 및 영상공유는 하지 않습니다.
+
+## 발표 목록
+
+# ~~8월(Aug)~~
+
+휴가로 한달 쉽니다!!!
+
+# 9월(Sep)
+
+## 일시 및 장소
+
+- 일시: 2023년 9월 7일(목) 19:00 ~ 21:00
+- 장소: 강남 교보타워 5층 노블리에홀
+  - 주소: 서울특별시 서초구 강남대로 465 교보타워
+  - 📍<a href="https://naver.me/F08oB7J8" target="_blank">네이버지도 링크</a>
+  - 📍<a href="http://kko.to/bmuzNbBHbs" target="_blank">카카오지도 링크</a>
+
+※ 실시간 방송 및 영상공유는 하지 않습니다.
+
+## 발표 목록
+
+# 10월(Oct)
+
+## 일시 및 장소
+
+- 일시: 2023년 10월 5일(목) 19:00 ~ 21:00
+- 장소: 강남 교보타워 5층 노블리에홀
+  - 주소: 서울특별시 서초구 강남대로 465 교보타워
+  - 📍<a href="https://naver.me/F08oB7J8" target="_blank">네이버지도 링크</a>
+  - 📍<a href="http://kko.to/bmuzNbBHbs" target="_blank">카카오지도 링크</a>
+
+※ 실시간 방송 및 영상공유는 하지 않습니다.
+
+## 발표 목록
+
+:::
+
+::::
