@@ -64,8 +64,8 @@ R Consortium R User Groups에 등록된 Seoul R Meetup은 매월 개최되는 �
 
 ## 스폰서 (Sponsors)
 
-[![](./fig/R_Consortium-logo-vertical-color.png){width=10%}](https://www.r-consortium.org/)
-[![](./fig/dplanex_EN.png){width=10%}](https://www.dplanex.com/)
+[![](../fig/R_Consortium-logo-vertical-color.png){width=10%}](https://www.r-consortium.org/)
+[![](../fig/dplanex_EN.png){width=10%}](https://www.dplanex.com/)
 
 **서울 R 미트업**은 언제는 후원을 기다리고 있습니다. 후원을 원하시는 경우 아래의 이메일을 통해 연락주세요.
 
