@@ -92,6 +92,8 @@ R사용자회는 2022년부터 오픈 통계 패키지(BitStat) 패키지를 개
 
 [![](./fig/R_Consortium-logo-vertical-color.png){width=10%}](https://www.r-consortium.org/)
 [![](./fig/dplanex_EN.png){width=20%}](https://www.dplanex.com/)
+[![](./fig/insight_logo.jpg){width=20%}](https://ebook.insightbook.co.kr/)
+
 
 **서울 R 미트업**은 언제는 후원을 기다리고 있습니다. 후원을 원하시는 경우 아래의 이메일을 통해 연락주세요.
 
