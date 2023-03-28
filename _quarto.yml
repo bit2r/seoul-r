@@ -8,6 +8,7 @@ date-format: "YYYY년 MM월 DD일"
 website:
   title: "서울 R 미트업"
   favicon: "fig/korea-r-user-group.png"
+  google-analytics: "UA-229551680-1"
   navbar:
     search: true
     logo: "fig/korea-r-user-group.png"
