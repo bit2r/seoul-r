@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="kr" xml:lang="kr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.3.299">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -18,7 +18,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -49,17 +49,31 @@ ul.task-list li input[type="checkbox"] {
   "type": "overlay",
   "limit": 20,
   "language": {
-    "search-no-results-text": "일치 없음",
-    "search-matching-documents-text": "일치된 문서",
-    "search-copy-link-title": "검색 링크 복사",
-    "search-hide-matches-text": "추가 검색 결과 숨기기",
-    "search-more-match-text": "추가 검색결과",
-    "search-more-matches-text": "추가 검색결과",
-    "search-clear-button-title": "제거",
-    "search-detached-cancel-button-title": "취소",
-    "search-submit-button-title": "검색"
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
   }
 }</script>
+
+<script type="text/javascript">
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-229551680-1', 'auto');
+
+ga('send', {
+  hitType: 'pageview',
+  'anonymizeIp': true,
+});
+</script>
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-P3F3EGT0XE"></script>
 <script>
@@ -112,70 +126,72 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">서울 R 미트업</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../contents/intro.html">
+    <a class="nav-link" href="../contents/intro.html" rel="" target="">
  <span class="menu-text">소개</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../contents/meetup-2023.html" aria-current="page">
+    <a class="nav-link active" href="../contents/meetup-2023.html" rel="" target="" aria-current="page">
  <span class="menu-text">2023년</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../contents/meetup-2022.html">
+    <a class="nav-link" href="../contents/meetup-2022.html" rel="" target="">
  <span class="menu-text">2022년</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../contents/meetup-2021.html">
+    <a class="nav-link" href="../contents/meetup-2021.html" rel="" target="">
  <span class="menu-text">2021년</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../contents/meetup-2020.html">
+    <a class="nav-link" href="../contents/meetup-2020.html" rel="" target="">
  <span class="menu-text">2020년</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../contents/meetup-2019.html">
+    <a class="nav-link" href="../contents/meetup-2019.html" rel="" target="">
  <span class="menu-text">2019년</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../contents/meetup-2018.html">
+    <a class="nav-link" href="../contents/meetup-2018.html" rel="" target="">
  <span class="menu-text">2018년</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../contents/history.html">
+    <a class="nav-link" href="../contents/history.html" rel="" target="">
  <span class="menu-text">연혁</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../contents/coc.html">
+    <a class="nav-link" href="../contents/coc.html" rel="" target="">
  <span class="menu-text">행동강령(CoC)</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="https://r2bit.com">
+    <a class="nav-link" href="https://r2bit.com" rel="" target="">
  <span class="menu-text">R사용자회</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.youtube.com/channel/UCW-epmIvjBEhhVXw_F0Nqbw"><i class="bi bi-youtube" role="img">
+    <a class="nav-link" href="https://www.youtube.com/channel/UCW-epmIvjBEhhVXw_F0Nqbw" rel="" target=""><i class="bi bi-youtube" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/bit2r/seoul-r"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/bit2r/seoul-r" rel="" target=""><i class="bi bi-github" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.facebook.com/groups/tidyverse"><i class="bi bi-facebook" role="img">
+    <a class="nav-link" href="https://www.facebook.com/groups/tidyverse" rel="" target=""><i class="bi bi-facebook" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools">
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -186,7 +202,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">목차</h2>
+    <h2 id="toc-title">On this page</h2>
    
   <ul>
   <li><a href="#서울r미트업-발표자-모집" id="toc-서울r미트업-발표자-모집" class="nav-link active" data-scroll-target="#서울r미트업-발표자-모집">서울R미트업 발표자 모집</a></li>
@@ -204,11 +220,11 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="quarto-title-meta-author">
-  <div class="quarto-title-meta-heading">저자</div>
-  <div class="quarto-title-meta-heading">소속</div>
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
   
     <div class="quarto-title-meta-contents">
-    <a href="https://r2bit.com">한국 R 사용자회</a> 
+    <p class="author"><a href="https://r2bit.com">한국 R 사용자회</a> </p>
   </div>
     <div class="quarto-title-meta-contents">
         <p class="affiliation">
@@ -234,7 +250,7 @@ ul.task-list li input[type="checkbox"] {
 <p>2023년 발표자를 모집하고 있습니다. 소정의 강사료가 지급되므로 관심있는 분들은 아래 링크를 통해 신청해 주시기 바랍니다.</p>
 <p><a href="https://forms.gle/pcr8y54jRMBz3pDa9">발표자 모집</a></p>
 <div class="column-body-outset">
-<div class="panel-tabset">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">4월(Apr)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">5월(May)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">6월(Jun)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">7월(Jul)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false"><del>8월(Aug)</del></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" role="tab" aria-controls="tabset-1-6" aria-selected="false">9월(Sep)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-7" role="tab" aria-controls="tabset-1-7" aria-selected="false">10월(Oct)</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
@@ -322,17 +338,28 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="발표-목록-1" class="level2">
 <h2 class="anchored" data-anchor-id="발표-목록-1">발표 목록</h2>
-<section id="chatgpt와-오정보-대응" class="level3">
-<h3 class="anchored" data-anchor-id="chatgpt와-오정보-대응">ChatGPT와 오정보 대응</h3>
+<section id="챗gpt와-오정보misinformation" class="level3">
+<h3 class="anchored" data-anchor-id="챗gpt와-오정보misinformation">챗GPT와 오정보(Misinformation)</h3>
 <ul>
-<li>제목: “ChatGPT와 오정보 대응”</li>
-<li>영문 제목: “chatGPT”</li>
-<li>발표자: Jevin West (University of Washington iSchool)
+<li>제목 “헛소문 바로잡기”</li>
+<li>영문 제목: “Cutting Through Bullshit: Navigating Misinformation and Disinformation in the GenChatGPT Era”</li>
+<li>발표자: <a href="https://jevinwest.org">제빈 웨스트 박사(Jevin West, Ph.D)</a>
 <ul>
 <li><a href="https://product.kyobobook.co.kr/detail/S000001708704">똑똑하게 생존하기(Calling Bullshit)</a> 저자</li>
 </ul></li>
-<li>발표요약:</li>
+<li>발표요약: GenChatGPT 시대의 잘못된 정보 및 허위 정보 탐색하여 가짜뉴스를 바로 잡습니다.</li>
 </ul>
+</section>
+<section id="chatgpt를-만난-오픈-통계-패키지-1" class="level3">
+<h3 class="anchored" data-anchor-id="chatgpt를-만난-오픈-통계-패키지-1">chatGPT를 만난 오픈 통계 패키지</h3>
+<ul>
+<li>제목 “ggplot2 프롬프트”</li>
+<li>영문 제목: “ggplot2 Prompt”</li>
+<li>발표자: 나성호 (헬로 데이터사이언스 대표)</li>
+<li>발표요약: 데이터 시각화를 위한 ggplot2에 유용한 ChatGPT 프롬프트를 소개합니다.</li>
+</ul>
+<p><a href="https://product.kyobobook.co.kr/detail/S000001708704">똑똑하게 생존하기(Calling Bullshit)</a> 책10권을 적극적으로 참여하신 분들께 무료증정행사도 병행하여 진행할 예정입니다.</p>
+<p>※ 실시간 방송 및 영상공유는 하지 않습니다.</p>
 </section>
 </section>
 </div>
@@ -447,9 +474,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -460,12 +501,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "복사완료!");
+    button.setAttribute("title", "Copied!");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "복사완료!");
+      button.setAttribute("data-bs-title", "Copied!");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
@@ -514,6 +555,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {

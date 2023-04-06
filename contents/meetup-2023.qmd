@@ -22,7 +22,7 @@ format:
 filters:
    - lightbox
 lightbox: auto
-link-citations: yes
+link-citations: true
 knitr:
   opts_chunk: 
     message: false
@@ -117,13 +117,24 @@ editor_options:
 
 ## 발표 목록
 
-### ChatGPT와 오정보 대응
+### 챗GPT와 오정보(Misinformation)
 
--   제목: "ChatGPT와 오정보 대응"
--   영문 제목: "chatGPT"
--   발표자: Jevin West (University of Washington iSchool)
-    -   [똑똑하게 생존하기(Calling Bullshit)](https://product.kyobobook.co.kr/detail/S000001708704) 저자
--   발표요약:
+- 제목 "헛소문 바로잡기"
+- 영문 제목: "Cutting Through Bullshit: Navigating Misinformation and Disinformation in the GenChatGPT Era"
+- 발표자: [제빈 웨스트 박사(Jevin West, Ph.D)](https://jevinwest.org)
+    - [똑똑하게 생존하기(Calling Bullshit)](https://product.kyobobook.co.kr/detail/S000001708704) 저자
+- 발표요약: GenChatGPT 시대의 잘못된 정보 및 허위 정보 탐색하여 가짜뉴스를 바로 잡습니다.
+
+### chatGPT를 만난 오픈 통계 패키지
+
+- 제목 “ggplot2 프롬프트”
+- 영문 제목: “ggplot2 Prompt”
+- 발표자: 나성호 (헬로 데이터사이언스 대표)
+- 발표요약: 데이터 시각화를 위한 ggplot2에 유용한 ChatGPT 프롬프트를 소개합니다.
+
+[똑똑하게 생존하기(Calling Bullshit)](https://product.kyobobook.co.kr/detail/S000001708704) 책10권을 적극적으로 참여하신 분들께 무료증정행사도 병행하여 진행할 예정입니다.
+
+※ 실시간 방송 및 영상공유는 하지 않습니다.
 
 # 6월(Jun)
 
