@@ -14,7 +14,7 @@ format:
 filters:
   - lightbox
 lightbox: auto
-link-citations: yes
+link-citations: true
 knitr:
   opts_chunk:
     message: false
