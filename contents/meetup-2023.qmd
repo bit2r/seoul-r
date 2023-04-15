@@ -118,26 +118,54 @@ editor_options:
 
 ※ 실시간 방송 및 영상공유는 하지 않습니다.
 
-## 발표 목록
+## 발표 목록 : 챗GPT와 오정보(Misinformation)
 
-### 챗GPT와 오정보(Misinformation)
+### 헛소문 바로잡기
 
-- 제목 "헛소문 바로잡기"
+- 제목: 헛소문 바로잡기
 - 영문 제목: "Cutting Through Bullshit: Navigating Misinformation and Disinformation in the GenChatGPT Era"
 - 발표자: [제빈 웨스트 박사(Jevin West, Ph.D)](https://jevinwest.org)
     - [똑똑하게 생존하기(Calling Bullshit)](https://product.kyobobook.co.kr/detail/S000001708704) 저자
-- 발표요약: GenChatGPT 시대의 잘못된 정보 및 허위 정보 탐색하여 가짜뉴스를 바로 잡습니다.
+- 토론: 안도현 (제주대 언론홍보학과)   
+- 발표요약: 생성AI는 진짜같은 콘텐츠의 대량 생산 및 유포를 저렴한 비용으로 할수 있도록 한다. 지식노동의 생산성을 크게 향상시키지만 동시에 허위정보 및 조작정보의 범람으로 이어질수도 있다. 생성AI의 윤리적이고도 현명한 사용을 모색한다.
 
-### chatGPT를 만난 오픈 통계 패키지
+### 대통령 취임사 임베딩 
 
-- 제목 “ggplot2 프롬프트”
-- 영문 제목: “ggplot2 Prompt”
-- 발표자: 나성호 (헬로 데이터사이언스 대표)
-- 발표요약: 데이터 시각화를 위한 ggplot2에 유용한 ChatGPT 프롬프트를 소개합니다.
-
-[똑똑하게 생존하기(Calling Bullshit)](https://product.kyobobook.co.kr/detail/S000001708704) 책10권을 적극적으로 참여하신 분들께 무료증정행사도 병행하여 진행할 예정입니다.
+- 제목: 대통령 취임사 임베딩 
+- 영문 제목: Text Embedding for Korean Inaugural Address
+- 발표자: 이광춘(한국 R 사용자회)
+- 발표요약: 역대 대통령 취임사에 담긴 국정철학과 방향에 대한 유사도를 통해 개념적으로 인식하고 있는 역대 대통령 유사도를 텍스트 임베딩 기법을 통해 살펴보고 챗GPT 텍스트 데이터 분석과정에서 경험한 사항을 공유합니다.
 
 ※ 실시간 방송 및 영상공유는 하지 않습니다.
+
+---
+
+적극적으로 참여하신 분들께 제빈 웨스트 박사의 [똑똑하게 생존하기(Calling Bullshit)](https://product.kyobobook.co.kr/detail/S000001708704) 책10권을 무료증정 예정입니다.
+
+::::: columns
+::: {.column width="50%"}
+![](../fig/calling_bullshit.jpg)
+:::
+
+::: {.column width="50%"}
+#### 똑똑하게 생존하기
+
+거짓과 기만 속에서 살아가는 현대인을 위한 헛소리 까발리기의 기술
+
+노벨상 수상자 솔 펄머터, 조지 애커로프, 폴 로머 교수와
+《틀리지 않는 법》의 조던 엘렌버그가 극찬한 책!
+정치인들은 사실에 얽매이지 않는다
+과학은 보도 자료를 통해 진행된다
+실리콘밸리의 스타트업들은 헛소리를 예술의 경지로 올려놓았다
+오늘날 세상에는 소음이 너무나 많다!
+거짓과 기만 속에서 살아가는 현대인을 위한 헛소리 까발리기의 기술!
+
+{{< video https://youtu.be/sCenEq4Ppcg >}}
+
+:::
+:::::
+
+
 
 # 6월(Jun)
 
@@ -151,6 +179,23 @@ editor_options:
 
 ※ 실시간 방송 및 영상공유는 하지 않습니다.
 
+## 발표목록
+
+### Medical AI 분야 임상통계 업무 소개
+
+- Title: “Introduction to clinical statistics in medical AI”
+- Korean Title: “Medical AI 분야 임상통계 업무 소개”
+- Speaker: 곽수영 (Lunit)
+- Abstract: Medical AI 업계에서 임상통계학자로써 하고 있는 일에 대한 소개입니다
+
+### “R을 이용한 기계 학습 간소화 방법”
+
+- Title: “How to simplify machine learning using R”
+- Korean Title: “R을 이용한 기계 학습 간소화 방법”
+- Speaker: 유충현 (한국R사용자회)
+- Abstract: Binary Classification 모형 개발 과정에서의 생산성 제고를 위한 방법을 공유합니다.
+
+
 ## 발표 목록
 
 # 7월(Jul)
@@ -162,6 +207,29 @@ editor_options:
     -   주소: 서울특별시 서초구 강남대로 465 교보타워
     -   📍<a href="https://naver.me/F08oB7J8" target="_blank">네이버지도 링크</a>
     -   📍<a href="http://kko.to/bmuzNbBHbs" target="_blank">카카오지도 링크</a>
+
+## 발표 목록
+
+### ChatGPT가 실현된 미래 예측
+
+- Title: “Predicting the future of ChatGPT”
+- Korean Title: “ChatGPT가 실현된 미래 예측”
+- Speaker: [Amang Kim](https://wapps2.ipm.edu.mo/teldir2005/Profile/Profilephoto.asp?ref_no=4CDL5JGNV) - (Macao Polytechnic University)
+- Abstract: ChatGPT이후 세상이 가치관, 철학적인 측면에서 어떤식으로 변화 할지에 대한 담론
+
+### 파이썬, 배워야 하나?
+
+- Title “파이썬, 배워야 하나?”
+- Korean Title “Python, should you learn it?”
+- Speaker: 나성호 (헬로 데이터사이언스 대표)
+- Abstract: ChatGPT 시대 파이썬을 꼭 학습해야하는지에 대한 철학(?)적 고민을 함께 합니다.
+
+### TBA
+
+- Title: TBD
+- Korean Title: TBD
+- Speaker: 안영찬 (나이스디앤알)
+- Abstract: TBD
 
 ※ 실시간 방송 및 영상공유는 하지 않습니다.
 
@@ -181,6 +249,16 @@ editor_options:
     -   📍<a href="https://naver.me/F08oB7J8" target="_blank">네이버지도 링크</a>
     -   📍<a href="http://kko.to/bmuzNbBHbs" target="_blank">카카오지도 링크</a>
 
+
+## 발표 목록
+
+### TBA
+
+- Title: TBD
+- Korean Title: TBD
+- Speaker: 박남호(미국 워싱턴대)
+- Abstract: TBD    
+
 ※ 실시간 방송 및 영상공유는 하지 않습니다.
 
 ## 발표 목록
@@ -194,6 +272,15 @@ editor_options:
     -   주소: 서울특별시 서초구 강남대로 465 교보타워
     -   📍<a href="https://naver.me/F08oB7J8" target="_blank">네이버지도 링크</a>
     -   📍<a href="http://kko.to/bmuzNbBHbs" target="_blank">카카오지도 링크</a>
+
+## 발표 목록
+
+### R 부동산
+
+- Title: TBD
+- Korean Title: TBD
+- Speaker: 박순만(명지대 부동산학과)
+- Abstract: TBD
 
 ※ 실시간 방송 및 영상공유는 하지 않습니다.
 
