@@ -188,6 +188,13 @@ editor_options:
 - Speaker: 곽수영 (Lunit)
 - Abstract: Medical AI 업계에서 임상통계학자로써 하고 있는 일에 대한 소개입니다
 
+### “챗GPT를 활용한 R 패키지 제작:  bitToken2”
+
+- Title: “Create an R package using ChatGPT: `bitToken2`”
+- Korean Title: “챗GPT를 활용한 R 패키지 제작: `bitToken2`”
+- Speaker: 신종화 (조원씨앤아이, CRO)
+- Abstract: 토큰화(tokenizing)은 문장형 텍스트 데이터를 다루는 방법의 하나이다. 토큰화를 통하여 대용량 텍스트 데이터를 대표하는 문장을 선택하는데 bitToken2 패키지가 활용될 수 있다. 이 발표는 chatGPT를 활용하여 패키지를 제작하고 업그레이드하는 사례 공유를 목적으로 한다.
+
 ### “R을 이용한 기계 학습 간소화 방법”
 
 - Title: “How to simplify machine learning using R”
@@ -275,12 +282,19 @@ editor_options:
 
 ## 발표 목록
 
+### R 샤이니를 활용한 비즈니스 인텔리전스 시스템의 개발과 활용 
+
+- Title: Develop and utilize a business intelligence system with R Shiny 
+- Korean Title: R 샤이니를 활용한 비즈니스 인텔리전스 시스템의 개발과 활용
+- Speaker: 공병규 (The University of Utah)
+- Abstract: TBA
+
 ### R 부동산
 
-- Title: TBD
-- Korean Title: TBD
+- Title: TBA
+- Korean Title: TBA
 - Speaker: 박순만(명지대 부동산학과)
-- Abstract: TBD
+- Abstract: TBA
 
 ※ 실시간 방송 및 영상공유는 하지 않습니다.
 
