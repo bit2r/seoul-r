@@ -266,6 +266,15 @@ editor_options:
 - Speaker: 박남호(미국 워싱턴대)
 - Abstract: TBD    
 
+### Data analysis with GPT and enbedding
+
+- Title: Data analysis with GPT and enbedding
+- Korean Title: GPT와 임베딩을 이용한 자동 데이터 분석
+- Speaker: 홍성학 (한국 R 사용자회)
+- Abstract: GPT를 이용해 데이터 분석, 데이터 해설을 자동화하려는 노력이 계속되고 있습니다.
+    하지만 GPT는 특정 산업이나 회사의 특별한 지식에 대해서 알지 못하므로 데이터 분석 결과를 알맞게 해석하지 못합니다.
+    이런 특별한 지식을 GPT에 넣어서 데이터 요약, 통계 요약에 대한 설명하게 하는 방법을 공유하고자 합니다.
+
 ※ 실시간 방송 및 영상공유는 하지 않습니다.
 
 ## 발표 목록
