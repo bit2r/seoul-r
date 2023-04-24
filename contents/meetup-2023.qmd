@@ -7,6 +7,7 @@ author:
     affiliation: 한국 R 사용자회
     affiliation-url: https://github.com/bit2r
 # title-block-banner: true
+title-block-banner-color: "#fff"
 title-block-banner: "#373830"
 format:
   html:
@@ -37,7 +38,8 @@ editor_options:
 
 # 서울R미트업 발표자 모집
 
-2023년 발표자를 모집하고 있습니다. 소정의 강사료가 지급되므로 관심있는 분들은 아래 링크를 통해 신청해 주시기 바랍니다.
+2023년 발표자를 모집하고 있습니다.  
+소정의 강사료가 지급되므로 관심있는 분들은 아래 링크를 통해 신청해 주시기 바랍니다.
 
 [발표자 모집](https://forms.gle/pcr8y54jRMBz3pDa9)
 
@@ -273,7 +275,7 @@ editor_options:
 - Speaker: 홍성학 (한국 R 사용자회)
 - Abstract: GPT를 이용해 데이터 분석, 데이터 해설을 자동화하려는 노력이 계속되고 있습니다.
     하지만 GPT는 특정 산업이나 회사의 특별한 지식에 대해서 알지 못하므로 데이터 분석 결과를 알맞게 해석하지 못합니다.
-    이런 특별한 지식을 GPT에 넣어서 데이터 요약, 통계 요약에 대한 설명하게 하는 방법을 공유하고자 합니다.
+    이런 특별한 지식을 GPT에 넣어서 데이터 요약, 통계 요약에 대한 설명하게 하는 방법을 공유합니다.
 
 ※ 실시간 방송 및 영상공유는 하지 않습니다.
 
