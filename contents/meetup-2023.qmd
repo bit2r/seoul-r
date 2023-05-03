@@ -138,7 +138,17 @@ editor_options:
 
 ※ 실시간 방송 및 영상공유는 하지 않습니다.
 
----
+------------------------------------------------------------------------
+
+:::{#meetup-may layout-ncol=2}
+
+![](../fig/seoul-r-meetup-may.jpg)
+
+![](../fig/seoul-r-meetup-may-AsiaR.jpg)
+
+:::
+
+------------------------------------------------------------------------
 
 적극적으로 참여하신 분들께 제빈 웨스트 박사의 [똑똑하게 생존하기(Calling Bullshit)](https://product.kyobobook.co.kr/detail/S000001708704) 책10권을 무료증정 예정입니다.
 
@@ -195,15 +205,22 @@ editor_options:
 - Speaker: 신종화 (조원씨앤아이, CRO)
 - Abstract: 토큰화(tokenizing)은 문장형 텍스트 데이터를 다루는 방법의 하나이다. 토큰화를 통하여 대용량 텍스트 데이터를 대표하는 문장을 선택하는데 bitToken2 패키지가 활용될 수 있다. 이 발표는 chatGPT를 활용하여 패키지를 제작하고 업그레이드하는 사례 공유를 목적으로 한다.
 
-### “R을 이용한 기계 학습 간소화 방법”
+<!-- ### “R을 이용한 기계 학습 간소화 방법” -->
 
-- Title: “How to simplify machine learning using R”
-- Korean Title: “R을 이용한 기계 학습 간소화 방법”
-- Speaker: 유충현 (한국R사용자회)
-- Abstract: Binary Classification 모형 개발 과정에서의 생산성 제고를 위한 방법을 공유합니다.
+<!-- - Title: “How to simplify machine learning using R” -->
+<!-- - Korean Title: “R을 이용한 기계 학습 간소화 방법” -->
+<!-- - Speaker: 유충현 (한국R사용자회) -->
+<!-- - Abstract: Binary Classification 모형 개발 과정에서의 생산성 제고를 위한 방법을 공유합니다. -->
+
+### chatGPT로 배우는 R 머신러닝 (feat.mlr3)
+
+- Title: "R Machine Learning with chatGPT (feat.mlr3)"
+- Korean Title: chatGPT로 배우는 R 머신러닝 (feat.mlr3)
+- Speaker: 장연훈 (분당서울대학교병원)
+- Abstract: 우리나라에는 아직 잘 알려지지 않은 머신러닝 프레임워크 (machine learning in R 3, mlr3)를 소개합니다. chatGPT를 활용하여 tidymodels와 mlr3을 비교하고, mlr3의 특징을 배워봅니다.
 
 
-## 발표 목록
+
 
 # 7월(Jul)
 
