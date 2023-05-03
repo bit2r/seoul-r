@@ -7,6 +7,7 @@ author:
     affiliation: 한국 R 사용자회
     affiliation-url: https://github.com/bit2r
 # title-block-banner: true
+title-block-banner-color: "#fff"
 title-block-banner: "#373830"
 format:
   html:
@@ -37,74 +38,13 @@ editor_options:
 
 # 서울R미트업 발표자 모집
 
-2023년 발표자를 모집하고 있습니다. 소정의 강사료가 지급되므로 관심있는 분들은 아래 링크를 통해 신청해 주시기 바랍니다.
+2023년 발표자를 모집하고 있습니다.  
+소정의 강사료가 지급되므로 관심있는 분들은 아래 링크를 통해 신청해 주시기 바랍니다.
 
 [발표자 모집](https://forms.gle/pcr8y54jRMBz3pDa9)
 
-::: column-body-outset
+::::: column-body-outset
 ::: panel-tabset
-# 4월(Apr)
-
-## 일시 및 장소
-
--   일시: 2023년 4월 13일(목) 19:00 \~ 21:00
--   장소: 강남 교보타워 5층 노블리에홀
-    -   주소: 서울특별시 서초구 강남대로 465 교보타워
-    -   📍<a href="https://naver.me/F08oB7J8" target="_blank">네이버지도 링크</a>
-    -   📍<a href="http://kko.to/bmuzNbBHbs" target="_blank">카카오지도 링크</a>
-
-※ 실시간 방송 및 영상공유는 하지 않습니다.
-
-## 발표 목록
-
-### R과 함께 chatGPT 활용하기
-
--   제목: "R과 함께 chatGPT 활용하기"
--   영문 제목: "Using chatGPT with R"
--   발표자: 유충현 (한국R사용자회)
--   발표요약: OpenAI API를 이용해서 R 환경에서 chatGPT를 활용하는 방법을 소개합니다.
--   발표자료: [바로보기](https://choonghyunryu.github.io/intro_Rpackages/slide/slide_bitGPT/)
-
-### chatGPT와 디지털 글쓰기
-
--   제목: "chatGPT와 디지털 글쓰기"
--   영문 제목: "Digital Writing Powered by chatGPT"
--   발표자: 이광춘 (한국R사용자회)
--   발표요약: 데이터 사이언스 분야 기계(chatGPT)와 함께 디지털 글쓰기 경험을 공유합니다.
--   발표자료: [바로보기](https://r2bit.com/bitSlide/slideshow/202304-seoul-r-meetup/)
-
-### chatGPT를 만난 오픈 통계 패키지
-
--   제목 "chatGPT를 만난 오픈 통계 패키지"
--   영문 제목: "BitStat meets chatGPT"
--   발표자: 김호성 (한국R사용자회)
--   발표요약: 우리아이 BitStat 오픈 통계패키지가 chatGPT를 만나 이렇게 바뀌었어요
--   발표자료: [바로보기](https://github.com/joygram/stat_with_langchain)
-
-------------------------------------------------------------------------
-
-![](../fig/webposter_202304.jpg){width="500"}
-
-------------------------------------------------------------------------
-
-[인사이트 출판사](https://ebook.insightbook.co.kr/)에서 [**R 사용자를 위한 Shiny 마스터 가이드**](https://ebook.insightbook.co.kr/book/142) 책을 10권 후원해주셨습니다. 미트업 행사에 참여하신 분 대상으로 추첨을 통해 나눠 드리도록 하겠습니다. 
-
-::: columns
-::: {.column width="50%"}
-![](../fig/book_mastering_shiny.webp)
-:::
-
-::: {.column width="50%"}
-#### R 사용자를 위한 Shiny 마스터 가이드
-
-데이터 분석용 인터랙티브 웹 애플리케이션을 만들 수 있게 해주는 Shiny에 대한 완벽한 가이드다. Shiny의 기초부터 반응성, 모듈, 테스트, 보안까지 Shiny에 대한 모든 것을 다루고 있어 독자들은 R 언어만으로 쉽고 빠르게 웹 애플리케이션을 만드는 방법을 익힐 수 있다. 또한 Shiny의 기반이 되는 반응형 프로그래밍에 대한 이론과 쓰임을 깊이 있게 배울 수 있다.
-
--   지은이 \| 해들리 위컴
-    -   Posit(구 RStudio)의 수석 과학자이며, 2019년 COPSS(Committee of Presidents of Statistical Societies) 회장상을 받은 R 재단의 회원이다. 데이터 과학을 보다 쉽고 빠르고 재미있게 만들기 위한 계산 및 인지 도구를 만들고 있으며, `tidyverse`의 첫단추가 된 `hadleyverse`의 창안자로 유명하다. 웹사이트(http://hadley.nz)에서 더 많은 정보를 볼 수 있다.
--   옮긴이 \| 이영록
-    -   미국 소재 글로벌 미디어/엔터테인먼트 회사에서 디시전 사이언스(Decision Science) 업무를 맡고 있으며, R과 Shiny를 주로 사용하고 있다. 포항공과대학교에서 산업공학 학사와 석사 학위를, 미국 아이오와주립대에서 산업공학 박사 학위를 받았으며, 데이터 마이닝을 주로 연구하였으며 [한국 R 컨퍼런스 2021년 발표 및 행사 기획자](https://use-r.kr/)로 많은 기여를 해주셨다.
-:::
-:::
 
 # 5월(May)
 
@@ -135,6 +75,7 @@ editor_options:
 - 영문 제목: Text Embedding for Korean Inaugural Address
 - 발표자: 이광춘(한국 R 사용자회)
 - 발표요약: 역대 대통령 취임사에 담긴 국정철학과 방향에 대한 유사도를 통해 개념적으로 인식하고 있는 역대 대통령 유사도를 텍스트 임베딩 기법을 통해 살펴보고 챗GPT 텍스트 데이터 분석과정에서 경험한 사항을 공유합니다.
+- 발표자료: [바로보기](https://r2bit.com/bitSlide/slideshow/202305-seoul-r-meetup)
 
 ※ 실시간 방송 및 영상공유는 하지 않습니다.
 
@@ -152,7 +93,7 @@ editor_options:
 
 적극적으로 참여하신 분들께 제빈 웨스트 박사의 [똑똑하게 생존하기(Calling Bullshit)](https://product.kyobobook.co.kr/detail/S000001708704) 책10권을 무료증정 예정입니다.
 
-::::: columns
+::: columns
 ::: {.column width="50%"}
 ![](../fig/calling_bullshit.jpg)
 :::
@@ -173,9 +114,7 @@ editor_options:
 {{< video https://youtu.be/sCenEq4Ppcg >}}
 
 :::
-:::::
-
-
+:::
 
 # 6월(Jun)
 
@@ -257,8 +196,6 @@ editor_options:
 
 ※ 실시간 방송 및 영상공유는 하지 않습니다.
 
-## 발표 목록
-
 # ~~8월(Aug)~~
 
 휴가로 한달 쉽니다!!!
@@ -283,9 +220,16 @@ editor_options:
 - Speaker: 박남호(미국 워싱턴대)
 - Abstract: TBD    
 
-※ 실시간 방송 및 영상공유는 하지 않습니다.
+### Data analysis with GPT and enbedding
 
-## 발표 목록
+- Title: Data analysis with GPT and enbedding
+- Korean Title: GPT와 임베딩을 이용한 자동 데이터 분석
+- Speaker: 홍성학 (한국 R 사용자회)
+- Abstract: GPT를 이용해 데이터 분석, 데이터 해설을 자동화하려는 노력이 계속되고 있습니다.
+    하지만 GPT는 특정 산업이나 회사의 특별한 지식에 대해서 알지 못하므로 데이터 분석 결과를 알맞게 해석하지 못합니다.
+    이런 특별한 지식을 GPT에 넣어서 데이터 요약, 통계 요약에 대한 설명하게 하는 방법을 공유합니다.
+
+※ 실시간 방송 및 영상공유는 하지 않습니다.
 
 # 10월(Oct)
 
@@ -315,6 +259,69 @@ editor_options:
 
 ※ 실시간 방송 및 영상공유는 하지 않습니다.
 
+# 4월(Apr) 종료
+
+## 일시 및 장소
+
+-   일시: 2023년 4월 13일(목) 19:00 \~ 21:00
+-   장소: 강남 교보타워 5층 노블리에홀
+    -   주소: 서울특별시 서초구 강남대로 465 교보타워
+    -   📍<a href="https://naver.me/F08oB7J8" target="_blank">네이버지도 링크</a>
+    -   📍<a href="http://kko.to/bmuzNbBHbs" target="_blank">카카오지도 링크</a>
+
+※ 실시간 방송 및 영상공유는 하지 않습니다.
+
 ## 발표 목록
+
+### R과 함께 chatGPT 활용하기
+
+-   제목: "R과 함께 chatGPT 활용하기"
+-   영문 제목: "Using chatGPT with R"
+-   발표자: 유충현 (한국R사용자회)
+-   발표요약: OpenAI API를 이용해서 R 환경에서 chatGPT를 활용하는 방법을 소개합니다.
+-   발표자료: [바로보기](https://choonghyunryu.github.io/intro_Rpackages/slide/slide_bitGPT/)
+
+### chatGPT와 디지털 글쓰기
+
+-   제목: "chatGPT와 디지털 글쓰기"
+-   영문 제목: "Digital Writing Powered by chatGPT"
+-   발표자: 이광춘 (한국R사용자회)
+-   발표요약: 데이터 사이언스 분야 기계(chatGPT)와 함께 디지털 글쓰기 경험을 공유합니다.
+-   발표자료: [바로보기](https://r2bit.com/bitSlide/slideshow/202304-seoul-r-meetup/)
+
+### chatGPT를 만난 오픈 통계 패키지
+
+-   제목 "chatGPT를 만난 오픈 통계 패키지"
+-   영문 제목: "BitStat meets chatGPT"
+-   발표자: 김호성 (한국R사용자회)
+-   발표요약: 우리아이 BitStat 오픈 통계패키지가 chatGPT를 만나 이렇게 바뀌었어요
+-   발표자료: [바로보기](https://github.com/joygram/stat_with_langchain)
+
+------------------------------------------------------------------------
+
+![](../fig/webposter_202304.jpg){width="500"}
+
+------------------------------------------------------------------------
+
+[인사이트 출판사](https://ebook.insightbook.co.kr/)에서 [**R 사용자를 위한 Shiny 마스터 가이드**](https://ebook.insightbook.co.kr/book/142) 책을 10권 후원해주셨습니다. 미트업 행사에 참여하신 분 대상으로 추첨을 통해 나눠 드리도록 하겠습니다. 
+
+::: columns
+::: {.column width="50%"}
+![](../fig/book_mastering_shiny.webp)
+:::
+
+
+::: {.column width="50%"}
+#### R 사용자를 위한 Shiny 마스터 가이드
+
+데이터 분석용 인터랙티브 웹 애플리케이션을 만들 수 있게 해주는 Shiny에 대한 완벽한 가이드다. Shiny의 기초부터 반응성, 모듈, 테스트, 보안까지 Shiny에 대한 모든 것을 다루고 있어 독자들은 R 언어만으로 쉽고 빠르게 웹 애플리케이션을 만드는 방법을 익힐 수 있다. 또한 Shiny의 기반이 되는 반응형 프로그래밍에 대한 이론과 쓰임을 깊이 있게 배울 수 있다.
+
+-   지은이 \| 해들리 위컴
+    -   Posit(구 RStudio)의 수석 과학자이며, 2019년 COPSS(Committee of Presidents of Statistical Societies) 회장상을 받은 R 재단의 회원이다. 데이터 과학을 보다 쉽고 빠르고 재미있게 만들기 위한 계산 및 인지 도구를 만들고 있으며, `tidyverse`의 첫단추가 된 `hadleyverse`의 창안자로 유명하다. 웹사이트(http://hadley.nz)에서 더 많은 정보를 볼 수 있다.
+-   옮긴이 \| 이영록
+    -   미국 소재 글로벌 미디어/엔터테인먼트 회사에서 디시전 사이언스(Decision Science) 업무를 맡고 있으며, R과 Shiny를 주로 사용하고 있다. 포항공과대학교에서 산업공학 학사와 석사 학위를, 미국 아이오와주립대에서 산업공학 박사 학위를 받았으며, 데이터 마이닝을 주로 연구하였으며 [한국 R 컨퍼런스 2021년 발표 및 행사 기획자](https://use-r.kr/)로 많은 기여를 해주셨다.
 :::
 :::
+
+:::
+:::::
