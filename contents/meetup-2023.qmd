@@ -157,11 +157,9 @@ R을 활용하여 원 데이터로부터 지식과 통찰을 끌어내는, 데�
 
 -   Title: "Predicting the future of ChatGPT"
 -   Korean Title: "ChatGPT가 실현된 미래 예측"
--   Speaker: [Amang
-    Kim](https://wapps2.ipm.edu.mo/teldir2005/Profile/Profilephoto.asp?ref_no=4CDL5JGNV) -
+-   Speaker: [Amang Kim](https://wapps2.ipm.edu.mo/teldir2005/Profile/Profilephoto.asp?ref_no=4CDL5JGNV) -
     (Macao Polytechnic University)
--   Abstract: ChatGPT이후 세상이 가치관, 철학적인 측면에서 어떤식으로
-    변화 할지에 대한 담론
+-   Abstract: ChatGPT이후 세상이 가치관, 철학적인 측면에서 어떤식으로 변화 할지에 대한 담론
 
 ### 파이썬, 배워야 하나?
 
@@ -180,11 +178,7 @@ R을 활용하여 원 데이터로부터 지식과 통찰을 끌어내는, 데�
 
 ※ 실시간 방송 및 영상공유는 하지 않습니다.
 
-# ~~8월(Aug)~~
-
-휴가로 한달 쉽니다!!!
-
-# 9월(Sep)
+# 8월(Aug)
 
 ## 일시 및 장소
 
@@ -200,10 +194,10 @@ R을 활용하여 원 데이터로부터 지식과 통찰을 끌어내는, 데�
 
 ### TBA
 
--   Title: TBD
--   Korean Title: TBD
+-   Title: "Communicating Data for Impact"
+-   Korean Title: "영향력 있는 데이터 커뮤니케이션"
 -   Speaker: 박남호(미국 워싱턴대)
--   Abstract: TBD
+-   Abstract: TBA
 
 ### Data analysis with GPT and enbedding
 
@@ -218,7 +212,7 @@ R을 활용하여 원 데이터로부터 지식과 통찰을 끌어내는, 데�
 
 ※ 실시간 방송 및 영상공유는 하지 않습니다.
 
-# 10월(Oct)
+# 9월(Sep)
 
 ## 일시 및 장소
 
