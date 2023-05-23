@@ -169,12 +169,12 @@ R을 활용하여 원 데이터로부터 지식과 통찰을 끌어내는, 데�
 -   Abstract: ChatGPT 시대 파이썬을 꼭 학습해야하는지에 대한 철학(?)적
     고민을 함께 합니다.
 
-### TBA
+### 데이터 상품 기획과 유통에 관하여
 
--   Title: TBD
--   Korean Title: TBD
+-   Title: About planning and distribution of data products
+-   Korean Title: 데이터 상품 기획과 유통에 관하여
 -   Speaker: 안영찬 (나이스디앤알)
--   Abstract: TBD
+-   Abstract: 훌륭한 분석가가 되기 위한 기회는 늘어나고 있지만, 괜찮은 데이터 상품의 기획자는 부족합니다. 데이터 상품의 기획과 유통에 대한 필요성과 방법론을 논하고자 합니다.
 
 ※ 실시간 방송 및 영상공유는 하지 않습니다.
 
