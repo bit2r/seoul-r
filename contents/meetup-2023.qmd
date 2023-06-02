@@ -52,7 +52,7 @@ editor:
 
 # 7월(Jul)
 
-## 참가신청: [참가신청]()
+## 참가신청: [참가신청](https://www.meetup.com/seoul-r-meetup/events/293929603/)
 
 ## 일시 및 장소
 
