@@ -57,4 +57,4 @@ theme:
   dark: [cosmo, theme-dark.scss]
   
 execute:
-  freeze: true
+  freeze: false
