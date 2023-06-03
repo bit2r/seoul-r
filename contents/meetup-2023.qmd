@@ -207,6 +207,13 @@ editor:
 -   Speaker: 공병규 (The University of Utah)
 -   Abstract: TBA
 
+### 디자인과 데이터 과학의 융합
+
+-   Title: The convergence of design and data science
+-   Korean Title: 디자인과 데이터 과학의 융합
+-   Speaker: 이현진 (홍익대)
+-   Abstract: 감성적이고, 예술적인 작업으로 인식되어온 디자인 업무에 데이터 과학을 융합하면 어떤 강점이 있으며, 디자이너와 데이터 전문가는 어떻게 협업하는 것이 좋을까. 디자이너의 시각에서 데이터 과학의 활용 가능성을 사용자 경험(UX) 리서치와 디자인 평가 업무를 중심으로 한 사례와 함께 살펴봅니다. 
+
 ### R 부동산
 
 -   Title: TBA
