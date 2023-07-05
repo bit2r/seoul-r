@@ -74,6 +74,7 @@ editor:
     (Macao Polytechnic University)
 -   Abstract: ChatGPT이후 세상이 가치관, 철학적인 측면에서 어떤식으로
     변화 할지에 대한 담론
+-   발표자료: [다운로드](../data/202307/July_RMeetup_ChatGPT_R04_Pub_AMG.pdf)
 
 ### 학술 논문과 ChatGPT는 잘못된 만남일까?
 
@@ -82,6 +83,7 @@ editor:
 -   Speaker: 나성호 (HelloDataScience 대표)
 -   Abstract: 학위 논문을 작성하는 과정에서 ChatGPT를 활용하는 방법을
     함께 고민해봅시다.
+-   발표자료: [다운로드](../data/202307/July_ChatGPT for Academic Papers.pdf)    
 
 ### 데이터 상품 기획과 유통에 관하여
 
@@ -91,6 +93,7 @@ editor:
 -   Abstract: 훌륭한 분석가가 되기 위한 기회는 늘어나고 있지만, 괜찮은
     데이터 상품의 기획자는 부족합니다. 데이터 상품의 기획과 유통에 대한
     필요성과 방법론을 논하고자 합니다.
+-   발표자료: [다운로드](../data/202307/July_데이터 상품의 기획(안영찬).pdf)
 
 ※ 실시간 방송 및 영상공유는 하지 않습니다.
 
