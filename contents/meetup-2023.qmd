@@ -153,7 +153,7 @@ width="2077"}
 
 -   Title: Shiny Dashboard Development based on Wrapper Libraries.
 -   Korean Title: 다양한 wrapper library에 기반한 Shiny 대쉬보드 구축
--   Speaker: 공병규 (The University of Utah)
+-   Speaker: 공병규(유타대 아시아캠퍼스)
 -   Abstract: Shiny 대쉬보드는 데이터 시각화 툴에 그 기능을 한정하지 않고, 보다 다양한 기능을 탑재하고 사용자 편의성을 도모할 수 있도록 끊임 없이 진화하고 있습니다. 특히 Shiny 생태계의 근간을 이루는 Shiny와 ShinyDashboard 라이브러리 외에도 R외부의 프로그래밍 언어를 번역해서 Shiny에서 활용이 가능하도록 하는 다양한 wrapper 라이브러리가 존재하며, 이들을 통해 Shiny 생태계가 보다 다양해지고 고급화된 기능들을 지원할 수 있게 되었습니다. 이번 발표에서는 유명한 shiny wrapper 라이브러리와 눈여겨봐야 할 만한 새로운 wrapper 라이브러리들도 용례와 함께 소개하는 시간을 갖도록 하겠습니다.
 
 ### 디자인과 데이터 과학의 융합
