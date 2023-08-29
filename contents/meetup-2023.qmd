@@ -50,97 +50,6 @@ editor:
 ::: column-body-outset
 ::: panel-tabset
 
-# 8월(Aug)
-
-## 참가신청: [마감](https://www.meetup.com/seoul-r-meetup/events/294651161/)
-
-## 일시 및 장소
-
--   일시: 2023년 8월 10일(목) 19:00 \~ 21:00
--   장소: 강남 교보타워 5층 노블리에홀
-    -   주소: 서울특별시 서초구 강남대로 465 교보타워
-    -   📍<a href="https://naver.me/F08oB7J8" target="_blank">네이버지도
-        링크</a>
-    -   📍<a href="http://kko.to/bmuzNbBHbs" target="_blank">카카오지도
-        링크</a>
-
-## 발표 목록
-
-### Communicating Data for Impact
-
--   Title: "Communicating Data for Impact"
--   Korean Title: "영향력 있는 데이터 커뮤니케이션"
--   Speaker: 박남호(미국 워싱턴대)
--   Abstract: 현대 디지털 사회에서는 지속적으로 방대한 양의 데이터가 생성되고 있습니다. 이러한 데이터가 실질적인 사회 변화를 이끌기 위해서는 데이터 커뮤니케이션 전략이 필수입니다. 이 강의에서는 데이터 커뮤니케이션의 핵심 개념과 원리를 이해하고, 이를 토대로 효과적인 프레젠테이션을 만들고 실전에서 활용하는 방법을 다룰 것입니다. 데이터의 힘을 최대한 발휘하여 사회적인 변화를 이루는 데 도움이 되는 기술과 전략을 알아보도록 합니다.
--   발표자료:
-    [바로보기](../data/202308/2023-08-10 Communicating Data for Impact @서울미트업.pdf)
-
-### Literate Programming and Publishing
-
--   Title: Literate Programming and Publishing
--   Korean Title: Literate Programming과 출판
--   Speaker: 김강수 (KTUG)
--   Abstract: D. Knuth의 weave에서 출발한 Literate Programming (문학적
-    프로그래밍)과 주로 markdown에 의하는 그 현대적 발전을 개관하고 그
-    백엔드 출판 엔진인 (La)TeX의 역할에 대하여 심도있게 알아보고,
-    출판이라는 관점에서 문학적 프로그래밍 기술로써 작성한 문서, 특히
-    한국어가 주언어인 문서가 갖추어야 할 요소를 검토하고 출판에 적합한
-    문서를 생성하는 방법을 제안한다.
--   발표자료:
-    [바로보기](../data/202308/2023-08-novadehi_slide.pdf)    
-
-### Data analysis with GPT and embedding
-
--   Title: Data analysis with GPT and embedding
--   Korean Title: GPT와 임베딩을 이용한 자동 데이터 분석
--   Speaker: 홍성학 (한국 R 사용자회)
--   Abstract: GPT를 이용해 데이터 분석, 데이터 해설을 자동화하려는
-    노력이 계속되고 있습니다. 하지만 GPT는 특정 산업이나 회사의 특별한
-    지식에 대해서 알지 못하므로 데이터 분석 결과를 알맞게 해석하지
-    못합니다. 이런 특별한 지식을 GPT에 넣어서 데이터 요약, 통계 요약에
-    대한 설명하게 하는 방법을 공유합니다.
--   발표자료:
-    [바로보기](../data/202308/2023-08-GPT와 임베딩을 이용한 자동 분석.pdf)
-
-※ 실시간 방송 및 영상공유는 하지 않습니다.
-
-------------------------------------------------------------------------
-
-![](../fig/seoul-r-meetup-august.jpg){fig-align="center" width="600"}
-
-------------------------------------------------------------------------
-
-
-
-::::: columns
-::: {.column width="30%"}
-![](../fig/Nam-ho_2021-head.jpg)
-:::
-
-::: {.column width="5%"}
-:::
-
-::: {.column width="65%"}
-
-박남호는 PLAIN Strategies의 대표로 미국 정부기관, 비영리 단체, 스타트업을 대상으로 디자인 전략 컨설팅을 수행하며, 다양한 문화권의 경험과 디자인씽킹을 바탕으로 디지털 제품과 서비스의 사용자 경험을 개선하는 주력적인 역할을 하고 있습니다. 그는 데이터 시각화, 인공지능(AI), 블록체인 분야에서의 사용자 경험에 관심을 가지고 있으며, 미국 시애틀 워싱턴 주립 대학교 정보학과 강사로도 활동하고 있습니다. 10년째 재직 중인 그는 디자인 이론, 디자인 시스템, 졸업 작품 등 다양한 수업을 가르치고 있습니다.
-
-:::
-:::::
-
-**Financial Industry Insight, New Industry Insight, 신용평가사가 들려주는 산업이야기2: 석유의미래** 각 5권과 총 15권을 적극적으로 참여하신 분들께 무료증정행사도 병행하여 진행할 예정입니다.
-
-::: {layout-nrow="2"}
-![](../fig/hex_chatGPT_unix_shell_02.png){fig-align="center"
-width="900"}
-
-![](../fig/nice/FINANCIAL%20INDUSTRY%20INSIGHT.png){fig-align="center"
-width="2077"}
-
-![](../fig/nice/NEW%20INDUSTRY%20INSIGHT.png)
-
-![](../fig/nice/산업이야기.png)
-:::
-
 # 9월(Sep)
 
 ## 참가신청: [참가신청](https://www.meetup.com/seoul-r-meetup/events/295338359/)
@@ -163,6 +72,7 @@ width="2077"}
 -   Korean Title: 다양한 wrapper library에 기반한 Shiny 대쉬보드 구축
 -   Speaker: 공병규(유타대 아시아캠퍼스)
 -   Abstract: Shiny 대쉬보드는 데이터 시각화 툴에 그 기능을 한정하지 않고, 보다 다양한 기능을 탑재하고 사용자 편의성을 도모할 수 있도록 끊임 없이 진화하고 있습니다. 특히 Shiny 생태계의 근간을 이루는 Shiny와 ShinyDashboard 라이브러리 외에도 R외부의 프로그래밍 언어를 번역해서 Shiny에서 활용이 가능하도록 하는 다양한 wrapper 라이브러리가 존재하며, 이들을 통해 Shiny 생태계가 보다 다양해지고 고급화된 기능들을 지원할 수 있게 되었습니다. 이번 발표에서는 유명한 shiny wrapper 라이브러리와 눈여겨봐야 할 만한 새로운 wrapper 라이브러리들도 용례와 함께 소개하는 시간을 갖도록 하겠습니다.
+-   발표자료
 
 ### 디자인과 데이터 과학의 융합
 
@@ -174,6 +84,7 @@ width="2077"}
     전문가는 어떻게 협업하는 것이 좋을까. 디자이너의 시각에서 데이터
     과학의 활용 가능성을 사용자 경험(UX) 리서치와 디자인 평가 업무를
     중심으로 한 사례와 함께 살펴봅니다.
+-   [발표자료](../data/202309/R사용자회_발표_이현진.pdf)
 
 ### Data Envelopment Analysis(DEA) in R
 
@@ -181,6 +92,7 @@ width="2077"}
 -   Korean Title: Data Envelopment Analysis(DEA) in R
 -   Speaker: 김용우 (DPLANEX)
 -   Abstract: DEA(자료포락분석)는 효율성 분석을 위해 경영학, 경제학, 행정학 등 다양한 학문분야에서 꾸준히 사용되어온 분석방법 입니다. DEA에 대해 간략히 소개하고, 사용 시 유의해야 할 점에 대하여 소개합니다.2023년 새로 CRAN에 등록된 deaR 패키지를 이용하여 간단하게 DEA를 수행할 수 있습니다. 이를 활용하여 국내 생명보험시장의 효율성을 분석한 "국내 생명보험시장의 효율성 분석: 인터넷 및 방카슈랑스 전문 생보사를 중심으로"에 대해서도 소개합니다.
+-   [발표자료](../data/202309/9월_R-Meetup-DEA.pdf)
 
 ### 챗GPT 데이터 사이언스
 
@@ -650,6 +562,98 @@ R을 활용하여 원 데이터로부터 지식과 통찰을 끌어내는, 데�
 -   [교보문고](https://product.kyobobook.co.kr/detail/S000001953762)
 :::
 :::
+
+# ~~8월(Aug)~~
+
+## 참가신청: [마감](https://www.meetup.com/seoul-r-meetup/events/294651161/)
+
+## 일시 및 장소
+
+-   일시: 2023년 8월 10일(목) 19:00 \~ 21:00
+-   장소: 강남 교보타워 5층 노블리에홀
+    -   주소: 서울특별시 서초구 강남대로 465 교보타워
+    -   📍<a href="https://naver.me/F08oB7J8" target="_blank">네이버지도
+        링크</a>
+    -   📍<a href="http://kko.to/bmuzNbBHbs" target="_blank">카카오지도
+        링크</a>
+
+## 발표 목록
+
+### Communicating Data for Impact
+
+-   Title: "Communicating Data for Impact"
+-   Korean Title: "영향력 있는 데이터 커뮤니케이션"
+-   Speaker: 박남호(미국 워싱턴대)
+-   Abstract: 현대 디지털 사회에서는 지속적으로 방대한 양의 데이터가 생성되고 있습니다. 이러한 데이터가 실질적인 사회 변화를 이끌기 위해서는 데이터 커뮤니케이션 전략이 필수입니다. 이 강의에서는 데이터 커뮤니케이션의 핵심 개념과 원리를 이해하고, 이를 토대로 효과적인 프레젠테이션을 만들고 실전에서 활용하는 방법을 다룰 것입니다. 데이터의 힘을 최대한 발휘하여 사회적인 변화를 이루는 데 도움이 되는 기술과 전략을 알아보도록 합니다.
+-   발표자료:
+    [바로보기](../data/202308/2023-08-10 Communicating Data for Impact @서울미트업.pdf)
+
+### Literate Programming and Publishing
+
+-   Title: Literate Programming and Publishing
+-   Korean Title: Literate Programming과 출판
+-   Speaker: 김강수 (KTUG)
+-   Abstract: D. Knuth의 weave에서 출발한 Literate Programming (문학적
+    프로그래밍)과 주로 markdown에 의하는 그 현대적 발전을 개관하고 그
+    백엔드 출판 엔진인 (La)TeX의 역할에 대하여 심도있게 알아보고,
+    출판이라는 관점에서 문학적 프로그래밍 기술로써 작성한 문서, 특히
+    한국어가 주언어인 문서가 갖추어야 할 요소를 검토하고 출판에 적합한
+    문서를 생성하는 방법을 제안한다.
+-   발표자료:
+    [바로보기](../data/202308/2023-08-novadehi_slide.pdf)    
+
+### Data analysis with GPT and embedding
+
+-   Title: Data analysis with GPT and embedding
+-   Korean Title: GPT와 임베딩을 이용한 자동 데이터 분석
+-   Speaker: 홍성학 (한국 R 사용자회)
+-   Abstract: GPT를 이용해 데이터 분석, 데이터 해설을 자동화하려는
+    노력이 계속되고 있습니다. 하지만 GPT는 특정 산업이나 회사의 특별한
+    지식에 대해서 알지 못하므로 데이터 분석 결과를 알맞게 해석하지
+    못합니다. 이런 특별한 지식을 GPT에 넣어서 데이터 요약, 통계 요약에
+    대한 설명하게 하는 방법을 공유합니다.
+-   발표자료:
+    [바로보기](../data/202308/2023-08-GPT와 임베딩을 이용한 자동 분석.pdf)
+
+※ 실시간 방송 및 영상공유는 하지 않습니다.
+
+------------------------------------------------------------------------
+
+![](../fig/seoul-r-meetup-august.jpg){fig-align="center" width="600"}
+
+------------------------------------------------------------------------
+
+
+
+::::: columns
+::: {.column width="30%"}
+![](../fig/Nam-ho_2021-head.jpg)
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="65%"}
+
+박남호는 PLAIN Strategies의 대표로 미국 정부기관, 비영리 단체, 스타트업을 대상으로 디자인 전략 컨설팅을 수행하며, 다양한 문화권의 경험과 디자인씽킹을 바탕으로 디지털 제품과 서비스의 사용자 경험을 개선하는 주력적인 역할을 하고 있습니다. 그는 데이터 시각화, 인공지능(AI), 블록체인 분야에서의 사용자 경험에 관심을 가지고 있으며, 미국 시애틀 워싱턴 주립 대학교 정보학과 강사로도 활동하고 있습니다. 10년째 재직 중인 그는 디자인 이론, 디자인 시스템, 졸업 작품 등 다양한 수업을 가르치고 있습니다.
+
+:::
+:::::
+
+**Financial Industry Insight, New Industry Insight, 신용평가사가 들려주는 산업이야기2: 석유의미래** 각 5권과 총 15권을 적극적으로 참여하신 분들께 무료증정행사도 병행하여 진행할 예정입니다.
+
+::: {layout-nrow="2"}
+![](../fig/hex_chatGPT_unix_shell_02.png){fig-align="center"
+width="900"}
+
+![](../fig/nice/FINANCIAL%20INDUSTRY%20INSIGHT.png){fig-align="center"
+width="2077"}
+
+![](../fig/nice/NEW%20INDUSTRY%20INSIGHT.png)
+
+![](../fig/nice/산업이야기.png)
+:::
+
 
 :::
 :::
