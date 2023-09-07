@@ -50,124 +50,7 @@ editor:
 ::: column-body-outset
 ::: panel-tabset
 
-# 9월(Sep)
-
-## 참가신청: [참가신청](https://www.meetup.com/seoul-r-meetup/events/295338359/)
-
-## 일시 및 장소
-
--   일시: 2023년 9월 7일(목) 19:00 \~ 21:00
--   장소: 강남 교보타워 5층 노블리에홀
-    -   주소: 서울특별시 서초구 강남대로 465 교보타워
-    -   📍<a href="https://naver.me/F08oB7J8" target="_blank">네이버지도
-        링크</a>
-    -   📍<a href="http://kko.to/bmuzNbBHbs" target="_blank">카카오지도
-        링크</a>
-
-## 발표 목록
-
-### 다양한 wrapper library에 기반한 Shiny 대쉬보드 구축
-
--   Title: Shiny Dashboard Development based on Wrapper Libraries.
--   Korean Title: 다양한 wrapper library에 기반한 Shiny 대쉬보드 구축
--   Speaker: 공병규(유타대 아시아캠퍼스)
--   Abstract: Shiny 대쉬보드는 데이터 시각화 툴에 그 기능을 한정하지 않고, 보다 다양한 기능을 탑재하고 사용자 편의성을 도모할 수 있도록 끊임 없이 진화하고 있습니다. 특히 Shiny 생태계의 근간을 이루는 Shiny와 ShinyDashboard 라이브러리 외에도 R외부의 프로그래밍 언어를 번역해서 Shiny에서 활용이 가능하도록 하는 다양한 wrapper 라이브러리가 존재하며, 이들을 통해 Shiny 생태계가 보다 다양해지고 고급화된 기능들을 지원할 수 있게 되었습니다. 이번 발표에서는 유명한 shiny wrapper 라이브러리와 눈여겨봐야 할 만한 새로운 wrapper 라이브러리들도 용례와 함께 소개하는 시간을 갖도록 하겠습니다.
--   [발표자료](../data/202309/Ruser_group.pdf)
-
-### 디자인과 데이터 과학의 융합
-
--   Title: The convergence of design and data science
--   Korean Title: 디자인과 데이터 과학의 융합
--   Speaker: 이현진 (홍익대)
--   Abstract: 감성적이고, 예술적인 작업으로 인식되어온 디자인 업무에
-    데이터 과학을 융합하면 어떤 강점이 있으며, 디자이너와 데이터
-    전문가는 어떻게 협업하는 것이 좋을까. 디자이너의 시각에서 데이터
-    과학의 활용 가능성을 사용자 경험(UX) 리서치와 디자인 평가 업무를
-    중심으로 한 사례와 함께 살펴봅니다.
--   [발표자료](../data/202309/R사용자회_발표_이현진.pdf)
-
-### Data Envelopment Analysis(DEA) in R
-
--   Title: Data Envelopment Analysis(DEA) in R
--   Korean Title: Data Envelopment Analysis(DEA) in R
--   Speaker: 김용우 (DPLANEX)
--   Abstract: DEA(자료포락분석)는 효율성 분석을 위해 경영학, 경제학, 행정학 등 다양한 학문분야에서 꾸준히 사용되어온 분석방법 입니다. DEA에 대해 간략히 소개하고, 사용 시 유의해야 할 점에 대하여 소개합니다.2023년 새로 CRAN에 등록된 deaR 패키지를 이용하여 간단하게 DEA를 수행할 수 있습니다. 이를 활용하여 국내 생명보험시장의 효율성을 분석한 "국내 생명보험시장의 효율성 분석: 인터넷 및 방카슈랑스 전문 생보사를 중심으로"에 대해서도 소개합니다.
--   [발표자료](../data/202309/9월_R-Meetup-DEA.pdf)
-
-### 챗GPT 데이터 사이언스
-
--   Title: ChatGPT Data Science
--   Korean Title: 챗GPT 데이터 사이언스
--   Speaker: 이광춘 (한국 R 사용자회)
--   Abstract: OpenAI 에서 Code Interpreter가 공개되면서 데이터 분석에 큰 변화가 생겨나고 있습니다.
-    Code Interpreter에서 정형 데이터뿐만 아니라 비정형 데이터까지 받고 분석결과도 해석해주는 것은
-    신선했습니다. 2023년도 챗GPT 데이터 사이언스를 주제로 서울 R 미트업을 
-    진행하면서 경험한 사항을 공유하고 가까운 미래도 함께 얘기를 나누는 방식으로 마무리하고자 합니다.
-
-※ 실시간 방송 및 영상공유는 하지 않습니다.
-
-------------------------------------------------------------------------
-
-적극적으로 참여하신 분들께 한국 R 사용자회에서 집필한 "챗GPT 유닉스 쉘: 데이터 과학 자동화 도구" 책5권과 [인사이트 출판사](https://ebook.insightbook.co.kr/)에서 [**R 사용자를 위한 Shiny 마스터 가이드**](https://ebook.insightbook.co.kr/book/142) 책을 5권 후원해주셨습니다. 미트업 행사에 참여하신 분 대상으로 추첨을 통해 나눠 드리도록 하겠습니다.
-
-::: columns
-::: {.column width="45%"}
-![](../fig/챗GPT-유닉스-쉘.jpg)
-:::
-
-::: {.column width="5%"}
-
-:::
-
-::: {.column width="50%"}
-#### 챗GPT 유닉스 쉘: 데이터 과학 자동화 도구
-
-"챗GPT 유닉스 쉘"은 단순한 기술서적이 아니고 지금 챗GPT AI 시대를 지탱하는 사고체계다. 컴퓨터의 대부인 IBM이 새로운 제국의 시대를 열었지만, 그 제국을 흔들었던 힘은 바로 '유닉스'였다.
-
-유닉스는 레고와 닮았다. 한가지 기능에 특화된 레고블록 각각은 별볼일 없지만 레고블록을 조합하면 명작으로 재탄생한다. 레고를 이해하면 유닉스도 쉽게 이해되고 강력한 소프트웨어를 제작할 수 있다.
-
-이 책은 21세기 가장 섹시한 직업으로 불리는 '데이터 과학' 분야를 주로 다루고 있지만, 챗GPT와 유닉스의 조합이 얼마나 강력한지 직접 체험함으로써 앞으로 펼쳐질 미래를 예측하는데도 도움을 줄 것이다.
-
-지은이 \| 이광춘, 신종화 (한국 R 사용자회)
-:::
-:::
-
-------------------------------------------------------------------------
-
-::: columns
-::: {.column width="50%"}
-![](../fig/book_mastering_shiny.webp)
-:::
-
-::: {.column width="50%"}
-#### R 사용자를 위한 Shiny 마스터 가이드
-
-데이터 분석용 인터랙티브 웹 애플리케이션을 만들 수 있게 해주는 Shiny에
-대한 완벽한 가이드다. Shiny의 기초부터 반응성, 모듈, 테스트, 보안까지
-Shiny에 대한 모든 것을 다루고 있어 독자들은 R 언어만으로 쉽고 빠르게 웹
-애플리케이션을 만드는 방법을 익힐 수 있다. 또한 Shiny의 기반이 되는
-반응형 프로그래밍에 대한 이론과 쓰임을 깊이 있게 배울 수 있다.
-
--   지은이 \| 해들리 위컴
-    -   Posit(구 RStudio)의 수석 과학자이며, 2019년 COPSS(Committee of
-        Presidents of Statistical Societies) 회장상을 받은 R 재단의
-        회원이다. 데이터 과학을 보다 쉽고 빠르고 재미있게 만들기 위한
-        계산 및 인지 도구를 만들고 있으며, `tidyverse`의 첫단추가 된
-        `hadleyverse`의 창안자로 유명하다.
-        웹사이트(http://hadley.nz)에서 더 많은 정보를 볼 수 있다.
--   옮긴이 \| 이영록
-    -   미국 소재 글로벌 미디어/엔터테인먼트 회사에서 디시전
-        사이언스(Decision Science) 업무를 맡고 있으며, R과 Shiny를 주로
-        사용하고 있다. 포항공과대학교에서 산업공학 학사와 석사 학위를,
-        미국 아이오와주립대에서 산업공학 박사 학위를 받았으며, 데이터
-        마이닝을 주로 연구하였으며 [한국 R 컨퍼런스 2021년 발표 및 행사
-        기획자](https://use-r.kr/)로 많은 기여를 해주셨다.
-:::
-:::
-
-
-
-# ~~4월(Apr)~~
+# 4월(Apr)
 
 ## 참가신청: [마감](https://www.meetup.com/seoul-r-meetup/events/292232899/)
 
@@ -256,7 +139,7 @@ Shiny에 대한 모든 것을 다루고 있어 독자들은 R 언어만으로 �
 :::
 :::
 
-# ~~5월(May)~~
+# 5월(May)
 
 ## 참가신청: [마감](https://www.meetup.com/seoul-r-meetup/events/292966674/)
 
@@ -341,7 +224,7 @@ Bullshit)](https://product.kyobobook.co.kr/detail/S000001708704)
 :::
 :::
 
-# ~~6월(Jun)~~
+# 6월(Jun)
 
 ## 참가신청: [마감](https://www.meetup.com/seoul-r-meetup/events/293485362/)
 
@@ -424,7 +307,7 @@ R을 활용하여 원 데이터로부터 지식과 통찰을 끌어내는, 데�
 :::
 :::
 
-# ~~7월(Jul)~~
+# 7월(Jul)
 
 ## 참가신청: [마감](https://www.meetup.com/seoul-r-meetup/events/293929603/)
 
@@ -563,7 +446,7 @@ R을 활용하여 원 데이터로부터 지식과 통찰을 끌어내는, 데�
 :::
 :::
 
-# ~~8월(Aug)~~
+# 8월(Aug)
 
 ## 참가신청: [마감](https://www.meetup.com/seoul-r-meetup/events/294651161/)
 
@@ -652,6 +535,128 @@ width="2077"}
 ![](../fig/nice/NEW%20INDUSTRY%20INSIGHT.png)
 
 ![](../fig/nice/산업이야기.png)
+:::
+
+
+# 9월(Sep)
+
+## 참가신청: [마감](https://www.meetup.com/seoul-r-meetup/events/295338359/)
+
+## 일시 및 장소
+
+-   일시: 2023년 9월 7일(목) 19:00 \~ 21:00
+-   장소: 강남 교보타워 5층 노블리에홀
+    -   주소: 서울특별시 서초구 강남대로 465 교보타워
+    -   📍<a href="https://naver.me/F08oB7J8" target="_blank">네이버지도
+        링크</a>
+    -   📍<a href="http://kko.to/bmuzNbBHbs" target="_blank">카카오지도
+        링크</a>
+
+## 발표 목록
+
+### 다양한 wrapper library에 기반한 Shiny 대쉬보드 구축
+
+-   Title: Shiny Dashboard Development based on Wrapper Libraries.
+-   Korean Title: 다양한 wrapper library에 기반한 Shiny 대쉬보드 구축
+-   Speaker: 공병규(유타대 아시아캠퍼스)
+-   Abstract: Shiny 대쉬보드는 데이터 시각화 툴에 그 기능을 한정하지 않고, 보다 다양한 기능을 탑재하고 사용자 편의성을 도모할 수 있도록 끊임 없이 진화하고 있습니다. 특히 Shiny 생태계의 근간을 이루는 Shiny와 ShinyDashboard 라이브러리 외에도 R외부의 프로그래밍 언어를 번역해서 Shiny에서 활용이 가능하도록 하는 다양한 wrapper 라이브러리가 존재하며, 이들을 통해 Shiny 생태계가 보다 다양해지고 고급화된 기능들을 지원할 수 있게 되었습니다. 이번 발표에서는 유명한 shiny wrapper 라이브러리와 눈여겨봐야 할 만한 새로운 wrapper 라이브러리들도 용례와 함께 소개하는 시간을 갖도록 하겠습니다.
+-   [발표자료](../data/202309/Ruser_group.pdf)
+
+### 디자인과 데이터 과학의 융합
+
+-   Title: The convergence of design and data science
+-   Korean Title: 디자인과 데이터 과학의 융합
+-   Speaker: 이현진 (홍익대)
+-   Abstract: 감성적이고, 예술적인 작업으로 인식되어온 디자인 업무에
+    데이터 과학을 융합하면 어떤 강점이 있으며, 디자이너와 데이터
+    전문가는 어떻게 협업하는 것이 좋을까. 디자이너의 시각에서 데이터
+    과학의 활용 가능성을 사용자 경험(UX) 리서치와 디자인 평가 업무를
+    중심으로 한 사례와 함께 살펴봅니다.
+-   [발표자료](../data/202309/R사용자회_발표_이현진.pdf)
+
+### Data Envelopment Analysis(DEA) in R
+
+-   Title: Data Envelopment Analysis(DEA) in R
+-   Korean Title: Data Envelopment Analysis(DEA) in R
+-   Speaker: 김용우 (DPLANEX)
+-   Abstract: DEA(자료포락분석)는 효율성 분석을 위해 경영학, 경제학, 행정학 등 다양한 학문분야에서 꾸준히 사용되어온 분석방법 입니다. DEA에 대해 간략히 소개하고, 사용 시 유의해야 할 점에 대하여 소개합니다.2023년 새로 CRAN에 등록된 deaR 패키지를 이용하여 간단하게 DEA를 수행할 수 있습니다. 이를 활용하여 국내 생명보험시장의 효율성을 분석한 "국내 생명보험시장의 효율성 분석: 인터넷 및 방카슈랑스 전문 생보사를 중심으로"에 대해서도 소개합니다.
+-   [발표자료](../data/202309/9월_R-Meetup-DEA.pdf)
+
+### 챗GPT 데이터 사이언스
+
+-   Title: ChatGPT Data Science
+-   Korean Title: 챗GPT 데이터 사이언스
+-   Speaker: 이광춘 (한국 R 사용자회)
+-   Abstract: OpenAI 에서 Code Interpreter가 공개되면서 데이터 분석에 큰 변화가 생겨나고 있습니다.
+    Code Interpreter에서 정형 데이터뿐만 아니라 비정형 데이터까지 받고 분석결과도 해석해주는 것은
+    신선했습니다. 2023년도 챗GPT 데이터 사이언스를 주제로 서울 R 미트업을 
+    진행하면서 경험한 사항을 공유하고 가까운 미래도 함께 얘기를 나누는 방식으로 마무리하고자 합니다.
+
+※ 실시간 방송 및 영상공유는 하지 않습니다.
+
+------------------------------------------------------------------------
+
+적극적으로 참여하신 분들께 한국 R 사용자회에서 집필한 "챗GPT 유닉스 쉘: 데이터 과학 자동화 도구" 책5권과 [인사이트 출판사](https://ebook.insightbook.co.kr/)에서 [**R 사용자를 위한 Shiny 마스터 가이드**](https://ebook.insightbook.co.kr/book/142) 책을 5권 후원해주셨습니다. 미트업 행사에 참여하신 분 대상으로 추첨을 통해 나눠 드리도록 하겠습니다.
+
+------------------------------------------------------------------------
+
+![](../fig/seoul-r-meetup-september.jpg){fig-align="center" width="600"}
+
+------------------------------------------------------------------------
+
+::: columns
+::: {.column width="45%"}
+![](../fig/챗GPT-유닉스-쉘.jpg)
+:::
+
+::: {.column width="5%"}
+
+:::
+
+::: {.column width="50%"}
+#### 챗GPT 유닉스 쉘: 데이터 과학 자동화 도구
+
+"챗GPT 유닉스 쉘"은 단순한 기술서적이 아니고 지금 챗GPT AI 시대를 지탱하는 사고체계다. 컴퓨터의 대부인 IBM이 새로운 제국의 시대를 열었지만, 그 제국을 흔들었던 힘은 바로 '유닉스'였다.
+
+유닉스는 레고와 닮았다. 한가지 기능에 특화된 레고블록 각각은 별볼일 없지만 레고블록을 조합하면 명작으로 재탄생한다. 레고를 이해하면 유닉스도 쉽게 이해되고 강력한 소프트웨어를 제작할 수 있다.
+
+이 책은 21세기 가장 섹시한 직업으로 불리는 '데이터 과학' 분야를 주로 다루고 있지만, 챗GPT와 유닉스의 조합이 얼마나 강력한지 직접 체험함으로써 앞으로 펼쳐질 미래를 예측하는데도 도움을 줄 것이다.
+
+지은이 \| 이광춘, 신종화 (한국 R 사용자회)
+:::
+:::
+
+------------------------------------------------------------------------
+
+::: columns
+::: {.column width="50%"}
+![](../fig/book_mastering_shiny.webp)
+:::
+
+::: {.column width="50%"}
+#### R 사용자를 위한 Shiny 마스터 가이드
+
+데이터 분석용 인터랙티브 웹 애플리케이션을 만들 수 있게 해주는 Shiny에
+대한 완벽한 가이드다. Shiny의 기초부터 반응성, 모듈, 테스트, 보안까지
+Shiny에 대한 모든 것을 다루고 있어 독자들은 R 언어만으로 쉽고 빠르게 웹
+애플리케이션을 만드는 방법을 익힐 수 있다. 또한 Shiny의 기반이 되는
+반응형 프로그래밍에 대한 이론과 쓰임을 깊이 있게 배울 수 있다.
+
+-   지은이 \| 해들리 위컴
+    -   Posit(구 RStudio)의 수석 과학자이며, 2019년 COPSS(Committee of
+        Presidents of Statistical Societies) 회장상을 받은 R 재단의
+        회원이다. 데이터 과학을 보다 쉽고 빠르고 재미있게 만들기 위한
+        계산 및 인지 도구를 만들고 있으며, `tidyverse`의 첫단추가 된
+        `hadleyverse`의 창안자로 유명하다.
+        웹사이트(http://hadley.nz)에서 더 많은 정보를 볼 수 있다.
+-   옮긴이 \| 이영록
+    -   미국 소재 글로벌 미디어/엔터테인먼트 회사에서 디시전
+        사이언스(Decision Science) 업무를 맡고 있으며, R과 Shiny를 주로
+        사용하고 있다. 포항공과대학교에서 산업공학 학사와 석사 학위를,
+        미국 아이오와주립대에서 산업공학 박사 학위를 받았으며, 데이터
+        마이닝을 주로 연구하였으며 [한국 R 컨퍼런스 2021년 발표 및 행사
+        기획자](https://use-r.kr/)로 많은 기여를 해주셨다.
+:::
 :::
 
 
