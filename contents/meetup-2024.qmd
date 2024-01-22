@@ -1,0 +1,192 @@
+---
+title: "서울 R 미트업 2024년"
+subtitle: "인공지능과 데이터 사이언스"
+author:
+  - name: 한국 R 사용자회
+    url: https://r2bit.com
+    affiliation: 한국 R 사용자회
+    affiliation-url: https://github.com/bit2r
+# title-block-banner: true
+title-block-banner-color: "#fff"
+title-block-banner: "#373830"
+format:
+  html:
+    theme: flatly
+    code-fold: true
+    code-overflow: wrap
+    toc: true
+    toc-depth: 2
+    toc-title: 목차
+    number-sections: false
+    highlight-style: github    
+    self-contained: false
+filters:
+   - lightbox
+lightbox: auto
+link-citations: true
+knitr:
+  opts_chunk: 
+    message: false
+    warning: false
+    collapse: true
+    comment: "#>" 
+    R.options:
+      knitr.graphics.auto_pdf: true
+editor_options: 
+  chunk_output_type: console
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# 서울 R 미트업 발표자
+
+
+## '24년 발표자 모집
+
+[발표자 모집 신청](https://forms.gle/1zxT1Xt5g4iYor4E9)
+
+
+::: column-body-outset
+::: panel-tabset
+
+# 3월(Mar)
+
+## 참가신청: [참가신청](https://www.meetup.com/seoul-r-meetup/events/292232899/)
+
+## 일시 및 장소
+
+-   일시: 2024년 3월 20일(수) 19:00 \~ 21:00
+-   장소: 강남 교보타워 5층 노블리에홀
+    -   주소: 서울특별시 서초구 강남대로 465 교보타워
+    -   📍<a href="https://naver.me/F08oB7J8" target="_blank">네이버지도
+        링크</a>
+    -   📍<a href="http://kko.to/bmuzNbBHbs" target="_blank">카카오지도
+        링크</a>
+
+※ 실시간 방송 및 영상공유는 하지 않습니다.
+
+## 발표 목록
+
+### 발표 1
+
+-   제목: "R과 함께 chatGPT 활용하기"
+-   English Title: "Using chatGPT with R"
+-   발표자: 유충현 (한국R사용자회)
+-   발표요약: OpenAI API를 이용해서 R 환경에서 chatGPT를 활용하는 방법을
+    소개합니다.
+-   발표자료:
+    [바로보기](https://choonghyunryu.github.io/intro_Rpackages/slide/slide_bitGPT/)
+
+### 발표 2
+
+-   제목: 
+-   English Title: 
+-   발표자: 
+-   발표요약: 
+-   발표자료:
+    [바로보기](https://r2bit.com/bitSlide/slideshow/202304-seoul-r-meetup/)
+
+### 발표 3
+
+-   제목: 
+-   English Title: 
+-   발표자: 
+-   발표요약: 
+-   발표자료: [바로보기](https://github.com/joygram/stat_with_langchain)
+
+------------------------------------------------------------------------
+
+![](../fig/webposter_202304.jpg){width="500"}
+
+------------------------------------------------------------------------
+
+[제이펍 출판사](https://jpub.tistory.com/)에서 [**Plotly로 시작하는 인터랙티브 데이터 시각화 in R & 파이썬**](https://jpub.tistory.com/1491)
+책을 10권 후원해주셨습니다. 미트업 행사에 참여하신 분 대상으로 추첨을
+통해 나눠 드리도록 하겠습니다.
+
+::: columns
+::: {.column width="50%"}
+![](../fig/book_2024/jpub_plotly.jpg)
+:::
+
+::: {.column width="50%"}
+#### R 사용자를 위한 Shiny 마스터 가이드
+
+이 책은 인터랙티브 시각화 패키지인 Plotly로 시각화하는 방법을 취업률 및 코로나 데이터로 예를 들면서 R과 파이썬으로 구현한다. 1부에서는 데이터 시각화의 개념과 중요성을 소개하고, 2부에서는 Plotly의 기초 개념과 레이아웃, 서브플롯 등 필수 기능을 설명한다. 3부에서는 산점도, 폭포수 차트 등 목적에 따른 Plotly 시각화 방법과 특수 기능을 안내한다. 4부에서는 효과적으로 Plotly 시각화를 활용하기 위한 버튼, 슬라이더 등 컨트롤의 생성 및 구현 방법, 결과물을 공유하기 위한 온/오프라인 배포 방법을 알아본다. 마지막으로 부록에서는 Plotly의 기능을 극대화할 수 있는 Dash와 Shiny 패키지로 대시보드를 설계하고 구현하는 과정을 다룬다.
+
+
+:::
+:::
+
+# 4월(May)
+
+## 참가신청: [참가신청](https://www.meetup.com/seoul-r-meetup/events/292232899/)
+
+## 일시 및 장소
+
+-   일시: 2024년 4월 17일(수) 19:00 \~ 21:00
+-   장소: 강남 교보타워 5층 노블리에홀
+    -   주소: 서울특별시 서초구 강남대로 465 교보타워
+    -   📍<a href="https://naver.me/F08oB7J8" target="_blank">네이버지도
+        링크</a>
+    -   📍<a href="http://kko.to/bmuzNbBHbs" target="_blank">카카오지도
+        링크</a>
+
+※ 실시간 방송 및 영상공유는 하지 않습니다.
+
+## 발표 목록
+
+### 발표 1
+
+-   제목: "R과 함께 chatGPT 활용하기"
+-   English Title: "Using chatGPT with R"
+-   발표자: 유충현 (한국R사용자회)
+-   발표요약: OpenAI API를 이용해서 R 환경에서 chatGPT를 활용하는 방법을
+    소개합니다.
+-   발표자료:
+    [바로보기](https://choonghyunryu.github.io/intro_Rpackages/slide/slide_bitGPT/)
+
+### 발표 2
+
+-   제목: 
+-   English Title: 
+-   발표자: 
+-   발표요약: 
+-   발표자료:
+    [바로보기](https://r2bit.com/bitSlide/slideshow/202304-seoul-r-meetup/)
+
+### 발표 3
+
+-   제목: 
+-   English Title: 
+-   발표자: 
+-   발표요약: 
+-   발표자료: [바로보기](https://github.com/joygram/stat_with_langchain)
+
+------------------------------------------------------------------------
+
+![](../fig/webposter_202304.jpg){width="500"}
+
+------------------------------------------------------------------------
+
+[김송규(Amang Kim)](https://brunch.co.kr/@amangkim)님께서 [**데이터는 예측하지 않는다**](https://product.kyobobook.co.kr/detail/S000211708787)
+책을 10권 후원해주셨습니다. 미트업 행사에 참여하신 분 대상으로 추첨을
+통해 나눠 드리도록 하겠습니다.
+
+::: columns
+::: {.column width="50%"}
+![](../fig/book_2024/amang_data.jpg)
+:::
+
+::: {.column width="50%"}
+#### 데이터는 예측하지 않는다
+
+데이터로 의사결정을 해야 하는 사람들 그리고 데이터로 의사결정 하는 것이 필요하다고 주장하는 사람들을 위한 책이 나왔다. 이 책은 우리가 알고 있던 데이터에 대한 지식이 얼마나 잘못된 것이 많으며, 이를 제대로 알지 못하면 어떤 실수를 범하게 되는지 여러 사례를 통해 밝히고 있다. 그리고 이런 실수에서 벗어나기 위해서는 인문학적 통찰이 중요하다는 것도 잊지 않고 강조한다.
+
+
+:::
+:::
+
+:::
+:::

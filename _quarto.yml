@@ -2,7 +2,7 @@ project:
   type: website
   output-dir: docs
 
-lang: kr
+lang: ko-kr
 date-format: "YYYY년 MM월 DD일"
 
 website:
@@ -13,8 +13,8 @@ website:
     search: true
     logo: "fig/korea-r-user-group.png"
     left:
-      - text: 소개
-        href: contents/intro.Rmd
+      - text: "**2024년**"
+        file: contents/meetup-2024.qmd
       - text: 2023년
         file: contents/meetup-2023.qmd
       - text: 2022년
